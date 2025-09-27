@@ -87,7 +87,7 @@ const DonateFood = () => {
 
       <div className="mt-8 text-center text-gray-700 bg-muted p-6 rounded-lg shadow-sm border border-border">
         <h3 className="text-lg font-semibold mb-2 text-primary">For Donation Queries:</h3>
-        <p>Please call us at <a href="tel:+919958349220" className="text-blue-500 hover:underline"><strong>+919958349220</strong></a> or email us at <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline"><strong>donations@navkalyansansthadelhi.org</strong></a>.</p>
+        <p>Please call us at <a href="tel:+919958349220" className="text-blue-500 hover:underline"><strong>+919958349220</strong></a> or email us at <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline"><strong>navkalyansansthadelhi@gmail.com</strong></a>.</p>
         <p className="text-sm text-muted-foreground mt-2">Our team is available to assist you with any questions regarding your donation.</p>
       </div>
     </div>

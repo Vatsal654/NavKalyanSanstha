@@ -15,7 +15,7 @@ const TermsAndConditions = () => {
       <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
         <li><strong>Voluntary and Non-Refundable:</strong> All donations made to Nav Kalyan Sanstha Delhi are entirely voluntary and, once processed, are strictly non-refundable. We encourage donors to carefully consider their decision before making a contribution.</li>
         <li><strong>Discretionary Use of Funds:</strong> Nav Kalyan Sanstha Delhi reserves the unequivocal right to utilize all received donations at its sole discretion for the furtherance of its charitable purposes and objectives, as outlined in our mission statement. This ensures maximum flexibility to address the most pressing needs within the community.</li>
-        <li><strong>Confirmation of Donation:</strong> Donors are requested to share a screenshot or transaction reference of their payment via WhatsApp to +919958349220 or email to donations@navkalyansansthadelhi.org for proper tracking and acknowledgment.</li>
+        <li><strong>Confirmation of Donation:</strong> Donors are requested to share a screenshot or transaction reference of their payment via WhatsApp to +919958349220 or email to navkalyansansthadelhi@gmail.com for proper tracking and acknowledgment.</li>
       </ul>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4 text-secondary-foreground">Intellectual Property:</h2>

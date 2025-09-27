@@ -41,7 +41,7 @@ const faqs = [
   },
   {
     question: 'How can I volunteer my time and services with Nav Kalyan Sanstha Delhi?',
-    answer: 'We are always eager to welcome new helping hands and passionate individuals to our team! If you are interested in volunteering your time and services, please do not hesitate to contact us directly via phone or email. We will be delighted to guide you through the volunteering process, discuss available opportunities, and help you find a meaningful way to contribute to our mission. Your dedication can make a significant difference.',
+    answer: 'We are always eager to welcome new helping hands and passionate individuals to our team! If you are interested in volunteering your time and services, please do not hesitate to contact us directly via phone or email at navkalyansansthadelhi@gmail.com. We will be delighted to guide you through the volunteering process, discuss available opportunities, and help you find a meaningful way to contribute to our mission. Your dedication can make a significant difference.',
   },
   {
     question: 'What other initiatives does Nav Kalyan Sanstha Delhi undertake?',

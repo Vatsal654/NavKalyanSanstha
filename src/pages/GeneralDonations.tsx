@@ -94,7 +94,7 @@ const GeneralDonations = () => {
 
       <div className="mt-8 text-center text-gray-700">
         <h3 className="text-lg font-semibold mb-2">For Donation Queries:</h3>
-        <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919958349220" className="text-blue-500 hover:underline">+919958349220</a> or send an email to <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a>. Our team is ready to assist you.</p>
+        <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919958349220" className="text-blue-500 hover:underline">+919958349220</a> or send an email to <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a>. Our team is ready to assist you.</p>
       </div>
     </div>
   );

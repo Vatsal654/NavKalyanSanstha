@@ -47,7 +47,7 @@ const ContactUs = () => {
           <CardContent className="text-gray-700">
             <p className="mb-2">For detailed inquiries, partnership proposals, or general correspondence, please send us an email:</p>
             <p>For General Inquiries: <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a></p>
-            <p>For Donations: <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a></p>
+            <p>For Donations: <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a></p>
             <p className="text-sm text-muted-foreground mt-2">We strive to respond to all emails within 24-48 business hours.</p>
           </CardContent>
         </Card>
