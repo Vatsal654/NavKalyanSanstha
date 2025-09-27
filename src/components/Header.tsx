@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { MadeWithDyad } from './made-with-dyad'; // Assuming this is the logo
+import { ModeToggle } from './ModeToggle'; // Import ModeToggle
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -65,6 +65,7 @@ const Header = () => {
             />
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           </form>
+          <ModeToggle /> {/* Add ModeToggle here */}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -99,7 +100,8 @@ const Header = () => {
                 </Link>
               ))}
               <div className="mt-auto">
-                <MadeWithDyad />
+                <ModeToggle /> {/* Add ModeToggle to mobile menu */}
+                {/* <MadeWithDyad /> */} {/* Removed MadeWithDyad from here to simplify */}
               </div>
             </div>
           </SheetContent>
