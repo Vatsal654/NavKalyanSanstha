@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, MapPin, Phone, Mail } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -11,7 +11,7 @@ const Home = () => {
       <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-gray-200" // Fallback bg
-          style={{ backgroundImage: 'url(/images/hero-background.webp)' }}
+          style={{ backgroundImage: 'url(/images/hero_2.jpg)' }} // Updated image
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
         </div>
@@ -53,7 +53,7 @@ const Home = () => {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore Our Mission</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Navigate through our key initiatives and learn how you can become a part of our journey to create a hunger-free Delhi. Each section provides a deeper insight into our work and the various ways you can contribute.
+            Dive deeper into the heart of Nav Kalyan Sanstha Delhi. Discover our core values, the impact we've made, and the various ways you can join us in creating a hunger-free community. Each section provides a deeper insight into our work and the various ways you can contribute.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border">
@@ -127,7 +127,7 @@ const Home = () => {
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-xl min-h-[200px] bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg" // Updated image
                 alt="Volunteers serving food"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -300,7 +300,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
             <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2 min-h-[200px] bg-gray-200">
               <img
-                src="https://images.unsplash.com/photo-1523240795601-830e02942357?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="/images/Black-and-Yellow-Photo-Modern-Business-Instagram-Post-3.jpg" // Updated image
                 alt="People collaborating"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />

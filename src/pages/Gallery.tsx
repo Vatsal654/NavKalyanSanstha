@@ -6,9 +6,9 @@ const images = [
   { src: '/images/gallery-2.jpg', alt: 'Child reaching for food' },
   { src: '/images/gallery-3.jpg', alt: 'Food package being handed over' },
   { src: '/images/gallery-4.jpg', alt: 'Another food package being handed over' },
-  { src: '/images/hero-background.webp', alt: 'Kid with food plate' },
-  { src: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Children eating together' },
-  { src: 'https://images.unsplash.com/photo-1593113616828-60bc0b06f170?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Volunteer distributing food' },
+  { src: '/images/hero_2.jpg', alt: 'Kid with food plate' }, // Updated image
+  { src: '/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg', alt: 'Children eating together' }, // Updated image
+  { src: '/images/20190122164349_838A3181_D5P3M1bwCyu0x7.jpg', alt: 'Volunteer distributing food' }, // Updated image
   { src: 'https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Community meal' },
   { src: 'https://images.unsplash.com/photo-1593113616828-60bc0b06f170?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Volunteer distributing food' },
   { src: 'https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Community meal' },
@@ -46,7 +46,7 @@ const Gallery = () => {
               className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-              <span className="text-white text-lg font-semibold">View</span>
+                <span className="text-white text-lg font-semibold">View</span>
             </div>
           </div>
         ))}
