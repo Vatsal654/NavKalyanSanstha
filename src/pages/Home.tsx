@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react'; // Added Search import
 
 const Home = () => {
   return (
@@ -262,25 +262,25 @@ const Home = () => {
             <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
               <img src="/images/gallery-1.jpg" alt="Child receiving food" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-lg font-semibold">View</span>
+                <Search className="h-8 w-8 text-white" />
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
               <img src="/images/gallery-2.jpg" alt="Child reaching for food" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-lg font-semibold">View</span>
+                <Search className="h-8 w-8 text-white" />
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/gallery-3.jpg" alt="Food package being handed over" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src="/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg" alt="Woman feeding cow" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-lg font-semibold">View</span>
+                <Search className="h-8 w-8 text-white" />
               </div>
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/gallery-4.jpg" alt="Another food package being handed over" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
+              <img src="/images/target-image1.jpg" alt="Children celebrating birthday" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
               <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <span className="text-white text-lg font-semibold">View</span>
+                <Search className="h-8 w-8 text-white" />
               </div>
             </div>
           </div>
