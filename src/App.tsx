@@ -1,14 +1,11 @@
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
 import DonateFood from "./pages/DonateFood";
-import PastDonations from "./pages/PastDonations";
+import GeneralDonations from "./pages/GeneralDonations"; // Renamed from PastDonations
 import FAQs from "./pages/FAQs";
 import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
@@ -17,7 +14,7 @@ import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
 import { AnimatePresence, motion } from "framer-motion"; // Import motion and AnimatePresence
 
-const queryClient = new QueryClient();
+// Removed QueryClient and QueryClientProvider as Supabase and react-query are no longer used.
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -77,7 +74,7 @@ const AnimatedRoutes = () => {
           }
         />
         <Route
-          path="/past-donations"
+          path="/general-donations" // Updated path for renamed page
           element={
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -85,7 +82,7 @@ const AnimatedRoutes = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <PastDonations />
+              <GeneralDonations /> {/* Updated component name */}
             </motion.div>
           }
         />
@@ -173,17 +170,15 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Layout>
-          <AnimatedRoutes />
-        </Layout>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
+  // Removed QueryClientProvider
+  <TooltipProvider>
+    {/* Toaster and Sonner removed */}
+    <BrowserRouter>
+      <Layout>
+        <AnimatedRoutes />
+      </Layout>
+    </BrowserRouter>
+  </TooltipProvider>
 );
 
 export default App;

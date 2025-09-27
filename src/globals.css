@@ -38,40 +38,6 @@
     --scrollbar-thumb: var(--accent); /* Orange thumb */
     --scrollbar-track: var(--muted); /* Light blue-gray track */
   }
-
-  .dark {
-    --background: 222.2 84% 4.9%; /* Dark Blue/Black */
-    --foreground: 210 40% 98%; /* Off-white */
-
-    --card: 222.2 84% 4.9%; /* Dark Blue/Black */
-    --card-foreground: 210 40% 98%; /* Off-white */
-
-    --popover: 222.2 84% 4.9%; /* Dark Blue/Black */
-    --popover-foreground: 210 40% 98%; /* Off-white */
-
-    --primary: 210 40% 98%; /* Off-white (for contrast) */
-    --primary-foreground: 222.2 47.4% 11.2%; /* Dark Blue/Black */
-
-    --secondary: 217.2 32.6% 17.5%; /* Darker Gray/Blue */
-    --secondary-foreground: 210 40% 98%; /* Off-white */
-
-    --muted: 217.2 32.6% 17.5%; /* Darker Gray/Blue */
-    --muted-foreground: 215 20.2% 65.1%; /* Lighter Gray */
-
-    --accent: 30 90% 50%; /* A vibrant orange for accents */
-    --accent-foreground: 222.2 47.4% 11.2%; /* Dark Blue/Black */
-
-    --destructive: 0 62.8% 30.6%; /* Dark Red */
-    --destructive-foreground: 210 40% 98%; /* Off-white */
-
-    --border: 217.2 32.6% 17.5%; /* Dark Gray Border */
-    --input: 217.2 32.6% 17.5%; /* Dark Gray Input */
-    --ring: 212.7 26.8% 83.9%; /* Light Blue Ring */
-
-    /* Scrollbar colors for dark mode */
-    --scrollbar-thumb: var(--accent); /* Orange thumb */
-    --scrollbar-track: var(--muted); /* Dark blue-gray track */
-  }
 }
 
 @layer base {

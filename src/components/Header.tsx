@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom'; // Import useLocation
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { ModeToggle } from './ModeToggle';
+// Removed ModeToggle import
 
 const navItems = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about-us' },
   { name: 'What We Do', path: '/what-we-do' },
   { name: 'Donate Food', path: '/donate-food' },
-  { name: 'Past Donations', path: '/past-donations' },
+  { name: 'General Donations', path: '/general-donations' }, // Updated path for renamed page
   { name: 'FAQs', path: '/faqs' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact Us', path: '/contact-us' },
@@ -20,7 +20,7 @@ const navItems = [
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
-  const location = useLocation(); // Get current location
+  const location = useLocation();
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,7 +43,7 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700" /> {/* Added fallback bg */}
+          <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
           <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
@@ -52,7 +52,7 @@ const Header = () => {
               key={item.name}
               to={item.path}
               className={`text-sm font-medium text-primary-foreground hover:text-accent transition-colors relative group ${
-                location.pathname === item.path ? 'text-accent' : '' // Apply accent color if active
+                location.pathname === item.path ? 'text-accent' : ''
               }`}
             >
               {item.name}
@@ -74,7 +74,7 @@ const Header = () => {
             />
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           </form>
-          <ModeToggle />
+          {/* ModeToggle removed */}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -83,11 +83,11 @@ const Header = () => {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background dark:bg-gray-900">
+          <SheetContent side="right" className="bg-background">
             <div className="flex flex-col gap-4 py-6">
               <Link to="/" className="flex items-center gap-2 mb-4">
-                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700" /> {/* Added fallback bg */}
-                <span className="text-lg font-semibold text-primary dark:text-primary-foreground">Nav Kalyan Sanstha</span>
+                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
+                <span className="text-lg font-semibold text-primary">Nav Kalyan Sanstha</span>
               </Link>
               <form onSubmit={handleSearch} className="relative mb-4">
                 <Input
@@ -103,13 +103,13 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-lg font-medium text-foreground hover:text-accent dark:text-gray-200 dark:hover:text-primary-foreground transition-colors"
+                  className="text-lg font-medium text-foreground hover:text-accent transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="mt-auto">
-                <ModeToggle />
+                {/* ModeToggle removed */}
               </div>
             </div>
           </SheetContent>

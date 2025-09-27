@@ -28,16 +28,16 @@ const Gallery = () => {
 
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary dark:text-primary-foreground">Our Gallery</h1>
-      <p className="text-lg text-center text-gray-700 dark:text-gray-300 mb-8">
-        Witness the impact of your generosity through these moments of hope and love. Click on any image to enlarge.
+      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Our Gallery</h1>
+      <p className="text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+        Witness the profound impact of your generosity through these heartwarming moments of hope and love. Our gallery showcases the real difference made by our food distribution drives, special events, and community interactions. Click on any image to enlarge and experience the joy.
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200 dark:bg-gray-700" // Added fallback bg and min-h
+            className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200"
             onClick={() => handleImageClick(image)}
           >
             <img
