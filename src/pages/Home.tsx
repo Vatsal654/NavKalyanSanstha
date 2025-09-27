@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, MapPin, Phone, Mail } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -276,7 +276,16 @@ const Home = () => {
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             Have questions, want to volunteer, or collaborate? We'd love to hear from you. Your engagement helps us grow and serve more effectively.
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
+            <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2">
+              <img
+                src="https://images.unsplash.com/photo-1523240795601-830e02942357?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="People collaborating"
+                className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+              <p className="absolute bottom-4 left-4 text-white text-xl font-semibold">Join Our Community</p>
+            </div>
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
               <CardHeader className="flex flex-col items-center text-center">
                 <MessageSquareText className="h-12 w-12 text-primary mb-4" />
@@ -291,19 +300,7 @@ const Home = () => {
             </Card>
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
               <CardHeader className="flex flex-col items-center text-center">
-                <HandHeart className="h-12 w-12 text-primary mb-4" />
-                <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Donate Now</CardTitle>
-              </CardHeader>
-              <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Your contribution makes a direct impact. Support our cause with a meal or a general donation today.</p>
-                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
-                  <Link to="/donate-food">Donate Today</Link>
-                </Button>
-              </CardContent>
-            </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
-              <CardHeader className="flex flex-col items-center text-center">
-                <MessageSquareText className="h-12 w-12 text-primary mb-4" />
+                <Phone className="h-12 w-12 text-primary mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Direct Contact</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
