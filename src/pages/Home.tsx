@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -48,18 +48,75 @@ const Home = () => {
         </div>
       </section>
 
+      {/* Quick Navigation / Call to Action Section */}
+      <section className="py-12 bg-gradient-to-r from-primary to-secondary dark:from-gray-800 dark:to-gray-700 text-primary-foreground">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore Our Mission</h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <Card className="bg-card/90 dark:bg-card/80 text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-600">
+              <CardHeader className="flex flex-col items-center text-center">
+                <Users className="h-10 w-10 text-primary mb-3" />
+                <CardTitle className="text-xl font-semibold">About Us</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">Discover our journey, vision, and the dedicated team behind Nav Kalyan Sanstha.</p>
+                <Button asChild variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  <Link to="/about-us">Our Story</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/90 dark:bg-card/80 text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-600">
+              <CardHeader className="flex flex-col items-center text-center">
+                <UtensilsCrossed className="h-10 w-10 text-primary mb-3" />
+                <CardTitle className="text-xl font-semibold">What We Do</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">Learn about our weekly food drives and special initiatives like Gau Seva.</p>
+                <Button asChild variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  <Link to="/what-we-do">Our Programs</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/90 dark:bg-card/80 text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-600">
+              <CardHeader className="flex flex-col items-center text-center">
+                <IndianRupee className="h-10 w-10 text-primary mb-3" />
+                <CardTitle className="text-xl font-semibold">Donate Food</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">Contribute a meal for just ₹21 and make a direct impact on someone's life.</p>
+                <Button asChild variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  <Link to="/donate-food">Donate Now</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-card/90 dark:bg-card/80 text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-600">
+              <CardHeader className="flex flex-col items-center text-center">
+                <GalleryHorizontal className="h-10 w-10 text-primary mb-3" />
+                <CardTitle className="text-xl font-semibold">Gallery</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-sm mb-4">See heartwarming moments from our food distribution drives and events.</p>
+                <Button asChild variant="secondary" className="bg-secondary hover:bg-secondary/90 text-secondary-foreground">
+                  <Link to="/gallery">View Photos</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* About Us Snippet */}
       <section className="py-16 bg-gradient-to-b from-background to-muted dark:from-gray-950 dark:to-gray-900">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">Who We Are</h2>
+          <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">Who We Are: Our Story</h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Nav Kalyan Sanstha Delhi is a non-profit, women-led organization dedicated to serving fresh, home-cooked meals to those in need. We believe in the power of community and compassion to create a hunger-free Delhi.
+            Nav Kalyan Sanstha Delhi began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. We are a non-profit, women-led organization dedicated to serving fresh, home-cooked meals to those in need, bridging the gap between compassion and action.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-left">
               <h3 className="text-2xl font-semibold mb-4 text-secondary-foreground dark:text-secondary">Our Vision & Mission</h3>
               <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Our vision is a hunger-free Delhi where every individual has access to nutritious food and is treated with dignity. Our mission is to consistently prepare and distribute healthy, hygienic, and tasty home-cooked meals to underprivileged children and individuals.
+                Our vision is a hunger-free Delhi where every individual has access to nutritious food and is treated with dignity. Our mission is to consistently prepare and distribute healthy, hygienic, and tasty home-cooked meals to underprivileged children and individuals. We are committed to transparency and community.
               </p>
               <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300">
                 <Link to="/about-us">Read More About Us</Link>
@@ -80,9 +137,9 @@ const Home = () => {
       {/* What We Do Snippet */}
       <section className="py-16 bg-background dark:bg-gray-950">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">What We Offer</h2>
+          <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">Our Initiatives: Beyond Meals</h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-10">
-            Beyond our weekly food drives, we engage in special initiatives to spread joy and support the community in various ways.
+            Beyond our weekly food drives, we engage in special initiatives to spread joy and support the community in various ways, fostering a holistic approach to well-being.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
@@ -91,7 +148,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Weekly Food Distribution</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Every Tuesday and Saturday, we distribute healthy, home-cooked meals to those in need across Delhi.</p>
+                <p>Every Tuesday and Saturday, we distribute healthy, home-cooked meals to those in need across Delhi, ensuring no one goes hungry.</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/what-we-do">Learn More</Link>
                 </Button>
@@ -103,7 +160,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Celebrate with Us</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Make your special occasions memorable by celebrating with the children we serve. Share a cake and smiles!</p>
+                <p>Make your special occasions memorable by celebrating with the children we serve. Share a cake and smiles, creating lasting memories.</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/what-we-do">Discover More</Link>
                 </Button>
@@ -115,7 +172,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Gau Seva & Custom Donations</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Support our cow feeding program or discuss custom ways to contribute to our mission.</p>
+                <p>Support our cow feeding program or discuss custom ways to contribute to our mission, extending kindness to all living beings.</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/what-we-do">Explore Options</Link>
                 </Button>
@@ -130,7 +187,7 @@ const Home = () => {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">Moments of Impact</h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-10">
-            See the smiles your generosity creates. Our gallery captures the heartwarming moments from our distribution drives.
+            Witness the smiles your generosity creates. Our gallery captures the heartwarming moments from our distribution drives, showcasing the real impact of your support.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
             <div className="relative overflow-hidden rounded-lg shadow-lg group">
@@ -169,7 +226,7 @@ const Home = () => {
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">Get In Touch</h2>
           <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
-            Have questions, want to volunteer, or collaborate? We'd love to hear from you.
+            Have questions, want to volunteer, or collaborate? We'd love to hear from you. Your engagement helps us grow and serve more effectively.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
@@ -178,7 +235,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Quick FAQs</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Find answers to common questions about our mission, donations, and operations.</p>
+                <p>Find answers to common questions about our mission, donations, and operations quickly and easily.</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/faqs">View FAQs</Link>
                 </Button>
@@ -190,8 +247,8 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Donate Now</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Your contribution makes a direct impact. Support our cause with a meal or a general donation.</p>
-                <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
+                <p>Your contribution makes a direct impact. Support our cause with a meal or a general donation today.</p>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
                   <Link to="/donate-food">Donate Today</Link>
                 </Button>
               </CardContent>
@@ -202,7 +259,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Direct Contact</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700 dark:text-gray-300">
-                <p>Reach out to us via phone, email, or visit our office. We're here to help!</p>
+                <p>Reach out to us via phone, email, or visit our office. We're here to help with any inquiries!</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/contact-us">Contact Us</Link>
                 </Button>
