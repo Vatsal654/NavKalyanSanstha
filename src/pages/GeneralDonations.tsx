@@ -11,7 +11,7 @@ const GeneralDonations = () => {
 
       <section className="mb-12 max-w-3xl mx-auto text-center">
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
-          While our Anna Daan (food distribution) program is our primary and most visible focus, general contributions are absolutely vital for the overall sustainability and operational efficiency of Nav Kalyan Sanstha Delhi. These flexible funds provide us with the necessary resources to cover essential administrative costs, manage logistics, and respond promptly to urgent and unforeseen needs within the community that fall outside our regular meal programs.
+          While our Nav Seva (food distribution) program is our primary and most visible focus, general contributions are absolutely vital for the overall sustainability and operational efficiency of Nav Kalyan Sanstha Delhi. These flexible funds provide us with the necessary resources to cover essential administrative costs, manage logistics, and respond promptly to urgent and unforeseen needs within the community that fall outside our regular meal programs.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mb-8">
           Your general donation is a powerful way to support the backbone of our organization and helps with a wide array of critical operational aspects, ensuring our mission continues to thrive:
@@ -89,18 +89,12 @@ const GeneralDonations = () => {
 
       <div className="mt-8 p-6 bg-blue-50/50 border-l-4 border-blue-500 rounded-md text-gray-800">
         <h3 className="text-lg font-semibold mb-2">Important Information Regarding Tax Exemption:</h3>
-        <p className="mb-2">Nav Kalyan Sanstha Delhi is registered under Section 80G of the Indian Income Tax Act, which means your donations are eligible for tax exemption. To receive your 80G tax-exemption certificate, please ensure you provide the following details:</p>
-        <ul className="list-disc list-inside space-y-2">
-          <li><strong>Your Full Name:</strong> As per your official records.</li>
-          <li><strong>Your Complete Address:</strong> Including street, city, state, and pin code.</li>
-          <li><strong>Your PAN (Permanent Account Number):</strong> This is mandatory for issuing the 80G certificate.</li>
-        </ul>
-        <p className="mt-3">Please share these details along with your payment confirmation via WhatsApp to <a href="https://wa.me/919118898507" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">+919118898507</a> or email us at <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a>. We appreciate your cooperation in helping us comply with tax regulations and provide you with the necessary documentation.</p>
+        <p className="mb-2">Nav Kalyan Sanstha Delhi is registered under Section 80G of the Indian Income Tax Act, which means your donations are eligible for tax exemption. Please contact us for details on how to receive your tax exemption certificate.</p>
       </div>
 
       <div className="mt-8 text-center text-gray-700">
         <h3 className="text-lg font-semibold mb-2">For Donation Queries:</h3>
-        <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919118898507" className="text-blue-500 hover:underline">+919118898507</a> or send an email to <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a>. Our team is ready to assist you.</p>
+        <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919958349220" className="text-blue-500 hover:underline">+919958349220</a> or send an email to <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a>. Our team is ready to assist you.</p>
       </div>
     </div>
   );

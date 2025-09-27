@@ -33,7 +33,7 @@ const ContactUs = () => {
           </CardHeader>
           <CardContent className="text-gray-700">
             <p className="mb-2">For immediate inquiries, volunteering interests, or donation confirmations, please reach us via phone or WhatsApp:</p>
-            <p><a href="tel:+919118898507" className="text-blue-500 hover:underline font-semibold text-lg">+919118898507</a></p>
+            <p><a href="tel:+919958349220" className="text-blue-500 hover:underline font-semibold text-lg">+919958349220</a></p>
             <p className="text-sm text-muted-foreground">(Our team is available to assist you during working hours and on WhatsApp for quick communication.)</p>
           </CardContent>
         </Card>
@@ -47,7 +47,7 @@ const ContactUs = () => {
           <CardContent className="text-gray-700">
             <p className="mb-2">For detailed inquiries, partnership proposals, or general correspondence, please send us an email:</p>
             <p>For General Inquiries: <a href="mailto:info@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">info@navkalyansansthadelhi.org</a></p>
-            <p>For Donations & 80G Certificates: <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a></p>
+            <p>For Donations: <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a></p>
             <p className="text-sm text-muted-foreground mt-2">We strive to respond to all emails within 24-48 business hours.</p>
           </CardContent>
         </Card>

@@ -13,7 +13,7 @@ const PrivacyPolicy = () => {
         We collect various types of information to facilitate our operations and enhance your experience with Nav Kalyan Sanstha Delhi. This includes:
       </p>
       <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
-        <li><strong>Personal Identification Information:</strong> This encompasses details such as your full name, email address, contact phone number, complete postal address, and PAN (Permanent Account Number). This information is primarily collected when you choose to make a donation, express interest in volunteering, or directly contact us for inquiries or support.</li>
+        <li><strong>Personal Identification Information:</strong> This encompasses details such as your full name, email address, contact phone number, and complete postal address. This information is primarily collected when you choose to make a donation, express interest in volunteering, or directly contact us for inquiries or support.</li>
         <li><strong>Payment Information:</strong> When you make a donation, we collect details related to your UPI transactions or bank transfers. It is crucial to note that we do not store sensitive financial details, such as credit card numbers or bank account passwords, directly on our servers. All payment transactions are securely processed through trusted and encrypted payment gateways, ensuring the highest level of security for your financial data.</li>
         <li><strong>Communication Data:</strong> We maintain records of your correspondence with us, which may include emails, messages, and phone call summaries. This helps us to provide consistent support, address your queries effectively, and improve our communication channels.</li>
         <li><strong>Website Usage Data:</strong> We may collect non-personally identifiable information about how you interact with our website, such as pages visited, time spent on site, and referral sources. This data is used in an aggregated and anonymized form to help us understand user behavior and improve our website's functionality and content.</li>
@@ -26,7 +26,6 @@ const PrivacyPolicy = () => {
       <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
         <li>To efficiently process and acknowledge your generous donations, ensuring proper record-keeping and gratitude.</li>
         <li>To communicate with you effectively regarding our ongoing activities, important updates, upcoming events, and the tangible impact of your support.</li>
-        <li>To promptly send you the necessary 80G tax-exemption receipts, enabling you to claim tax benefits as per Indian Income Tax Act rules.</li>
         <li>To enhance and continually improve our website's user experience, functionality, and the overall quality of our services.</li>
         <li>To comply with all applicable legal obligations, regulatory requirements, and governmental requests, ensuring our operations are fully compliant.</li>
         <li>To manage and coordinate volunteer activities, ensuring smooth operations and effective deployment of our dedicated helping hands.</li>

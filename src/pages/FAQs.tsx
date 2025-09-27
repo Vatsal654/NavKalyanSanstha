@@ -25,7 +25,7 @@ const faqs = [
   },
   {
     question: 'Are donations to Nav Kalyan Sanstha Delhi eligible for tax exemption?',
-    answer: 'Yes, absolutely. Nav Kalyan Sanstha Delhi is officially registered under Section 80G of the Indian Income Tax Act. This means that all monetary donations made to our organization are eligible for tax exemption. To receive your 80G tax-exemption certificate, it is essential that you provide your full name, complete address, and PAN (Permanent Account Number) when making your donation. Please share these details with your payment confirmation via WhatsApp or email.',
+    answer: 'Nav Kalyan Sanstha Delhi is officially registered under Section 80G of the Indian Income Tax Act. This means that all monetary donations made to our organization are eligible for tax exemption. Please contact us for more details on how to receive your tax exemption certificate.',
   },
   {
     question: 'Can I celebrate my birthday or other special occasions with your organization?',
@@ -33,7 +33,7 @@ const faqs = [
   },
   {
     question: 'How do I confirm my donation, and what details should I provide?',
-    answer: 'To help us accurately track your generous contribution and send you a timely confirmation, we kindly request you to share a screenshot of your payment confirmation via WhatsApp to +919118898507. Additionally, if you wish to receive an 80G tax-exemption certificate, please also provide your full name, complete address, and PAN number along with the payment screenshot. This ensures proper record-keeping and acknowledgment of your support.',
+    answer: 'To help us accurately track your generous contribution and send you a timely confirmation, we kindly request you to share a screenshot of your payment confirmation via WhatsApp to +919958349220. This ensures proper record-keeping and acknowledgment of your support.',
   },
   {
     question: 'Who are the key individuals leading Nav Kalyan Sanstha Delhi?',
