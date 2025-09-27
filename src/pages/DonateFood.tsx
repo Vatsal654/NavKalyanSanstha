@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { toast } from 'sonner';
 import { supabase } from '@/lib/supabase'; // Import Supabase client
+import { v4 as uuidv4 } from 'uuid'; // For unique file names
 
 const DonateFood = () => {
   const [formData, setFormData] = useState({
@@ -20,11 +21,20 @@ const DonateFood = () => {
     donationAmount: '',
     occasion: '',
   });
+  const [paymentStatementFile, setPaymentStatementFile] = useState<File | null>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
+  };
+
+  const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      setPaymentStatementFile(e.target.files[0]);
+    } else {
+      setPaymentStatementFile(null);
+    }
   };
 
   const handleDonateAmountClick = (amount: number) => {
@@ -48,11 +58,37 @@ const DonateFood = () => {
     setIsSubmitting(true);
     const loadingToastId = toast.loading('Processing your donation...');
 
-    try {
-      // Simulate payment processing
-      await new Promise(resolve => setTimeout(resolve, 2000)); // 2-second delay for mock payment
+    let paymentStatementUrl: string | null = null;
 
-      // Insert donation data into Supabase
+    try {
+      // 1. Upload payment statement file if provided
+      if (paymentStatementFile) {
+        const fileExtension = paymentStatementFile.name.split('.').pop();
+        const fileName = `${uuidv4()}.${fileExtension}`;
+        const filePath = `payment_statements/${fileName}`; // Assuming a 'payment-statements' bucket
+
+        const { data: uploadData, error: uploadError } = await supabase.storage
+          .from('payment-statements') // Ensure this bucket exists in Supabase Storage
+          .upload(filePath, paymentStatementFile, {
+            cacheControl: '3600',
+            upsert: false,
+          });
+
+        if (uploadError) {
+          throw new Error(`File upload failed: ${uploadError.message}`);
+        }
+
+        const { data: publicUrlData } = supabase.storage
+          .from('payment-statements')
+          .getPublicUrl(filePath);
+        
+        paymentStatementUrl = publicUrlData.publicUrl;
+      }
+
+      // Simulate payment processing
+      await new Promise(resolve => setTimeout(resolve, 1500)); // 1.5-second delay for mock payment
+
+      // 2. Insert donation data into Supabase
       const { data, error } = await supabase.from('donations').insert([
         {
           first_name: formData.firstName,
@@ -67,6 +103,7 @@ const DonateFood = () => {
           donation_amount: parseFloat(formData.donationAmount),
           occasion: formData.occasion,
           payment_status: 'completed', // Mark as completed after mock payment
+          payment_statement_url: paymentStatementUrl, // Store the URL
         },
       ]).select();
 
@@ -76,13 +113,13 @@ const DonateFood = () => {
 
       toast.dismiss(loadingToastId);
       toast.success('Donation successful! Thank you for your generosity.');
-      toast.info('Please share a screenshot of your payment via WhatsApp to +919118898507.');
+      toast.info('Please share a screenshot of your payment via WhatsApp to +919118898507 if you haven\'t uploaded it.');
 
-      // Simulate sending emails
-      const donorEmailBody = `Dear ${formData.firstName},\n\nThank you for your generous donation of ₹${formData.donationAmount} to Nav Kalyan Sanstha Delhi. Your contribution will help us provide nutritious meals to those in need.\n\nTransaction ID: ${data[0].id}\n\nWarm regards,\nNav Kalyan Sanstha Delhi`;
+      // Simulate sending emails (mocked)
+      const donorEmailBody = `Dear ${formData.firstName},\n\nThank you for your generous donation of ₹${formData.donationAmount} to Nav Kalyan Sanstha Delhi. Your contribution will help us provide nutritious meals to those in need.\n\nTransaction ID: ${data[0].id}\n${paymentStatementUrl ? `Payment Statement: ${paymentStatementUrl}\n` : ''}\nWarm regards,\nNav Kalyan Sanstha Delhi`;
       await sendMockEmail(formData.email, 'Thank You for Your Donation to Nav Kalyan Sanstha', donorEmailBody);
 
-      const ngoEmailBody = `New Donation Received!\n\nDonor: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAmount: ₹${formData.donationAmount}\nOccasion: ${formData.occasion || 'N/A'}\nTransaction ID: ${data[0].id}`;
+      const ngoEmailBody = `New Donation Received!\n\nDonor: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAmount: ₹${formData.donationAmount}\nOccasion: ${formData.occasion || 'N/A'}\nTransaction ID: ${data[0].id}\n${paymentStatementUrl ? `Payment Statement URL: ${paymentStatementUrl}\n` : ''}`;
       await sendMockEmail('donations@navkalyansansthadelhi.org', 'New Donation Alert!', ngoEmailBody); // Mock NGO email
 
       // Reset form
@@ -99,11 +136,12 @@ const DonateFood = () => {
         donationAmount: '',
         occasion: '',
       });
+      setPaymentStatementFile(null);
 
-    } catch (error) {
+    } catch (error: any) {
       console.error('Donation submission error:', error);
       toast.dismiss(loadingToastId);
-      toast.error('Failed to process your donation. Please try again.');
+      toast.error(`Failed to process your donation: ${error.message || 'Please try again.'}`);
     } finally {
       setIsSubmitting(false);
     }
@@ -130,7 +168,7 @@ const DonateFood = () => {
             <Button
               key={amount}
               variant="outline"
-              className="py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
+              className="py-6 h-auto text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 whitespace-normal break-words"
               onClick={() => handleDonateAmountClick(amount)}
               disabled={isSubmitting}
             >
@@ -139,7 +177,7 @@ const DonateFood = () => {
           ))}
           <Button
             variant="outline"
-            className="py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 col-span-2 md:col-span-1"
+            className="py-6 h-auto text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 col-span-2 md:col-span-1 whitespace-normal break-words"
             onClick={() => setFormData((prev) => ({ ...prev, donationAmount: '' }))} // Clear for custom amount
             disabled={isSubmitting}
           >
@@ -209,6 +247,12 @@ const DonateFood = () => {
             <div>
               <Label htmlFor="occasion">Dedicate Your Donation on a Special Occasion (Optional)</Label>
               <Input id="occasion" type="text" placeholder="e.g., Birthday, Anniversary, In Memory of..." value={formData.occasion} onChange={handleChange} disabled={isSubmitting} />
+            </div>
+
+            <div>
+              <Label htmlFor="paymentStatement">Upload Payment Statement (Optional)</Label>
+              <Input id="paymentStatement" type="file" accept="image/*,application/pdf" onChange={handleFileChange} disabled={isSubmitting} />
+              <p className="text-sm text-muted-foreground mt-1">Accepted formats: images (JPG, PNG), PDF.</p>
             </div>
 
             <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg rounded-md transition-colors duration-300" disabled={isSubmitting}>
