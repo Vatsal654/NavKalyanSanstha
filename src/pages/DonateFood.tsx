@@ -3,7 +3,8 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { toast } from 'sonner'; // Using sonner for toasts
+import { toast } from 'sonner';
+import { supabase } from '@/lib/supabase'; // Import Supabase client
 
 const DonateFood = () => {
   const [formData, setFormData] = useState({
@@ -19,6 +20,7 @@ const DonateFood = () => {
     donationAmount: '',
     occasion: '',
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -29,27 +31,82 @@ const DonateFood = () => {
     setFormData((prev) => ({ ...prev, donationAmount: amount.toString() }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // Mock function to simulate sending an email
+  const sendMockEmail = async (toEmail: string, subject: string, body: string) => {
+    console.log(`--- MOCK EMAIL SENT ---`);
+    console.log(`To: ${toEmail}`);
+    console.log(`Subject: ${subject}`);
+    console.log(`Body: \n${body}`);
+    console.log(`-----------------------`);
+    // In a real application, you would use an email API here (e.g., SendGrid, Resend, or a Supabase Edge Function)
+    // Example: await fetch('/api/send-email', { method: 'POST', body: JSON.stringify({ toEmail, subject, body }) });
+    return Promise.resolve(); // Simulate success
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // This is where you would typically send data to your backend (Supabase)
-    // For now, we'll just show a toast.
-    console.log('Donation Form Data:', formData);
-    toast.success('Thank you for your donation! Your details have been submitted.');
-    toast.info('Please share a screenshot of your payment via WhatsApp to +919118898507.');
-    // Reset form
-    setFormData({
-      firstName: '',
-      lastName: '',
-      email: '',
-      phone: '',
-      panNumber: '',
-      address: '',
-      city: '',
-      state: '',
-      zipCode: '',
-      donationAmount: '',
-      occasion: '',
-    });
+    setIsSubmitting(true);
+    const loadingToastId = toast.loading('Processing your donation...');
+
+    try {
+      // Simulate payment processing
+      await new Promise(resolve => setTimeout(resolve, 2000)); // 2-second delay for mock payment
+
+      // Insert donation data into Supabase
+      const { data, error } = await supabase.from('donations').insert([
+        {
+          first_name: formData.firstName,
+          last_name: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          pan_number: formData.panNumber,
+          address: formData.address,
+          city: formData.city,
+          state: formData.state,
+          zip_code: formData.zipCode,
+          donation_amount: parseFloat(formData.donationAmount),
+          occasion: formData.occasion,
+          payment_status: 'completed', // Mark as completed after mock payment
+        },
+      ]).select();
+
+      if (error) {
+        throw error;
+      }
+
+      toast.dismiss(loadingToastId);
+      toast.success('Donation successful! Thank you for your generosity.');
+      toast.info('Please share a screenshot of your payment via WhatsApp to +919118898507.');
+
+      // Simulate sending emails
+      const donorEmailBody = `Dear ${formData.firstName},\n\nThank you for your generous donation of ₹${formData.donationAmount} to Nav Kalyan Sanstha Delhi. Your contribution will help us provide nutritious meals to those in need.\n\nTransaction ID: ${data[0].id}\n\nWarm regards,\nNav Kalyan Sanstha Delhi`;
+      await sendMockEmail(formData.email, 'Thank You for Your Donation to Nav Kalyan Sanstha', donorEmailBody);
+
+      const ngoEmailBody = `New Donation Received!\n\nDonor: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\nAmount: ₹${formData.donationAmount}\nOccasion: ${formData.occasion || 'N/A'}\nTransaction ID: ${data[0].id}`;
+      await sendMockEmail('donations@navkalyansansthadelhi.org', 'New Donation Alert!', ngoEmailBody); // Mock NGO email
+
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        panNumber: '',
+        address: '',
+        city: '',
+        state: '',
+        zipCode: '',
+        donationAmount: '',
+        occasion: '',
+      });
+
+    } catch (error) {
+      console.error('Donation submission error:', error);
+      toast.dismiss(loadingToastId);
+      toast.error('Failed to process your donation. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -75,6 +132,7 @@ const DonateFood = () => {
               variant="outline"
               className="py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300"
               onClick={() => handleDonateAmountClick(amount)}
+              disabled={isSubmitting}
             >
               Donate ₹{amount} to feed {amount / 21} people
             </Button>
@@ -83,6 +141,7 @@ const DonateFood = () => {
             variant="outline"
             className="py-6 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground transition-colors duration-300 col-span-2 md:col-span-1"
             onClick={() => setFormData((prev) => ({ ...prev, donationAmount: '' }))} // Clear for custom amount
+            disabled={isSubmitting}
           >
             Donate Any Amount of Your Choice
           </Button>
@@ -100,60 +159,60 @@ const DonateFood = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="firstName">First Name*</Label>
-                <Input id="firstName" type="text" required value={formData.firstName} onChange={handleChange} />
+                <Input id="firstName" type="text" required value={formData.firstName} onChange={handleChange} disabled={isSubmitting} />
               </div>
               <div>
                 <Label htmlFor="lastName">Last Name</Label>
-                <Input id="lastName" type="text" value={formData.lastName} onChange={handleChange} />
+                <Input id="lastName" type="text" value={formData.lastName} onChange={handleChange} disabled={isSubmitting} />
               </div>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <Label htmlFor="email">Email Address*</Label>
-                <Input id="email" type="email" required value={formData.email} onChange={handleChange} />
+                <Input id="email" type="email" required value={formData.email} onChange={handleChange} disabled={isSubmitting} />
               </div>
               <div>
                 <Label htmlFor="phone">Phone*</Label>
-                <Input id="phone" type="tel" required value={formData.phone} onChange={handleChange} />
+                <Input id="phone" type="tel" required value={formData.phone} onChange={handleChange} disabled={isSubmitting} />
               </div>
             </div>
             <div>
               <Label htmlFor="panNumber">PAN Number (For 80G Tax Exemption Receipt)</Label>
-              <Input id="panNumber" type="text" value={formData.panNumber} onChange={handleChange} />
+              <Input id="panNumber" type="text" value={formData.panNumber} onChange={handleChange} disabled={isSubmitting} />
             </div>
 
             <h3 className="text-xl font-semibold text-secondary-foreground dark:text-secondary">Billing Details</h3>
             <div>
               <Label htmlFor="address">Address*</Label>
-              <Input id="address" type="text" required value={formData.address} onChange={handleChange} />
+              <Input id="address" type="text" required value={formData.address} onChange={handleChange} disabled={isSubmitting} />
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
               <div>
                 <Label htmlFor="city">City*</Label>
-                <Input id="city" type="text" required value={formData.city} onChange={handleChange} />
+                <Input id="city" type="text" required value={formData.city} onChange={handleChange} disabled={isSubmitting} />
               </div>
               <div>
                 <Label htmlFor="state">State*</Label>
-                <Input id="state" type="text" required value={formData.state} onChange={handleChange} />
+                <Input id="state" type="text" required value={formData.state} onChange={handleChange} disabled={isSubmitting} />
               </div>
               <div>
                 <Label htmlFor="zipCode">Zip / Postal Code*</Label>
-                <Input id="zipCode" type="text" required value={formData.zipCode} onChange={handleChange} />
+                <Input id="zipCode" type="text" required value={formData.zipCode} onChange={handleChange} disabled={isSubmitting} />
               </div>
             </div>
 
             <div>
               <Label htmlFor="donationAmount">Donation Amount (₹)*</Label>
-              <Input id="donationAmount" type="number" required value={formData.donationAmount} onChange={handleChange} min="1" />
+              <Input id="donationAmount" type="number" required value={formData.donationAmount} onChange={handleChange} min="1" disabled={isSubmitting} />
             </div>
 
             <div>
               <Label htmlFor="occasion">Dedicate Your Donation on a Special Occasion (Optional)</Label>
-              <Input id="occasion" type="text" placeholder="e.g., Birthday, Anniversary, In Memory of..." value={formData.occasion} onChange={handleChange} />
+              <Input id="occasion" type="text" placeholder="e.g., Birthday, Anniversary, In Memory of..." value={formData.occasion} onChange={handleChange} disabled={isSubmitting} />
             </div>
 
-            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg rounded-md transition-colors duration-300">
-              Proceed to Payment
+            <Button type="submit" className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 text-lg rounded-md transition-colors duration-300" disabled={isSubmitting}>
+              {isSubmitting ? 'Processing...' : 'Proceed to Payment'}
             </Button>
           </form>
         </CardContent>
