@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -175,6 +175,54 @@ const Home = () => {
                 <p>Support our cow feeding program or discuss custom ways to contribute to our mission, extending kindness to all living beings.</p>
                 <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
                   <Link to="/what-we-do">Explore Options</Link>
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* How You Can Help Section */}
+      <section className="py-16 bg-gradient-to-br from-accent to-muted dark:from-gray-700 dark:to-gray-800 text-accent-foreground dark:text-gray-200">
+        <div className="container mx-auto px-4 md:px-6 text-center">
+          <h2 className="text-4xl font-bold mb-6 text-primary dark:text-primary-foreground">How You Can Help</h2>
+          <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
+            Your support is the backbone of our mission. Here are a few ways you can make a profound difference in the lives of those we serve.
+          </p>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
+              <CardHeader className="flex flex-col items-center text-center">
+                <IndianRupee className="h-12 w-12 text-primary mb-4" />
+                <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Donate Meals</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700 dark:text-gray-300">
+                <p>Provide a nutritious, home-cooked meal for just ₹21. Every donation directly feeds someone in need.</p>
+                <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
+                  <Link to="/donate-food">Donate Now</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
+              <CardHeader className="flex flex-col items-center text-center">
+                <HeartHandshake className="h-12 w-12 text-primary mb-4" />
+                <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Volunteer Your Time</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700 dark:text-gray-300">
+                <p>Join our dedicated team of volunteers. Your time and effort are invaluable in preparing and distributing meals.</p>
+                <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
+                  <Link to="/contact-us">Become a Volunteer</Link>
+                </Button>
+              </CardContent>
+            </Card>
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border dark:border-gray-700">
+              <CardHeader className="flex flex-col items-center text-center">
+                <CalendarDays className="h-12 w-12 text-primary mb-4" />
+                <CardTitle className="text-2xl font-bold text-primary dark:text-primary-foreground">Celebrate with Purpose</CardTitle>
+              </CardHeader>
+              <CardContent className="text-gray-700 dark:text-gray-300">
+                <p>Mark your special occasions by sharing joy with underprivileged children. A unique way to celebrate!</p>
+                <Button asChild variant="link" className="mt-4 text-primary dark:text-primary-foreground">
+                  <Link to="/what-we-do">Plan Your Celebration</Link>
                 </Button>
               </CardContent>
             </Card>
