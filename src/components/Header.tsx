@@ -2,16 +2,15 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Search } from 'lucide-react';
+import { Menu, Search, QrCode } from 'lucide-react'; // Added QrCode import
 import { Input } from '@/components/ui/input';
-// Removed ModeToggle import
 
 const navItems = [
   { name: 'Home', path: '/' },
   { name: 'About Us', path: '/about-us' },
   { name: 'What We Do', path: '/what-we-do' },
   { name: 'Donate Food', path: '/donate-food' },
-  { name: 'General Donations', path: '/general-donations' }, // Updated path for renamed page
+  { name: 'General Donations', path: '/general-donations' },
   { name: 'FAQs', path: '/faqs' },
   { name: 'Gallery', path: '/gallery' },
   { name: 'Contact Us', path: '/contact-us' },
@@ -33,7 +32,6 @@ const Header = () => {
     } else if (lowerCaseSearchTerm.includes('terms')) {
       navigate('/terms-and-conditions');
     } else {
-      // Optionally show a toast or alert if nothing is found
       console.log('No matching page found for:', searchTerm);
     }
     setSearchTerm('');
@@ -42,10 +40,18 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
-          <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
+            <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
+            <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
+          </Link>
+          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
+            <Link to="/donate-food" className="flex items-center gap-1">
+              <QrCode className="h-4 w-4" />
+              <span className="text-sm">Show QR</span>
+            </Link>
+          </Button>
+        </div>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
@@ -56,11 +62,9 @@ const Header = () => {
               }`}
             >
               {item.name}
-              {/* Underline effect for active link */}
               {location.pathname === item.path && (
                 <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-transform duration-300"></span>
               )}
-              {/* Hover underline effect */}
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
@@ -74,7 +78,6 @@ const Header = () => {
             />
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           </form>
-          {/* ModeToggle removed */}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
@@ -89,6 +92,12 @@ const Header = () => {
                 <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
                 <span className="text-lg font-semibold text-primary">Nav Kalyan Sanstha</span>
               </Link>
+              <Button asChild variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
+                <Link to="/donate-food" className="flex items-center gap-1">
+                  <QrCode className="h-4 w-4" />
+                  <span className="text-base">Show QR</span>
+                </Link>
+              </Button>
               <form onSubmit={handleSearch} className="relative mb-4">
                 <Input
                   type="text"
@@ -108,9 +117,6 @@ const Header = () => {
                   {item.name}
                 </Link>
               ))}
-              <div className="mt-auto">
-                {/* ModeToggle removed */}
-              </div>
             </div>
           </SheetContent>
         </Sheet>

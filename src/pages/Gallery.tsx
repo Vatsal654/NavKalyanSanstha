@@ -6,15 +6,14 @@ const images = [
   { src: '/images/gallery-2.jpg', alt: 'Child reaching for food' },
   { src: '/images/gallery-3.jpg', alt: 'Food package being handed over' },
   { src: '/images/gallery-4.jpg', alt: 'Another food package being handed over' },
-  { src: '/images/hero_2.jpg', alt: 'Kid with food plate' }, // Updated image
-  { src: '/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg', alt: 'Children eating together' }, // Updated image
-  { src: '/images/20190122164349_838A3181_D5P3M1bwCyu0x7.jpg', alt: 'Volunteer distributing food' }, // Updated image
-  { src: 'https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Community meal' },
-  { src: 'https://images.unsplash.com/photo-1593113616828-60bc0b06f170?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Volunteer distributing food' },
-  { src: 'https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Community meal' },
-  { src: 'https://images.unsplash.com/photo-1593113598332-cd288d649433?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Children eating together' },
-  { src: 'https://images.unsplash.com/photo-1593113616828-60bc0b06f170?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Volunteer distributing food' },
-  { src: 'https://images.unsplash.com/photo-1593113630400-f711629579a7?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', alt: 'Community meal' },
+  { src: '/images/hero_2.jpg', alt: 'Kid with food plate' },
+  { src: '/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg', alt: 'Children eating together' },
+  { src: '/images/20190122164349_838A3181_D5P3M1bwCyu0x7.jpg', alt: 'Volunteer distributing food' },
+  { src: '/images/istockphoto-941786374-612x612.jpg', alt: 'Children waiting for food' },
+  { src: '/images/malmas-1-1024x683.jpg', alt: 'Donation in temple' },
+  { src: '/images/target-image1.jpg', alt: 'Children celebrating birthday' },
+  { src: '/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg', alt: 'Woman feeding cow' },
+  { src: '/images/cow-feeding-her-calf-varanasi-india-ali-kabas.jpg', alt: 'Cow feeding calf' },
 ];
 
 const Gallery = () => {

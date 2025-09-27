@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone } from 'lucide-react'; // Added Phone import
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone } from 'lucide-react';
 
 const Home = () => {
   return (
@@ -187,7 +187,7 @@ const Home = () => {
                 <CardTitle className="text-2xl font-bold text-primary">Gau Seva & Custom Donations</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                <p className="mb-4">Extend your kindness to all living beings through our revered Gau Seva (cow feeding) program. We facilitate donations specifically for providing nutritious fodder and essential care for these gentle animals, reflecting our broader commitment to compassion and welfare. Additionally, if you have a unique act of charity in mind or wish to make a custom donation for specific needs, we are open to discussing and facilitating your generous contributions.</p>
+                <p className="mb-4">Extend your profound kindness and compassion to all living beings through our revered Gau Seva (cow feeding) program. We actively facilitate donations specifically dedicated to providing nutritious fodder, clean water, and essential veterinary care for these gentle and sacred animals. This initiative is a reflection of our broader commitment to compassion and welfare for all creatures, promoting a holistic approach to charity that extends beyond human beneficiaries. Your contribution to Gau Seva helps us ensure the well-being and respectful treatment of these animals, upholding a cherished tradition of service.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Gau Seva:</strong> Support the feeding and care of cows, a sacred act of kindness.</li>
                   <li><strong>Custom Donations:</strong> Tailor your contribution to specific needs or projects you care about.</li>
@@ -230,7 +230,7 @@ const Home = () => {
               </CardHeader>
               <CardContent className="text-gray-700">
                 <p className="mb-4">Join our dedicated team of volunteers and become a helping hand. Your time and effort are invaluable in preparing and distributing meals, connecting with the community, and making a tangible difference on the ground. We welcome passionate individuals to join our cause.</p>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
                   <Link to="/contact-us">Become a Volunteer</Link>
                 </Button>
               </CardContent>
@@ -242,7 +242,7 @@ const Home = () => {
               </CardHeader>
               <CardContent className="text-gray-700">
                 <p className="mb-4">Mark your special occasions by sharing joy with underprivileged children. A unique and heartwarming way to celebrate your milestones—be it birthdays, anniversaries, or achievements—by giving back to the community and creating smiles!</p>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
                   <Link to="/what-we-do">Plan Your Celebration</Link>
                 </Button>
               </CardContent>
