@@ -46,7 +46,7 @@ const ContactUs = () => {
           </CardHeader>
           <CardContent className="text-gray-700">
             <p className="mb-2">For detailed inquiries, partnership proposals, or general correspondence, please send us an email:</p>
-            <p>For General Inquiries: <a href="mailto:info@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">info@navkalyansansthadelhi.org</a></p>
+            <p>For General Inquiries: <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a></p>
             <p>For Donations: <a href="mailto:donations@navkalyansansthadelhi.org" className="text-blue-500 hover:underline">donations@navkalyansansthadelhi.org</a></p>
             <p className="text-sm text-muted-foreground mt-2">We strive to respond to all emails within 24-48 business hours.</p>
           </CardContent>
@@ -61,7 +61,7 @@ const ContactUs = () => {
           <CardContent className="text-gray-700">
             <p className="mb-2">Stay updated with our latest activities, events, and impact stories by connecting with us on social media:</p>
             <p>Instagram: <a href="https://www.instagram.com/nav.kalyan.sanstha/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">@nav.kalyan.sanstha</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/company/nav-kalyan-sanstha-delhi" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">linkedin.com/company/nav-kalyan-sanstha-delhi</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nav-kalyan-sanstha/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">linkedin.com/in/nav-kalyan-sanstha</a></p>
             <p className="text-sm text-muted-foreground mt-2">Follow us to see the real-time impact of your support!</p>
           </CardContent>
         </Card>

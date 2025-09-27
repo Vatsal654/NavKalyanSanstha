@@ -38,10 +38,10 @@ const DonateFood = () => {
               <IndianRupee className="h-12 w-12 text-accent mb-4" />
               <CardTitle className="text-xl text-primary mb-4">UPI (Paytm, Google Pay, PhonePe, etc.)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
-                <p><strong>UPI ID:</strong> nav.kalyan.sanstha@upi</p>
+                <p><strong>UPI ID:</strong> 9958349220@ibl</p>
                 <p className="mt-4">Scan this QR code to make a quick payment:</p>
                 <div className="flex justify-center p-4 bg-white rounded-md mt-2">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=nav.kalyan.sanstha@upi&pn=NavKalyanSanstha&cu=INR" alt="UPI QR Code" className="w-48 h-48" />
+                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=9958349220@ibl&pn=NavKalyanSanstha&cu=INR" alt="UPI QR Code" className="w-48 h-48" />
                 </div>
               </CardContent>
             </Card>
@@ -51,7 +51,7 @@ const DonateFood = () => {
               <CardTitle className="text-xl text-primary mb-4">Bank Transfer (NEFT/RTGS/IMPS)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
                 <p>For larger contributions or if you prefer traditional banking, you can make a direct bank transfer:</p>
-                <p><strong>Bank Name:</strong> Jana Bank</p>
+                <p><strong>Bank Name:</strong> Axis Bank</p>
                 <p><strong>Account Name:</strong> Nav Kalyan Sanstha</p>
                 <p><strong>Account Number:</strong> 50100XXXXXXX</p> {/* Placeholder for actual account number */}
                 <p><strong>IFSC Code:</strong> JANA0000XXX</p> {/* Placeholder for actual IFSC code */}

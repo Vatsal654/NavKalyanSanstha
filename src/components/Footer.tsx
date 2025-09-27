@@ -28,7 +28,7 @@ const Footer = () => {
             <Instagram className="h-5 w-5" />
           </a>
           <a
-            href="https://www.linkedin.com/company/nav-kalyan-sanstha-delhi" // Mock LinkedIn link
+            href="https://www.linkedin.com/in/nav-kalyan-sanstha/"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-accent transition-colors"

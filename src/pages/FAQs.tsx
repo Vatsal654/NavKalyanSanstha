@@ -13,7 +13,7 @@ const faqs = [
   },
   {
     question: 'How can I contribute to your food distribution program?',
-    answer: 'You can make a significant impact by donating a food package for just ₹21. We accept donations via UPI to our dedicated ID: nav.kalyan.sanstha@upi. For larger contributions or if you prefer alternative methods, we also accept bank transfers. Detailed information on all donation methods, including our bank account details and UPI QR code, can be found on our "Donate Food" page. Your contribution directly translates into a warm meal for someone in need.',
+    answer: 'You can make a significant impact by donating a food package for just ₹21. We accept donations via UPI to our dedicated ID: 9958349220@ibl. For larger contributions or if you prefer alternative methods, we also accept bank transfers. Detailed information on all donation methods, including our bank account details and UPI QR code, can be found on our "Donate Food" page. Your contribution directly translates into a warm meal for someone in need.',
   },
   {
     question: 'When do you conduct your food distribution drives?',
