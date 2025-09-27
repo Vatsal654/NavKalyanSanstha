@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom'; // Import useLocation
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
 import { Menu, Search } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { ModeToggle } from './ModeToggle'; // Import ModeToggle
+import { ModeToggle } from './ModeToggle';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -20,6 +20,7 @@ const navItems = [
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
+  const location = useLocation(); // Get current location
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -39,20 +40,28 @@ const Header = () => {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-white/80 backdrop-blur-sm dark:bg-gray-900/80">
+    <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
-          <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full" />
-          <span className="text-lg font-semibold text-primary dark:text-primary-foreground">Nav Kalyan Sanstha</span>
+          <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700" /> {/* Added fallback bg */}
+          <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
         </Link>
         <nav className="hidden md:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
               to={item.path}
-              className="text-sm font-medium text-gray-600 hover:text-primary dark:text-gray-300 dark:hover:text-primary-foreground transition-colors"
+              className={`text-sm font-medium text-primary-foreground hover:text-accent transition-colors relative group ${
+                location.pathname === item.path ? 'text-accent' : '' // Apply accent color if active
+              }`}
             >
               {item.name}
+              {/* Underline effect for active link */}
+              {location.pathname === item.path && (
+                <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent transition-transform duration-300"></span>
+              )}
+              {/* Hover underline effect */}
+              <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
           <form onSubmit={handleSearch} className="relative">
@@ -61,23 +70,23 @@ const Header = () => {
               placeholder="Search..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none"
+              className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none text-foreground"
             />
             <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
           </form>
-          <ModeToggle /> {/* Add ModeToggle here */}
+          <ModeToggle />
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden">
+            <Button variant="outline" size="icon" className="md:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right">
+          <SheetContent side="right" className="bg-background dark:bg-gray-900">
             <div className="flex flex-col gap-4 py-6">
               <Link to="/" className="flex items-center gap-2 mb-4">
-                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full" />
+                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200 dark:bg-gray-700" /> {/* Added fallback bg */}
                 <span className="text-lg font-semibold text-primary dark:text-primary-foreground">Nav Kalyan Sanstha</span>
               </Link>
               <form onSubmit={handleSearch} className="relative mb-4">
@@ -86,7 +95,7 @@ const Header = () => {
                   placeholder="Search..."
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none w-full"
+                  className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none w-full text-foreground"
                 />
                 <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               </form>
@@ -94,14 +103,13 @@ const Header = () => {
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="text-lg font-medium text-gray-700 hover:text-primary dark:text-gray-200 dark:hover:text-primary-foreground transition-colors"
+                  className="text-lg font-medium text-foreground hover:text-accent dark:text-gray-200 dark:hover:text-primary-foreground transition-colors"
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="mt-auto">
-                <ModeToggle /> {/* Add ModeToggle to mobile menu */}
-                {/* <MadeWithDyad /> */} {/* Removed MadeWithDyad from here to simplify */}
+                <ModeToggle />
               </div>
             </div>
           </SheetContent>

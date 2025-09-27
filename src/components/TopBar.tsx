@@ -3,14 +3,14 @@ import { Phone, Mail, Instagram, Linkedin } from 'lucide-react';
 
 const TopBar = () => {
   return (
-    <div className="bg-primary text-primary-foreground py-2 text-sm"> {/* Removed hidden md:block */}
+    <div className="bg-primary text-primary-foreground py-2 text-sm">
       <div className="container flex items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-6">
-          <a href="tel:+919118898507" className="flex items-center gap-2 hover:underline transition-colors">
+          <a href="tel:+919118898507" className="flex items-center gap-2 hover:underline transition-colors hover:text-accent">
             <Phone className="h-4 w-4" />
             <span>+919118898507</span>
           </a>
-          <a href="mailto:info@navkalyansansthadelhi.org" className="flex items-center gap-2 hover:underline transition-colors">
+          <a href="mailto:info@navkalyansansthadelhi.org" className="flex items-center gap-2 hover:underline transition-colors hover:text-accent">
             <Mail className="h-4 w-4" />
             <span>info@navkalyansansthadelhi.org</span>
           </a>

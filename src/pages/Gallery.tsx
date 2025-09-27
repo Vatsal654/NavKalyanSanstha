@@ -37,7 +37,7 @@ const Gallery = () => {
         {images.map((image, index) => (
           <div
             key={index}
-            className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group"
+            className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200 dark:bg-gray-700" // Added fallback bg and min-h
             onClick={() => handleImageClick(image)}
           >
             <img
