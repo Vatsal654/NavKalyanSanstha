@@ -43,7 +43,10 @@ const Header = () => {
         <div className="flex items-center gap-2">
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
-            <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
+            <div className="flex flex-col items-start">
+              <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
+              <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
+            </div>
           </Link>
           <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
             <Link to="/donate-food" className="flex items-center gap-1">
@@ -90,7 +93,10 @@ const Header = () => {
             <div className="flex flex-col gap-4 py-6">
               <Link to="/" className="flex items-center gap-2 mb-4">
                 <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
-                <span className="text-lg font-semibold text-primary">Nav Kalyan Sanstha</span>
+                <div className="flex flex-col items-start">
+                  <span className="text-lg font-semibold text-primary">Nav Kalyan Sanstha</span>
+                  <span className="text-sm text-primary/80 -mt-1">Charity Organization</span>
+                </div>
               </Link>
               <Button asChild variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
                 <Link to="/donate-food" className="flex items-center gap-1">

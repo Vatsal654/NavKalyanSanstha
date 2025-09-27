@@ -1,10 +1,26 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react'; // Added Search import
+import { Dialog, DialogContent } from '@/components/ui/dialog'; // Import Dialog components
 
 const Home = () => {
+  const [open, setOpen] = useState(false);
+  const [selectedImage, setSelectedImage] = useState<{ src: string; alt: string } | null>(null);
+
+  const handleImageClick = (image: { src: string; alt: string }) => {
+    setSelectedImage(image);
+    setOpen(true);
+  };
+
+  const galleryImages = [
+    { src: '/images/gallery-1.jpg', alt: 'Child receiving food' },
+    { src: '/images/gallery-2.jpg', alt: 'Child reaching for food' },
+    { src: '/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg', alt: 'Woman feeding cow' },
+    { src: '/images/target-image1.jpg', alt: 'Children celebrating birthday' },
+  ];
+
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
@@ -259,30 +275,22 @@ const Home = () => {
             Witness the smiles your generosity creates and the profound impact of our collective efforts. Our gallery captures heartwarming moments from our food distribution drives, special events, and community interactions, showcasing the real difference your support makes in countless lives.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
-            <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/gallery-1.jpg" alt="Child receiving food" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Search className="h-8 w-8 text-white" />
+            {galleryImages.map((image, index) => (
+              <div
+                key={index}
+                className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200"
+                onClick={() => handleImageClick(image)}
+              >
+                <img
+                  src={image.src}
+                  alt={image.alt}
+                  className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <Search className="h-8 w-8 text-white" />
+                </div>
               </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/gallery-2.jpg" alt="Child reaching for food" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Search className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg" alt="Woman feeding cow" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Search className="h-8 w-8 text-white" />
-              </div>
-            </div>
-            <div className="relative overflow-hidden rounded-lg shadow-lg cursor-pointer group min-h-[150px] bg-gray-200">
-              <img src="/images/target-image1.jpg" alt="Children celebrating birthday" className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110" />
-              <div className="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <Search className="h-8 w-8 text-white" />
-              </div>
-            </div>
+            ))}
           </div>
           <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg rounded-md shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
             <Link to="/gallery">View Full Gallery</Link>
@@ -334,6 +342,18 @@ const Home = () => {
           </div>
         </div>
       </section>
+
+      <Dialog open={open} onOpenChange={setOpen}>
+        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
+          {selectedImage && (
+            <img
+              src={selectedImage.src}
+              alt={selectedImage.alt}
+              className="w-full h-auto max-h-[90vh] object-contain"
+            />
+          )}
+        </DialogContent>
+      </Dialog>
     </div>
   );
 };
