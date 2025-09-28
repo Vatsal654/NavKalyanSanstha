@@ -16,7 +16,7 @@ const AnimatedNumber: React.FC<AnimatedNumberProps> = ({ to, prefix = '', suffix
     if (!node) return;
 
     const controls = animate(0, to, {
-      duration: 0.55, // 550ms as requested
+      duration: 1, // Changed from 0.55 to 1 second
       ease: "easeOut",
       onUpdate(value) {
         // Use toLocaleString() to format numbers like 3,000
