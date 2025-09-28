@@ -1,10 +1,21 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { Link } from 'react-router-dom';
-import { IndianRupee, Banknote } from 'lucide-react'; // Added icons for payment methods
+import { Link, useLocation } from 'react-router-dom';
+import { IndianRupee, Banknote } from 'lucide-react';
 
 const DonateFood = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash === '#donation-qr-section') {
+      const element = document.getElementById('donation-qr-section');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">Nav Seva - A Gift of Food, A Gift of Life.</h1>
@@ -23,7 +34,7 @@ const DonateFood = () => {
         </p>
       </section>
 
-      <Card className="max-w-3xl mx-auto shadow-lg border border-border bg-card">
+      <Card id="donation-qr-section" className="max-w-3xl mx-auto shadow-lg border border-border bg-card">
         <CardHeader>
           <CardTitle className="text-3xl font-bold text-primary text-center">Complete Your Donation</CardTitle>
           <CardDescription className="text-gray-600 text-center mt-2">Thank you for your generosity! Please use one of the following secure methods to complete your donation.</CardDescription>
@@ -38,7 +49,7 @@ const DonateFood = () => {
               <IndianRupee className="h-12 w-12 text-accent mb-4" />
               <CardTitle className="text-xl text-primary mb-4">UPI (Paytm, Google Pay, PhonePe, etc.)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
-                <p><strong>UPI ID:</strong> 9958349220@ibl</p>
+                <p><strong>UPI ID:</strong> 9958349220@kotak811</p>
                 <p className="mt-4">Scan this QR code to make a quick payment:</p>
                 <div className="flex justify-center p-4 bg-white rounded-md mt-2">
                   <img src="/images/qr-code.jpg" alt="UPI QR Code" className="w-48 h-48" />
@@ -51,11 +62,11 @@ const DonateFood = () => {
               <CardTitle className="text-xl text-primary mb-4">Bank Transfer (NEFT/RTGS/IMPS)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
                 <p>For larger contributions or if you prefer traditional banking, you can make a direct bank transfer:</p>
-                <p><strong>Bank Name:</strong> Axis Bank</p>
-                <p><strong>Account Name:</strong> Nav Kalyan Sanstha</p>
-                <p><strong>Account Number:</strong> 50100XXXXXXX</p> {/* Placeholder for actual account number */}
-                <p><strong>IFSC Code:</strong> JANA0000XXX</p> {/* Placeholder for actual IFSC code */}
-                <p><strong>Account Type:</strong> Savings</p>
+                <p><strong>Bank Name:</strong> Kotak Bank</p>
+                <p><strong>Account Name:</strong> Shreyshi Arya</p>
+                <p><strong>Account Number:</strong> 4750795681</p>
+                <p><strong>IFSC Code:</strong> KKBK0000634</p>
+                <p><strong>Account Type:</strong> Savings Account</p>
               </CardContent>
             </Card>
           </div>

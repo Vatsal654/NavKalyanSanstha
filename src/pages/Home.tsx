@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react'; // Added Search import
-import { Dialog, DialogContent } from '@/components/ui/dialog'; // Import Dialog components
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -26,8 +26,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
         <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-gray-200" // Fallback bg
-          style={{ backgroundImage: 'url(/images/hero_2.jpg)' }} // Updated image
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-gray-200"
+          style={{ backgroundImage: 'url(/images/hero_2.jpg)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
         </div>
@@ -55,7 +55,7 @@ const Home = () => {
 
           <div className="flex flex-col md:flex-row justify-center gap-4">
             <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
-              <Link to="/donate-food">Donate a Meal Now (₹21)</Link>
+              <Link to="/donate-food#donation-qr-section">Donate a Meal Now (₹21)</Link>
             </Button>
             <Button asChild variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-7 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
               <Link to="/about-us">Learn Our Story</Link>
@@ -77,7 +77,7 @@ const Home = () => {
                 <Users className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">About Us</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="flex-grow flex flex-col justify-between p-4">
                 <p className="text-sm mb-4 text-wrap">Discover our inspiring journey, our unwavering vision for a better society, and meet the dedicated team behind Nav Kalyan Sanstha.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/about-us">Our Story</Link>
@@ -89,7 +89,7 @@ const Home = () => {
                 <UtensilsCrossed className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">What We Do</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="flex-grow flex flex-col justify-between p-4">
                 <p className="text-sm mb-4 text-wrap">Learn about our impactful weekly food drives, special initiatives like Gau Seva, and how we bring hope to the community.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/what-we-do">Our Programs</Link>
@@ -101,10 +101,10 @@ const Home = () => {
                 <IndianRupee className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Donate Food</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="flex-grow flex flex-col justify-between p-4">
                 <p className="text-sm mb-4 text-wrap">Contribute a nutritious meal for just ₹21 and make a direct, tangible impact on someone's life today.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
-                  <Link to="/donate-food">Donate Now</Link>
+                  <Link to="/donate-food#donation-qr-section">Donate Now</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -113,7 +113,7 @@ const Home = () => {
                 <GalleryHorizontal className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Gallery</CardTitle>
               </CardHeader>
-              <CardContent className="flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="flex-grow flex flex-col justify-between p-4">
                 <p className="text-sm mb-4 text-wrap">Browse heartwarming moments from our food distribution drives and special events, showcasing our impact.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/gallery">View Photos</Link>
@@ -143,7 +143,7 @@ const Home = () => {
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2 min-h-[200px] bg-gray-200">
               <img
-                src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg" // Updated image
+                src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg"
                 alt="Volunteers serving food"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -166,7 +166,7 @@ const Home = () => {
                 <HandHeart className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Weekly Food Distribution</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Our core program involves the consistent distribution of hundreds of healthy, home-cooked meals. Every Tuesday and Saturday, our dedicated volunteers reach out to underprivileged children and individuals across various locations in Delhi, ensuring that no one in our community goes hungry. This program is the heartbeat of our mission, providing essential nourishment and a message of hope.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Impact:</strong> Providing consistent nourishment and hope to vulnerable communities.</li>
@@ -184,7 +184,7 @@ const Home = () => {
                 <UtensilsCrossed className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Us</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Make your special occasions—be it birthdays, anniversaries, or significant milestones—truly unforgettable by sharing your joy. For a modest contribution of ₹500-₹600, we can arrange for a cake cutting and celebration with the children we serve. This unique initiative creates heartwarming moments of happiness and allows you to give back in a deeply personal way.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Occasions:</strong> Ideal for Birthdays, Anniversaries, Graduations, or any personal milestone.</li>
@@ -202,7 +202,7 @@ const Home = () => {
                 <PiggyBank className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Gau Seva & Custom Donations</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Extend your profound kindness and compassion to all living beings through our revered Gau Seva (cow feeding) program. We actively facilitate donations specifically dedicated to providing nutritious fodder, clean water, and essential veterinary care for these gentle and sacred animals. This initiative is a reflection of our broader commitment to compassion and welfare for all creatures, promoting a holistic approach to charity that extends beyond human beneficiaries. Your contribution to Gau Seva helps us ensure the well-being and respectful treatment of these animals, upholding a cherished tradition of service.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Gau Seva:</strong> Support the feeding and care of cows, a sacred act of kindness.</li>
@@ -232,10 +232,10 @@ const Home = () => {
                 <IndianRupee className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Donate Meals</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Provide a nutritious, home-cooked meal for just ₹21. Every donation directly feeds someone in need and brings a smile to their face, offering essential sustenance and hope. Your contribution ensures a warm meal reaches those who need it most.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
-                  <Link to="/donate-food">Donate Now</Link>
+                  <Link to="/donate-food#donation-qr-section">Donate Now</Link>
                 </Button>
               </CardContent>
             </Card>
@@ -244,7 +244,7 @@ const Home = () => {
                 <HeartHandshake className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Volunteer Your Time</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Join our dedicated team of volunteers and become a helping hand. Your time and effort are invaluable in preparing and distributing meals, connecting with the community, and making a tangible difference on the ground. We welcome passionate individuals to join our cause.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
                   <Link to="/contact-us">Become a Volunteer</Link>
@@ -256,7 +256,7 @@ const Home = () => {
                 <CalendarDays className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Purpose</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Mark your special occasions by sharing joy with underprivileged children. A unique and heartwarming way to celebrate your milestones—be it birthdays, anniversaries, or achievements—by giving back to the community and creating smiles!</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
                   <Link to="/what-we-do">Plan Your Celebration</Link>
@@ -308,7 +308,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
             <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2 min-h-[200px] bg-gray-200">
               <img
-                src="/images/Black-and-Yellow-Photo-Modern-Business-Instagram-Post-3.jpg" // Updated image
+                src="/images/Black-and-Yellow-Photo-Modern-Business-Instagram-Post-3.jpg"
                 alt="People collaborating"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -320,7 +320,7 @@ const Home = () => {
                 <MessageSquareText className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Quick FAQs</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Find answers to common questions about our mission, donation processes, and operational details quickly and easily. Our comprehensive FAQ section is designed to provide clarity and assist you.</p>
                 <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/faqs">View FAQs</Link>
@@ -332,7 +332,7 @@ const Home = () => {
                 <Phone className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Direct Contact</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between p-4">
                 <p className="mb-4 text-wrap">Reach out to us directly via phone, email, or visit our office during working hours. We're here to help with any inquiries, discuss potential collaborations, or guide you through volunteer opportunities!</p>
                 <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/contact-us">Contact Us</Link>

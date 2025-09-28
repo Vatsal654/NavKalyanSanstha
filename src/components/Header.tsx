@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Search, QrCode } from 'lucide-react'; // Added QrCode import
+import { Menu, Search, QrCode } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 
 const navItems = [
@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-2 flex-shrink-0"> {/* Added flex-shrink-0 */}
+        <div className="flex items-center gap-2 flex-shrink-0">
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
             <div className="flex flex-col items-start">
@@ -49,13 +49,13 @@ const Header = () => {
             </div>
           </Link>
           <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
-            <Link to="/donate-food" className="flex items-center gap-1">
+            <Link to="/donate-food#donation-qr-section" className="flex items-center gap-1">
               <QrCode className="h-4 w-4" />
               <span className="text-sm">Show QR</span>
             </Link>
           </Button>
         </div>
-        <nav className="hidden lg:flex items-center gap-6"> {/* Changed md:flex to lg:flex */}
+        <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -84,7 +84,7 @@ const Header = () => {
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground"> {/* Changed md:hidden to lg:hidden */}
+            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
@@ -99,7 +99,7 @@ const Header = () => {
                 </div>
               </Link>
               <Button asChild variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
-                <Link to="/donate-food" className="flex items-center gap-1">
+                <Link to="/donate-food#donation-qr-section" className="flex items-center gap-1">
                   <QrCode className="h-4 w-4" />
                   <span className="text-base">Show QR</span>
                 </Link>
