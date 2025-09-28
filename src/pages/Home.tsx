@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search, Utensils } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
 import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
 
