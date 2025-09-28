@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react'; // Import useEffect
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
@@ -24,6 +24,11 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
+
+  // Added a non-functional useEffect to ensure this file is re-processed
+  useEffect(() => {
+    console.log("Header component rendered or re-rendered.");
+  }, []);
 
   const handleSearchSelect = (itemPath: string, itemAnchor?: string) => {
     setOpenSearch(false);
