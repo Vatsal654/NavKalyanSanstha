@@ -25,32 +25,24 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
-      <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
-        <img
-          src="/images/child-reaching-for-food.jpg"
-          alt="Child reaching for a meal"
-          className="absolute inset-0 w-full h-full object-cover bg-gray-200"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
-        <BackgroundPattern Icon={HandHeart} size={300} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
-        <BackgroundPattern Icon={UtensilsCrossed} size={250} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
-        <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">A Meal of Hope. A Gesture of Love.</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto drop-shadow">
+      <section className="bg-primary text-primary-foreground min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-24">
+        <div className="p-4 md:p-8 max-w-5xl mx-auto">
+          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">A Meal of Hope. A Gesture of Love.</h1>
+          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             Welcome to Nav Kalyan Sanstha Delhi. We are a non-profit, women-led initiative dedicated to serving fresh, home-cooked meals to those in need. For just ₹21, you can provide a nutritious meal and be a part of our mission to ensure no one in our community goes hungry. Our commitment extends beyond just food; it's about fostering dignity, community, and hope.
           </p>
-          <p className="text-2xl md:text-3xl font-semibold mb-10 text-accent drop-shadow">Our Slogan: Donate. Impact. Change.</p>
+          <p className="text-2xl md:text-3xl font-semibold mb-10 text-accent">Our Slogan: Donate. Impact. Change.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">3000+</h3>
               <p className="text-lg">Meals Served and Counting</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">100%</h3>
               <p className="text-lg">Volunteer Driven</p>
             </div>
-            <div className="bg-white/10 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
+            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">₹21</h3>
               <p className="text-lg">Provides One Hygienic, Home-Cooked Meal</p>
             </div>
