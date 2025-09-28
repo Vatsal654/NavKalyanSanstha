@@ -72,50 +72,50 @@ const Home = () => {
             Dive deeper into the heart of Nav Kalyan Sanstha Delhi. Discover our core values, the impact we've made, and the various ways you can join us in creating a hunger-free community. Each section provides a deeper insight into our work and the various ways you can contribute.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Users className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">About Us</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col justify-between">
                 <p className="text-sm mb-4">Discover our inspiring journey, our unwavering vision for a better society, and meet the dedicated team behind Nav Kalyan Sanstha.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/about-us">Our Story</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <UtensilsCrossed className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">What We Do</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col justify-between">
                 <p className="text-sm mb-4">Learn about our impactful weekly food drives, special initiatives like Gau Seva, and how we bring hope to the community.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/what-we-do">Our Programs</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <IndianRupee className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Donate Food</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col justify-between">
                 <p className="text-sm mb-4">Contribute a nutritious meal for just ₹21 and make a direct, tangible impact on someone's life today.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/donate-food">Donate Now</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <GalleryHorizontal className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Gallery</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="flex-grow flex flex-col justify-between">
                 <p className="text-sm mb-4">Browse heartwarming moments from our food distribution drives and special events, showcasing our impact.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/gallery">View Photos</Link>
                 </Button>
               </CardContent>
@@ -161,12 +161,12 @@ const Home = () => {
             Beyond our regular food distribution, we organize special programs that allow our community to engage in unique acts of kindness and celebrate life's moments with those less fortunate. Each initiative is a step towards a more compassionate society, fostering hope and well-being for all.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <HandHeart className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Weekly Food Distribution</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Our core program involves the consistent distribution of hundreds of healthy, home-cooked meals. Every Tuesday and Saturday, our dedicated volunteers reach out to underprivileged children and individuals across various locations in Delhi, ensuring that no one in our community goes hungry. This program is the heartbeat of our mission, providing essential nourishment and a message of hope.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Impact:</strong> Providing consistent nourishment and hope to vulnerable communities.</li>
@@ -174,17 +174,17 @@ const Home = () => {
                   <li><strong>Cost:</strong> Each nutritious, freshly prepared meal costs just ₹21.</li>
                   <li><strong>Quality:</strong> We ensure all meals are hygienic, home-cooked, and served with dignity.</li>
                 </ul>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/what-we-do">Learn More</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <UtensilsCrossed className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Us</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Make your special occasions—be it birthdays, anniversaries, or significant milestones—truly unforgettable by sharing your joy. For a modest contribution of ₹500-₹600, we can arrange for a cake cutting and celebration with the children we serve. This unique initiative creates heartwarming moments of happiness and allows you to give back in a deeply personal way.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Occasions:</strong> Ideal for Birthdays, Anniversaries, Graduations, or any personal milestone.</li>
@@ -192,17 +192,17 @@ const Home = () => {
                   <li><strong>Contribution:</strong> A small contribution of ₹500-₹600 helps cover the costs of the celebration.</li>
                   <li><strong>Memories:</strong> Create lasting, meaningful memories by spreading happiness.</li>
                 </ul>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/what-we-do">Discover More</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <PiggyBank className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Gau Seva & Custom Donations</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Extend your profound kindness and compassion to all living beings through our revered Gau Seva (cow feeding) program. We actively facilitate donations specifically dedicated to providing nutritious fodder, clean water, and essential veterinary care for these gentle and sacred animals. This initiative is a reflection of our broader commitment to compassion and welfare for all creatures, promoting a holistic approach to charity that extends beyond human beneficiaries. Your contribution to Gau Seva helps us ensure the well-being and respectful treatment of these animals, upholding a cherished tradition of service.</p>
                 <ul className="list-disc list-inside text-left pl-4 space-y-1 text-sm">
                   <li><strong>Gau Seva:</strong> Support the feeding and care of cows, a sacred act of kindness.</li>
@@ -210,7 +210,7 @@ const Home = () => {
                   <li><strong>Flexibility:</strong> Contact us to discuss unique acts of charity and how we can help facilitate them.</li>
                   <li><strong>Holistic Welfare:</strong> Our commitment extends to the well-being of all creatures.</li>
                 </ul>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/what-we-do">Explore Options</Link>
                 </Button>
               </CardContent>
@@ -227,38 +227,38 @@ const Home = () => {
             Your support is the backbone of our mission, enabling us to reach more individuals and make a lasting impact. Here are a few profound ways you can contribute to a brighter future for our community. Every gesture of kindness, big or small, fuels our efforts.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <IndianRupee className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Donate Meals</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Provide a nutritious, home-cooked meal for just ₹21. Every donation directly feeds someone in need and brings a smile to their face, offering essential sustenance and hope. Your contribution ensures a warm meal reaches those who need it most.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
                   <Link to="/donate-food">Donate Now</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <HeartHandshake className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Volunteer Your Time</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Join our dedicated team of volunteers and become a helping hand. Your time and effort are invaluable in preparing and distributing meals, connecting with the community, and making a tangible difference on the ground. We welcome passionate individuals to join our cause.</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
                   <Link to="/contact-us">Become a Volunteer</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <CalendarDays className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Purpose</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Mark your special occasions by sharing joy with underprivileged children. A unique and heartwarming way to celebrate your milestones—be it birthdays, anniversaries, or achievements—by giving back to the community and creating smiles!</p>
-                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-4">
+                <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-6 py-3 rounded-md transition-colors duration-300 mt-auto">
                   <Link to="/what-we-do">Plan Your Celebration</Link>
                 </Button>
               </CardContent>
@@ -315,26 +315,26 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <p className="absolute bottom-4 left-4 text-white text-xl font-semibold">Join Our Community</p>
             </div>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <MessageSquareText className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Quick FAQs</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Find answers to common questions about our mission, donation processes, and operational details quickly and easily. Our comprehensive FAQ section is designed to provide clarity and assist you.</p>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/faqs">View FAQs</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Phone className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Direct Contact</CardTitle>
               </CardHeader>
-              <CardContent className="text-gray-700">
+              <CardContent className="text-gray-700 flex-grow flex flex-col justify-between">
                 <p className="mb-4">Reach out to us directly via phone, email, or visit our office during working hours. We're here to help with any inquiries, discuss potential collaborations, or guide you through volunteer opportunities!</p>
-                <Button asChild variant="link" className="mt-4 text-accent hover:text-accent/90">
+                <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                   <Link to="/contact-us">Contact Us</Link>
                 </Button>
               </CardContent>
