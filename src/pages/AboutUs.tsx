@@ -8,6 +8,41 @@ const AboutUs = () => {
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">About Us</h1>
 
+      <section className="relative mb-12 bg-muted p-8 rounded-lg shadow-lg border border-border">
+        <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Leadership: Guiding with Vision and Dedication</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
+          Nav Kalyan Sanstha Delhi is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
+        </p>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
+          <div className="flex flex-col items-center text-center">
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+              <img src="/images/seema-arya.jpg" alt="Ms. Seema Arya" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
+            <p className="text-lg text-gray-700">President</p>
+            <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
+          </div>
+          <div className="flex flex-col items-center text-center">
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+              <img src="/images/shreyshi-arya.jpg" alt="Ms. Shreyshi Arya" className="w-full h-full object-cover" />
+            </div>
+            <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
+            <p className="text-lg text-gray-700">Secretary</p>
+            <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>
+          </div>
+          <div className="md:col-span-2 text-center mt-8">
+            <p className="text-lg text-gray-700 leading-relaxed">
+              And a powerful team of countless helping hands – Our volunteers are the true heart and soul of our organization. Their selfless efforts on the ground, from meal preparation to distribution, make our mission a reality every single day, embodying the spirit of community service.
+            </p>
+          </div>
+        </div>
+        <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center relative z-10">
+          Together, this team works tirelessly to ensure that Nav Kalyan Sanstha Delhi continues to be a beacon of hope and service in the community, transforming lives one meal and one act of kindness at a time. We are deeply grateful for their leadership and the collective spirit that propels our mission forward.
+        </p>
+      </section>
+
       <section className="relative mb-12 bg-background p-8 rounded-lg shadow-lg border border-border">
         <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Story: The Spark of Service</h2>
@@ -53,41 +88,6 @@ const AboutUs = () => {
           </CardContent>
         </Card>
       </div>
-
-      <section className="relative bg-muted p-8 rounded-lg shadow-lg border border-border">
-        <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
-        <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Leadership: Guiding with Vision and Dedication</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
-          Nav Kalyan Sanstha Delhi is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
-        </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
-          <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
-              <img src="/images/seema-arya.jpg" alt="Ms. Seema Arya" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
-            <p className="text-lg text-gray-700">President</p>
-            <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
-          </div>
-          <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
-              <img src="/images/shreyshi-arya.jpg" alt="Ms. Shreyshi Arya" className="w-full h-full object-cover" />
-            </div>
-            <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
-            <p className="text-lg text-gray-700">Secretary</p>
-            <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>
-          </div>
-          <div className="md:col-span-2 text-center mt-8">
-            <p className="text-lg text-gray-700 leading-relaxed">
-              And a powerful team of countless helping hands – Our volunteers are the true heart and soul of our organization. Their selfless efforts on the ground, from meal preparation to distribution, make our mission a reality every single day, embodying the spirit of community service.
-            </p>
-          </div>
-        </div>
-        <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center relative z-10">
-          Together, this team works tirelessly to ensure that Nav Kalyan Sanstha Delhi continues to be a beacon of hope and service in the community, transforming lives one meal and one act of kindness at a time. We are deeply grateful for their leadership and the collective spirit that propels our mission forward.
-        </p>
-      </section>
     </div>
   );
 };

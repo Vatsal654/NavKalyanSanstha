@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link, useLocation } from 'react-router-dom';
-import { IndianRupee, Banknote, HandHeart } from 'lucide-react'; // Added HandHeart icon
+import { IndianRupee, Banknote, HandHeart, Users } from 'lucide-react'; // Added HandHeart and Users icons
 import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
 
 const DonateFood = () => {
@@ -95,6 +95,34 @@ const DonateFood = () => {
               <li>Child Birth or Adoption</li>
             </ul>
             <p className="mt-3 text-gray-700">When you send your payment screenshot, please let us know the occasion so we can share the blessings with you and acknowledge your thoughtful gesture!</p>
+          </div>
+        </CardContent>
+      </Card>
+
+      <Card className="relative max-w-3xl mx-auto shadow-lg border border-border bg-card mt-8">
+        <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <CardHeader className="relative z-10">
+          <CardTitle className="text-3xl font-bold text-primary text-center">Our Leadership</CardTitle>
+          <CardDescription className="text-gray-600 text-center mt-2">Meet the dedicated team guiding our mission.</CardDescription>
+        </CardHeader>
+        <CardContent className="relative z-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+                <img src="/images/seema-arya.jpg" alt="Ms. Seema Arya" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
+              <p className="text-lg text-gray-700">President</p>
+              <p className="text-sm text-muted-foreground mt-2">The visionary leader whose compassion and dedication are the driving force behind our organization.</p>
+            </div>
+            <div className="flex flex-col items-center text-center">
+              <div className="w-24 h-24 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+                <img src="/images/shreyshi-arya.jpg" alt="Ms. Shreyshi Arya" className="w-full h-full object-cover" />
+              </div>
+              <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
+              <p className="text-lg text-gray-700">Secretary</p>
+              <p className="text-sm text-muted-foreground mt-2">Instrumental in our mission, bringing fresh perspectives and tireless energy to our initiatives.</p>
+            </div>
           </div>
         </CardContent>
       </Card>

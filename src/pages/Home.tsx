@@ -27,8 +27,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
         <img
-          src="/images/cake-cutting-children.jpg"
-          alt="Children celebrating"
+          src="/images/child-reaching-for-food.jpg"
+          alt="Child reaching for a meal"
           className="absolute inset-0 w-full h-full object-cover bg-gray-200"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
