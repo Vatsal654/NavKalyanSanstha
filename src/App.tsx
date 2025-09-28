@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-// import Layout from "./components/Layout"; // Temporarily removed
+import Layout from "./components/Layout"; // Re-importing Layout
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
@@ -14,20 +14,21 @@ import NotFound from "./pages/NotFound";
 
 const App = () => (
   <BrowserRouter>
-    {/* Temporarily removed Layout component for debugging */}
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="/about-us" element={<AboutUs />} />
-      <Route path="/what-we-do" element={<WhatWeDo />} />
-      <Route path="/donate-food" element={<DonateFood />} />
-      <Route path="/general-donations" element={<GeneralDonations />} />
-      <Route path="/faqs" element={<FAQs />} />
-      <Route path="/gallery" element={<Gallery />} />
-      <Route path="/contact-us" element={<ContactUs />} />
-      <Route path="/privacy-policy" element={<PrivacyPolicy />} />
-      <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
+    <Layout> {/* Re-adding Layout here */}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/what-we-do" element={<WhatWeDo />} />
+        <Route path="/donate-food" element={<DonateFood />} />
+        <Route path="/general-donations" element={<GeneralDonations />} />
+        <Route path="/faqs" element={<FAQs />} />
+        <Route path="/gallery" element={<Gallery />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Layout> {/* Closing Layout tag */}
   </BrowserRouter>
 );
 
