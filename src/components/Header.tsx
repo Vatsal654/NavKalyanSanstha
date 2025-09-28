@@ -56,8 +56,7 @@ const Header = () => {
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
             </div>
           </Link>
-          {/* Removed asChild from this Button */}
-          <Button variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
+          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
             <Link to="/donate-food" className="flex items-center gap-1">
               <QrCode className="h-4 w-4" />
               <span className="text-sm">Show QR</span>
@@ -81,7 +80,6 @@ const Header = () => {
             </Link>
           ))}
           <Popover open={openSearch} onOpenChange={setOpenSearch}>
-            {/* PopoverTrigger now directly contains a Button, not using asChild */}
             <PopoverTrigger asChild={false}>
               <Button
                 variant="outline"
@@ -89,8 +87,11 @@ const Header = () => {
                 aria-expanded={openSearch}
                 className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
               >
-                <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                {searchTerm ? searchTerm : "Search..."}
+                {/* Wrapped icon and text in a single span */}
+                <span>
+                  <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                  {searchTerm ? searchTerm : "Search..."}
+                </span>
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[300px] p-0">
@@ -123,11 +124,13 @@ const Header = () => {
           </Popover>
         </nav>
         <Sheet>
-          {/* SheetTrigger now directly contains a Button, not using asChild */}
           <SheetTrigger asChild={false}>
             <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
+              {/* Wrapped icon and sr-only span in a single span */}
+              <span>
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
@@ -153,8 +156,10 @@ const Header = () => {
                     aria-expanded={openSearch}
                     className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
                   >
-                    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                    {searchTerm ? searchTerm : "Search..."}
+                    <span>
+                      <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                      {searchTerm ? searchTerm : "Search..."}
+                    </span>
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[calc(100%-2rem)] p-0">
