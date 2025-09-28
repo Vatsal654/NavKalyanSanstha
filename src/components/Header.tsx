@@ -80,17 +80,16 @@ const Header = () => {
             </Link>
           ))}
           <Popover open={openSearch} onOpenChange={setOpenSearch}>
-            {/* Corrected PopoverTrigger usage with asChild={true} and shadcn/ui Button */}
             <PopoverTrigger asChild>
-              <Button
-                variant="outline"
+              {/* Using a native span with button styling */}
+              <span
+                className="inline-flex items-center justify-between whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-[200px] bg-background text-foreground hover:bg-background/90 hover:text-foreground cursor-pointer"
                 role="combobox"
                 aria-expanded={openSearch}
-                className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
               >
                 <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                 {searchTerm ? searchTerm : "Search..."}
-              </Button>
+              </span>
             </PopoverTrigger>
             <PopoverContent className="w-[300px] p-0">
               <Command>
@@ -122,12 +121,15 @@ const Header = () => {
           </Popover>
         </nav>
         <Sheet>
-          {/* Corrected SheetTrigger usage with asChild={true} and shadcn/ui Button */}
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
+            {/* Using a native span with button styling */}
+            <span
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground cursor-pointer"
+              aria-label="Toggle navigation menu"
+            >
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
-            </Button>
+            </span>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
             <div className="flex flex-col gap-4 py-6">
@@ -146,15 +148,15 @@ const Header = () => {
               </Button>
               <Popover open={openSearch} onOpenChange={setOpenSearch}>
                 <PopoverTrigger asChild>
-                  <Button
-                    variant="outline"
+                  {/* Using a native span with button styling */}
+                  <span
+                    className="inline-flex items-center justify-between whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 px-4 py-2 w-full bg-background text-foreground hover:bg-background/90 hover:text-foreground cursor-pointer"
                     role="combobox"
                     aria-expanded={openSearch}
-                    className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
                   >
                     <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                     {searchTerm ? searchTerm : "Search..."}
-                  </Button>
+                  </span>
                 </PopoverTrigger>
                 <PopoverContent className="w-[calc(100%-2rem)] p-0">
                   <Command>
