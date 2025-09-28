@@ -84,8 +84,11 @@ const Header = () => {
                 aria-expanded={openSearch}
                 className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
               >
-                <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                {searchTerm ? searchTerm : "Search..."}
+                {/* Wrapped children in a span to resolve React.Children.only error */}
+                <span>
+                  <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                  {searchTerm ? searchTerm : "Search..."}
+                </span>
               </Button>
             </PopoverTrigger>
             <PopoverContent className="w-[300px] p-0">
@@ -120,8 +123,11 @@ const Header = () => {
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
-              <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
+              {/* Wrapped children in a span to resolve React.Children.only error */}
+              <span>
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Toggle navigation menu</span>
+              </span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
@@ -147,8 +153,11 @@ const Header = () => {
                     aria-expanded={openSearch}
                     className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
                   >
-                    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                    {searchTerm ? searchTerm : "Search..."}
+                    {/* Wrapped children in a span to resolve React.Children.only error */}
+                    <span>
+                      <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                      {searchTerm ? searchTerm : "Search..."}
+                    </span>
                   </Button>
                 </PopoverTrigger>
                 <PopoverContent className="w-[calc(100%-2rem)] p-0"> {/* Adjusted width for mobile */}
