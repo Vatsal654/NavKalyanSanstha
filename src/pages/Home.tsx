@@ -141,7 +141,7 @@ const Home = () => {
                 <Link to="/about-us">Read More About Us</Link>
               </Button>
             </div>
-            <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2 min-h-[200px] bg-gray-200">
+            <div className="relative overflow-hidden rounded-lg shadow-xl min-h-[200px] bg-gray-200">
               <img
                 src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg"
                 alt="Volunteers serving food"
