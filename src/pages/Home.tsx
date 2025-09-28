@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react'; // Added Search import
-import { Dialog, DialogContent } from '@/components/ui/dialog'; // Import Dialog components
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react';
+import { Dialog, DialogContent } from '@/components/ui/dialog';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -344,15 +344,15 @@ const Home = () => {
       </section>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
-          {selectedImage && (
+        {selectedImage && (
+          <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
             <img
               src={selectedImage.src}
               alt={selectedImage.alt}
               className="w-full h-auto max-h-[90vh] object-contain"
             />
-          )}
-        </DialogContent>
+          </DialogContent>
+        )}
       </Dialog>
     </div>
   );
