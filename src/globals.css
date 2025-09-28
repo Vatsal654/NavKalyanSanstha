@@ -4,7 +4,7 @@
 
 @layer base {
   :root {
-    --background: 210 20% 98%; /* Very light blue-gray for main background */
+    --background: 0 0% 100% / 0; /* Transparent background for components, body uses gradient */
     --foreground: 222.2 84% 4.9%; /* Dark Blue/Black */
 
     --card: 0 0% 100%; /* White for cards */
@@ -34,9 +34,13 @@
 
     --radius: 0.5rem;
 
-    /* Scrollbar colors */
-    --scrollbar-thumb: var(--accent); /* Orange thumb */
-    --scrollbar-track: var(--muted); /* Light blue-gray track */
+    /* Custom gradient background colors for body */
+    --background-gradient-start: 210, 60%, 95%, 0.8; /* Light blue with 80% opacity */
+    --background-gradient-end: 210, 70%, 90%, 0.9;   /* Slightly darker blue with 90% opacity */
+
+    /* Scrollbar colors - make thumb very subtle by default */
+    --scrollbar-thumb: 210, 80%, 30%, 0.2; /* Primary color, 20% opacity */
+    --scrollbar-track: 210, 20%, 98%, 0; /* Transparent track */
   }
 }
 
@@ -46,34 +50,38 @@
   }
 
   body {
-    @apply bg-background text-foreground;
-    overflow-y: scroll; /* Force scrollbar to always be visible */
+    /* Apply gradient directly to body */
+    background: linear-gradient(to bottom right, hsla(var(--background-gradient-start)), hsla(var(--background-gradient-end)));
+    @apply text-foreground font-sans; /* Apply new font */
+    overflow-y: auto; /* Allow scrollbar to appear only when needed */
     scrollbar-width: thin; /* For Firefox */
-    scrollbar-color: hsl(var(--scrollbar-thumb)) hsl(var(--scrollbar-track)); /* For Firefox */
+    scrollbar-color: hsla(var(--scrollbar-thumb)) hsla(var(--scrollbar-track)); /* For Firefox */
   }
 }
 
 /* Custom scrollbar for a smoother look */
 ::-webkit-scrollbar {
-  width: 12px; /* Default width */
+  width: 12px;
   height: 8px;
-  transition: width 0.2s ease-in-out; /* Smooth transition for width change */
-}
-
-::-webkit-scrollbar:hover {
-  width: 16px; /* Wider on hover */
 }
 
 ::-webkit-scrollbar-track {
-  background: hsl(var(--scrollbar-track));
+  background: hsla(var(--scrollbar-track)); /* Transparent track */
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: hsl(var(--scrollbar-thumb));
+  background: hsla(var(--scrollbar-thumb)); /* Subtle thumb */
   border-radius: 10px;
+  transition: background 0.3s ease-in-out; /* Smooth transition for visibility */
 }
 
+/* Make scrollbar thumb more visible on body hover */
+body:hover ::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary)); /* Primary color, full opacity */
+}
+
+/* Also make it more visible when the scrollbar itself is hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent)); /* Keep the same accent color on hover */
+  background: hsl(var(--primary)); /* Primary color, full opacity */
 }
