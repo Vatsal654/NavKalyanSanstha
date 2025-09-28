@@ -39,12 +39,11 @@ const Header = () => {
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
             </div>
           </Link>
-          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
-            <Link to="/donate-food" className="flex items-center gap-1">
-              <QrCode className="h-4 w-4" />
-              <span className="text-sm">Show QR</span>
-            </Link>
-          </Button>
+          {/* Simplified QR code link: Removed Button asChild wrapper */}
+          <Link to="/donate-food" className="flex items-center gap-1 text-primary-foreground hover:text-accent transition-colors px-2 py-1 rounded-md">
+            <QrCode className="h-4 w-4" />
+            <span className="text-sm">Show QR</span>
+          </Link>
         </div>
         <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
@@ -66,13 +65,12 @@ const Header = () => {
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            {/* Using a native span with button styling */}
+            {/* Simplified SheetTrigger child: Only Menu icon, sr-only moved to aria-label */}
             <span
               className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground cursor-pointer"
-              aria-label="Toggle navigation menu"
+              aria-label="Toggle navigation menu" // sr-only text moved here for accessibility
             >
               <Menu className="h-6 w-6" />
-              <span className="sr-only">Toggle navigation menu</span>
             </span>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
@@ -84,12 +82,10 @@ const Header = () => {
                   <span className="text-sm text-primary/80 -mt-1">Charity Organization</span>
                 </div>
               </Link>
-              <Button variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
-                <Link to="/donate-food" className="flex items-center gap-1">
-                  <QrCode className="h-4 w-4" />
-                  <span className="text-base">Show QR</span>
-                </Link>
-              </Button>
+              <Link to="/donate-food" className="flex items-center gap-1 text-primary hover:text-accent transition-colors px-2 py-1 rounded-md justify-start">
+                <QrCode className="h-4 w-4" />
+                <span className="text-base">Show QR</span>
+              </Link>
               {/* Removed Popover search component from mobile menu */}
               {navItems.map((item) => (
                 <Link
