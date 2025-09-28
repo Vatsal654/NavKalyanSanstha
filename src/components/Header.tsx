@@ -52,9 +52,11 @@ const Header = () => {
           ))}
         </nav>
         <Sheet>
-          <SheetTrigger className="lg:hidden inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 text-primary-foreground hover:bg-accent hover:text-accent-foreground">
-            <Menu className="h-6 w-6" />
-            <span className="sr-only">Toggle navigation menu</span>
+          <SheetTrigger asChild>
+            <Button variant="ghost" size="icon" className="lg:hidden h-10 w-10 text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
             <div className="flex flex-col gap-4 py-6">
