@@ -84,7 +84,7 @@ const Header = () => {
                 aria-expanded={openSearch}
                 className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
               >
-                {/* Wrapped children in a span to resolve React.Children.only error */}
+                {/* Ensure this span is the ONLY child of the Button when asChild is used */}
                 <span>
                   <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                   {searchTerm ? searchTerm : "Search..."}
@@ -123,7 +123,7 @@ const Header = () => {
         <Sheet>
           <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
-              {/* Wrapped children in a span to resolve React.Children.only error */}
+              {/* Ensure this span is the ONLY child of the Button when asChild is used */}
               <span>
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Toggle navigation menu</span>
@@ -153,7 +153,7 @@ const Header = () => {
                     aria-expanded={openSearch}
                     className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
                   >
-                    {/* Wrapped children in a span to resolve React.Children.only error */}
+                    {/* Ensure this span is the ONLY child of the Button when asChild is used */}
                     <span>
                       <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
                       {searchTerm ? searchTerm : "Search..."}
