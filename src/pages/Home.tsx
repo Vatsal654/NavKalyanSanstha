@@ -335,7 +335,7 @@ const Home = () => {
                   <Link to="/faqs">View FAQs</Link>
                 </Button>
               </CardContent>
-            </card>
+            </Card>
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Phone className="h-12 w-12 text-accent mb-4" />
