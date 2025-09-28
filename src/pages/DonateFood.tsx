@@ -41,7 +41,7 @@ const DonateFood = () => {
                 <p><strong>UPI ID:</strong> 9958349220@ibl</p>
                 <p className="mt-4">Scan this QR code to make a quick payment:</p>
                 <div className="flex justify-center p-4 bg-white rounded-md mt-2">
-                  <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=upi://pay?pa=9958349220@ibl&pn=NavKalyanSanstha&cu=INR" alt="UPI QR Code" className="w-48 h-48" />
+                  <img src="/images/qr-code.jpg" alt="UPI QR Code" className="w-48 h-48" />
                 </div>
               </CardContent>
             </Card>
