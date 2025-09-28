@@ -1,8 +1,9 @@
-import React from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, QrCode } from 'lucide-react';
+import { Menu, Search, QrCode } from 'lucide-react'; // Added QrCode import
+import { Input } from '@/components/ui/input';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -16,12 +17,30 @@ const navItems = [
 ];
 
 const Header = () => {
+  const [searchTerm, setSearchTerm] = useState('');
+  const navigate = useNavigate();
   const location = useLocation();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    const lowerCaseSearchTerm = searchTerm.toLowerCase();
+    const foundItem = navItems.find(item => item.name.toLowerCase().includes(lowerCaseSearchTerm));
+    if (foundItem) {
+      navigate(foundItem.path);
+    } else if (lowerCaseSearchTerm.includes('privacy')) {
+      navigate('/privacy-policy');
+    } else if (lowerCaseSearchTerm.includes('terms')) {
+      navigate('/terms-and-conditions');
+    } else {
+      console.log('No matching page found for:', searchTerm);
+    }
+    setSearchTerm('');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-2 flex-shrink-0">
+        <div className="flex items-center gap-2 flex-shrink-0"> {/* Added flex-shrink-0 */}
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
             <div className="flex flex-col items-start">
@@ -29,12 +48,14 @@ const Header = () => {
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
             </div>
           </Link>
-          <Link to="/donate-food" className="flex items-center gap-1 text-primary-foreground hover:text-accent transition-colors px-2 py-1 rounded-md">
-            <QrCode className="h-4 w-4" />
-            <span className="text-sm">Show QR</span>
-          </Link>
+          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
+            <Link to="/donate-food" className="flex items-center gap-1">
+              <QrCode className="h-4 w-4" />
+              <span className="text-sm">Show QR</span>
+            </Link>
+          </Button>
         </div>
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6"> {/* Changed md:flex to lg:flex */}
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -50,10 +71,20 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
+          <form onSubmit={handleSearch} className="relative">
+            <Input
+              type="text"
+              placeholder="Search..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none text-foreground"
+            />
+            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+          </form>
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="lg:hidden h-10 w-10 text-primary-foreground hover:bg-accent hover:text-accent-foreground">
+            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground"> {/* Changed md:hidden to lg:hidden */}
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
@@ -67,10 +98,22 @@ const Header = () => {
                   <span className="text-sm text-primary/80 -mt-1">Charity Organization</span>
                 </div>
               </Link>
-              <Link to="/donate-food" className="flex items-center gap-1 text-primary hover:text-accent transition-colors px-2 py-1 rounded-md justify-start">
-                <QrCode className="h-4 w-4" />
-                <span className="text-base">Show QR</span>
-              </Link>
+              <Button asChild variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
+                <Link to="/donate-food" className="flex items-center gap-1">
+                  <QrCode className="h-4 w-4" />
+                  <span className="text-base">Show QR</span>
+                </Link>
+              </Button>
+              <form onSubmit={handleSearch} className="relative mb-4">
+                <Input
+                  type="text"
+                  placeholder="Search..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                  className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none w-full text-foreground"
+                />
+                <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+              </form>
               {navItems.map((item) => (
                 <Link
                   key={item.name}

@@ -7,7 +7,7 @@ import { Gift, Smile, Heart, Handshake, Award } from 'lucide-react'; // Added ic
 const GeneralDonations = () => {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary" id="general-contributions-page">Support Our Mission: General Contributions</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Support Our Mission: General Contributions</h1>
 
       <section className="mb-12 max-w-3xl mx-auto text-center">
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
@@ -32,14 +32,14 @@ const GeneralDonations = () => {
       </section>
 
       <section className="mt-12 max-w-3xl mx-auto">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center" id="our-impact">Our Impact: Moments of Joy and Service</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center">Our Impact: Moments of Joy and Service</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center">
           Beyond the numbers, our journey is filled with heartwarming moments and profound connections. Here are some glimpses into the impact we've made, fueled by your generosity and our volunteers' dedication:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Card className="bg-card shadow-md border border-border">
             <CardHeader>
-              <CardTitle className="text-xl text-primary flex items-center gap-2" id="birthday-celebrations">
+              <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Smile className="h-6 w-6 text-accent" /> Birthday Celebrations
               </CardTitle>
             </CardHeader>
@@ -51,7 +51,7 @@ const GeneralDonations = () => {
 
           <Card className="bg-card shadow-md border border-border">
             <CardHeader>
-              <CardTitle className="text-xl text-primary flex items-center gap-2" id="awaiting-our-arrival">
+              <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Handshake className="h-6 w-6 text-accent" /> Awaiting Our Arrival
               </CardTitle>
             </CardHeader>
@@ -63,7 +63,7 @@ const GeneralDonations = () => {
 
           <Card className="bg-card shadow-md border border-border">
             <CardHeader>
-              <CardTitle className="text-xl text-primary flex items-center gap-2" id="donations-in-temples">
+              <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Heart className="h-6 w-6 text-accent" /> Donations in Temples
               </CardTitle>
             </CardHeader>
@@ -75,7 +75,7 @@ const GeneralDonations = () => {
 
           <Card className="bg-card shadow-md border border-border">
             <CardHeader>
-              <CardTitle className="text-xl text-primary flex items-center gap-2" id="milestones-self-donations">
+              <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Award className="h-6 w-6 text-accent" /> Milestones & Self-Donations
               </CardTitle>
             </CardHeader>
@@ -88,12 +88,12 @@ const GeneralDonations = () => {
       </section>
 
       <div className="mt-8 p-6 bg-blue-50/50 border-l-4 border-blue-500 rounded-md text-gray-800">
-        <h3 className="text-lg font-semibold mb-2" id="tax-exemption-info">Important Information Regarding Tax Exemption:</h3>
+        <h3 className="text-lg font-semibold mb-2">Important Information Regarding Tax Exemption:</h3>
         <p className="mb-2">Nav Kalyan Sanstha Delhi is registered under Section 80G of the Indian Income Tax Act, which means your donations are eligible for tax exemption. Please contact us for details on how to receive your tax exemption certificate.</p>
       </div>
 
       <div className="mt-8 text-center text-gray-700">
-        <h3 className="text-lg font-semibold mb-2" id="general-donation-queries">For Donation Queries:</h3>
+        <h3 className="text-lg font-semibold mb-2">For Donation Queries:</h3>
         <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919958349220" className="text-blue-500 hover:underline">+919958349220</a> or send an email to <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a>. Our team is ready to assist you.</p>
       </div>
     </div>
