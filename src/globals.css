@@ -55,7 +55,7 @@
 
 /* Custom scrollbar for a smoother look */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 12px; /* Made scrollbar wider for better visibility */
   height: 8px;
 }
 
@@ -70,5 +70,5 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--accent-foreground));
+  background: hsl(var(--accent)); /* Keep the same accent color on hover to prevent vanishing */
 }
