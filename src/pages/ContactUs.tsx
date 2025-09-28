@@ -5,7 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 const ContactUs = () => {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Get In Touch</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 text-primary" id="contact-us-page">Get In Touch</h1>
       <p className="text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
         We would love to hear from you. Whether you have a question about our initiatives, wish to volunteer your time, explore collaboration opportunities, or simply want to share your feedback, please do not hesitate to reach out to us. Your engagement is invaluable to our mission.
       </p>
@@ -13,7 +13,7 @@ const ContactUs = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2" id="our-office-address">
               <MapPin className="h-6 w-6 text-accent" /> Our Office Address
             </CardTitle>
           </CardHeader>
@@ -27,7 +27,7 @@ const ContactUs = () => {
 
         <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2" id="phone-whatsapp">
               <Phone className="h-6 w-6 text-accent" /> Phone & WhatsApp
             </CardTitle>
           </CardHeader>
@@ -40,7 +40,7 @@ const ContactUs = () => {
 
         <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2" id="email-us">
               <Mail className="h-6 w-6 text-accent" /> Email Us
             </CardTitle>
           </CardHeader>
@@ -54,7 +54,7 @@ const ContactUs = () => {
 
         <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
           <CardHeader>
-            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
+            <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2" id="connect-online">
               <Instagram className="h-6 w-6 text-accent" /> Connect With Us Online
             </CardTitle>
           </CardHeader>
@@ -68,7 +68,7 @@ const ContactUs = () => {
       </div>
 
       <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center">Our Location on Map</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center" id="our-location-map">Our Location on Map</h2>
         <p className="text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
           Find us easily on the map. Our central location in Rohini, Delhi, allows us to efficiently coordinate our food distribution drives and reach various communities in need.
         </p>
@@ -87,7 +87,7 @@ const ContactUs = () => {
       </section>
 
       <section className="text-center text-gray-700">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground">Hours of Operation</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground" id="hours-of-operation">Hours of Operation</h2>
         <p className="text-lg max-w-3xl mx-auto mb-6">
           We are committed to serving the community and are available during the following hours for inquiries and operations. Our food distribution schedule is fixed to ensure consistent support.
         </p>

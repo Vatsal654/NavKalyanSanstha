@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Search, QrCode } from 'lucide-react'; // Added QrCode import
+import { Menu, Search, QrCode } from 'lucide-react';
 import { Input } from '@/components/ui/input';
+import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
+import { Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem } from '@/components/ui/command';
+import { searchItems } from '@/utils/search-items'; // Import search items
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -17,30 +20,32 @@ const navItems = [
 ];
 
 const Header = () => {
+  const [openSearch, setOpenSearch] = useState(false);
   const [searchTerm, setSearchTerm] = useState('');
   const navigate = useNavigate();
   const location = useLocation();
 
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    const lowerCaseSearchTerm = searchTerm.toLowerCase();
-    const foundItem = navItems.find(item => item.name.toLowerCase().includes(lowerCaseSearchTerm));
-    if (foundItem) {
-      navigate(foundItem.path);
-    } else if (lowerCaseSearchTerm.includes('privacy')) {
-      navigate('/privacy-policy');
-    } else if (lowerCaseSearchTerm.includes('terms')) {
-      navigate('/terms-and-conditions');
-    } else {
-      console.log('No matching page found for:', searchTerm);
-    }
+  const handleSearchSelect = (itemPath: string, itemAnchor?: string) => {
+    setOpenSearch(false);
     setSearchTerm('');
+    if (itemAnchor) {
+      navigate(`${itemPath}#${itemAnchor}`);
+      // Small delay to ensure navigation completes before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(itemAnchor);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      navigate(itemPath);
+    }
   };
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-2 flex-shrink-0"> {/* Added flex-shrink-0 */}
+        <div className="flex items-center gap-2 flex-shrink-0">
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
             <div className="flex flex-col items-start">
@@ -55,7 +60,7 @@ const Header = () => {
             </Link>
           </Button>
         </div>
-        <nav className="hidden lg:flex items-center gap-6"> {/* Changed md:flex to lg:flex */}
+        <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -71,20 +76,50 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
-          <form onSubmit={handleSearch} className="relative">
-            <Input
-              type="text"
-              placeholder="Search..."
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none text-foreground"
-            />
-            <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-          </form>
+          <Popover open={openSearch} onOpenChange={setOpenSearch}>
+            <PopoverTrigger asChild>
+              <Button
+                variant="outline"
+                role="combobox"
+                aria-expanded={openSearch}
+                className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
+              >
+                <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                {searchTerm ? searchTerm : "Search..."}
+              </Button>
+            </PopoverTrigger>
+            <PopoverContent className="w-[300px] p-0">
+              <Command>
+                <CommandInput
+                  placeholder="Search pages or sections..."
+                  value={searchTerm}
+                  onValueChange={setSearchTerm}
+                />
+                <CommandList>
+                  <CommandEmpty>No results found.</CommandEmpty>
+                  <CommandGroup>
+                    {searchItems
+                      .filter((item) =>
+                        item.label.toLowerCase().includes(searchTerm.toLowerCase())
+                      )
+                      .map((item) => (
+                        <CommandItem
+                          key={item.value}
+                          value={item.label}
+                          onSelect={() => handleSearchSelect(item.path, item.anchor)}
+                        >
+                          {item.label}
+                        </CommandItem>
+                      ))}
+                  </CommandGroup>
+                </CommandList>
+              </Command>
+            </PopoverContent>
+          </Popover>
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground"> {/* Changed md:hidden to lg:hidden */}
+            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
@@ -104,16 +139,46 @@ const Header = () => {
                   <span className="text-base">Show QR</span>
                 </Link>
               </Button>
-              <form onSubmit={handleSearch} className="relative mb-4">
-                <Input
-                  type="text"
-                  placeholder="Search..."
-                  value={searchTerm}
-                  onChange={(e) => setSearchTerm(e.target.value)}
-                  className="pl-8 pr-2 py-1 text-sm rounded-md border border-input bg-background focus:ring-1 focus:ring-ring focus:outline-none w-full text-foreground"
-                />
-                <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
-              </form>
+              <Popover open={openSearch} onOpenChange={setOpenSearch}>
+                <PopoverTrigger asChild>
+                  <Button
+                    variant="outline"
+                    role="combobox"
+                    aria-expanded={openSearch}
+                    className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
+                  >
+                    <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
+                    {searchTerm ? searchTerm : "Search..."}
+                  </Button>
+                </PopoverTrigger>
+                <PopoverContent className="w-[calc(100%-2rem)] p-0"> {/* Adjusted width for mobile */}
+                  <Command>
+                    <CommandInput
+                      placeholder="Search pages or sections..."
+                      value={searchTerm}
+                      onValueChange={setSearchTerm}
+                    />
+                    <CommandList>
+                      <CommandEmpty>No results found.</CommandEmpty>
+                      <CommandGroup>
+                        {searchItems
+                          .filter((item) =>
+                            item.label.toLowerCase().includes(searchTerm.toLowerCase())
+                          )
+                          .map((item) => (
+                            <CommandItem
+                              key={item.value}
+                              value={item.label}
+                              onSelect={() => handleSearchSelect(item.path, item.anchor)}
+                            >
+                              {item.label}
+                            </CommandItem>
+                          ))}
+                      </CommandGroup>
+                    </CommandList>
+                  </Command>
+                </PopoverContent>
+              </Popover>
               {navItems.map((item) => (
                 <Link
                   key={item.name}

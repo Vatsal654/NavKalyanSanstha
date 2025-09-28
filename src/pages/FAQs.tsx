@@ -52,7 +52,7 @@ const faqs = [
 const FAQs = () => {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Frequently Asked Questions</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 text-primary" id="faqs-page">Frequently Asked Questions</h1>
       <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-8">
         Here you'll find answers to the most common questions about Nav Kalyan Sanstha Delhi, our mission, how we operate, and how you can get involved. If you don't find what you're looking for, please feel free to contact us directly.
       </p>
@@ -61,7 +61,7 @@ const FAQs = () => {
         <Accordion type="single" collapsible className="w-full">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
-              <AccordionTrigger className="text-lg font-semibold text-secondary-foreground hover:no-underline text-left py-4">
+              <AccordionTrigger className="text-lg font-semibold text-secondary-foreground hover:no-underline text-left py-4" id={`faq-${index}`}>
                 {faq.question}
               </AccordionTrigger>
               <AccordionContent className="text-gray-700 text-base leading-relaxed pb-4">

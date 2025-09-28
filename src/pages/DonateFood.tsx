@@ -7,11 +7,11 @@ import { IndianRupee, Banknote } from 'lucide-react'; // Added icons for payment
 const DonateFood = () => {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Nav Seva - A Gift of Food, A Gift of Life.</h1>
+      <h1 className="text-4xl font-bold text-center mb-10 text-primary" id="donate-food-page">Nav Seva - A Gift of Food, A Gift of Life.</h1>
       <p className="text-xl text-center text-gray-700 mb-8">Feed a Needy Person for Just ₹21.</p>
 
       <section className="mb-12 max-w-3xl mx-auto bg-secondary p-8 rounded-lg shadow-lg border border-border">
-        <h2 className="text-3xl font-semibold mb-6 text-primary text-center">The Power of Nav Seva</h2>
+        <h2 className="text-3xl font-semibold mb-6 text-primary text-center" id="power-of-nav-seva">The Power of Nav Seva</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6">
           In a city of millions, many struggle silently for their next meal. For the families of patients in hospitals, for daily wage workers, and for countless children, a warm, nutritious meal is a distant dream. It's not just food; it's a message of hope, a moment of comfort, and the strength to face another day. At Nav Kalyan Sanstha Delhi, we believe that no one should go hungry.
         </p>
@@ -25,7 +25,7 @@ const DonateFood = () => {
 
       <Card className="max-w-3xl mx-auto shadow-lg border border-border bg-card">
         <CardHeader>
-          <CardTitle className="text-3xl font-bold text-primary text-center">Complete Your Donation</CardTitle>
+          <CardTitle className="text-3xl font-bold text-primary text-center" id="complete-your-donation">Complete Your Donation</CardTitle>
           <CardDescription className="text-gray-600 text-center mt-2">Thank you for your generosity! Please use one of the following secure methods to complete your donation.</CardDescription>
         </CardHeader>
         <CardContent className="space-y-6">
@@ -36,7 +36,7 @@ const DonateFood = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
               <IndianRupee className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="text-xl text-primary mb-4">UPI (Paytm, Google Pay, PhonePe, etc.)</CardTitle>
+              <CardTitle className="text-xl text-primary mb-4" id="upi-payment">UPI (Paytm, Google Pay, PhonePe, etc.)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
                 <p><strong>UPI ID:</strong> 9958349220@ibl</p>
                 <p className="mt-4">Scan this QR code to make a quick payment:</p>
@@ -48,7 +48,7 @@ const DonateFood = () => {
 
             <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
               <Banknote className="h-12 w-12 text-accent mb-4" />
-              <CardTitle className="text-xl text-primary mb-4">Bank Transfer (NEFT/RTGS/IMPS)</CardTitle>
+              <CardTitle className="text-xl text-primary mb-4" id="bank-transfer">Bank Transfer (NEFT/RTGS/IMPS)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
                 <p>For larger contributions or if you prefer traditional banking, you can make a direct bank transfer:</p>
                 <p><strong>Bank Name:</strong> Axis Bank</p>
@@ -61,7 +61,7 @@ const DonateFood = () => {
           </div>
 
           <div className="p-6 bg-primary/10 border-l-4 border-primary rounded-md text-gray-800 mt-8">
-            <h3 className="text-lg font-semibold mb-2 text-primary">Important: Donation Confirmation</h3>
+            <h3 className="text-lg font-semibold mb-2 text-primary" id="donation-confirmation">Important: Donation Confirmation</h3>
             <ul className="list-disc list-inside space-y-2 text-gray-700">
               <li>After donating, please share a screenshot of your payment with us via WhatsApp at <a href="https://wa.me/919958349220" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><strong>+919958349220</strong></a>. This helps us track your generous contribution and send a confirmation efficiently.</li>
               <li>Your privacy is important to us. All personal information provided will be used solely for donation processing and communication purposes.</li>
@@ -69,7 +69,7 @@ const DonateFood = () => {
           </div>
 
           <div className="p-6 bg-accent/10 border-l-4 border-accent rounded-md text-gray-800 mt-8">
-            <h3 className="text-lg font-semibold mb-2 text-primary">Dedicate Your Donation on a Special Occasion</h3>
+            <h3 className="text-lg font-semibold mb-2 text-primary" id="dedicate-your-donation">Dedicate Your Donation on a Special Occasion</h3>
             <p className="mb-2 text-gray-700">Make your milestones more meaningful by sharing your joy. Donate food in honor of:</p>
             <ul className="list-disc list-inside grid grid-cols-1 md:grid-cols-2 gap-1 text-gray-700">
               <li>Birthdays & Anniversaries</li>
@@ -86,7 +86,7 @@ const DonateFood = () => {
       </Card>
 
       <div className="mt-8 text-center text-gray-700 bg-muted p-6 rounded-lg shadow-sm border border-border">
-        <h3 className="text-lg font-semibold mb-2 text-primary">For Donation Queries:</h3>
+        <h3 className="text-lg font-semibold mb-2 text-primary" id="donation-queries">For Donation Queries:</h3>
         <p>Please call us at <a href="tel:+919958349220" className="text-blue-500 hover:underline"><strong>+919958349220</strong></a> or email us at <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline"><strong>navkalyansansthadelhi@gmail.com</strong></a>.</p>
         <p className="text-sm text-muted-foreground mt-2">Our team is available to assist you with any questions regarding your donation.</p>
       </div>
