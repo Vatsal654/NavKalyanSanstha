@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search, Utensils } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
-import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
+import BackgroundPattern from '@/components/BackgroundPattern';
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -119,8 +119,7 @@ const Home = () => {
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/gallery">View Photos</Link>
                 </Button>
-              </I've updated the logo to be circular and added the new background image to the hero section with a transparent overlay.
-CardContent>
+              </CardContent>
             </Card>
           </div>
         </div>
