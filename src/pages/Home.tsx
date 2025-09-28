@@ -27,8 +27,8 @@ const Home = () => {
       {/* Hero Section */}
       <section className="relative text-primary-foreground min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-24">
         <div className="absolute inset-0">
-          <img src="/images/hero-background-child.jpg" alt="Child receiving food" className="w-full h-full object-cover object-top" />
-          <div className="absolute inset-0 bg-black/60"></div>
+          <img src="/images/hero-background-child-2.jpg" alt="Child receiving food" className="w-full h-full object-cover object-center" />
+          <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">A Meal of Hope. A Gesture of Love.</h1>
@@ -38,15 +38,15 @@ const Home = () => {
           <p className="text-2xl md:text-3xl font-semibold mb-10 text-accent">Our Slogan: Donate. Impact. Change.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">3000+</h3>
               <p className="text-lg">Meals Served and Counting</p>
             </div>
-            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">100%</h3>
               <p className="text-lg">Volunteer Driven</p>
             </div>
-            <div className="bg-primary-foreground/10 p-6 rounded-xl shadow-xl border border-primary-foreground/20 hover:bg-primary-foreground/20 transition-all duration-300">
+            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
               <h3 className="text-4xl font-bold text-accent mb-2">₹21</h3>
               <p className="text-lg">Provides One Hygienic, Home-Cooked Meal</p>
             </div>

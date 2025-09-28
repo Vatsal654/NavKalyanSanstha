@@ -48,12 +48,6 @@ const Header = () => {
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
             </div>
           </Link>
-          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
-            <Link to="/donate-food#donation-qr-section" className="flex items-center gap-1">
-              <QrCode className="h-4 w-4" />
-              <span className="text-sm">Show QR</span>
-            </Link>
-          </Button>
         </div>
         <nav className="hidden lg:flex items-center gap-6">
           {navItems.map((item) => (
@@ -71,6 +65,12 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
+          <Button asChild variant="ghost" size="sm" className="text-primary-foreground hover:text-accent hover:bg-transparent px-2">
+            <Link to="/donate-food#donation-qr-section" className="flex items-center gap-1">
+              <QrCode className="h-4 w-4" />
+              <span className="text-sm">Show QR</span>
+            </Link>
+          </Button>
           <form onSubmit={handleSearch} className="relative">
             <Input
               type="text"
