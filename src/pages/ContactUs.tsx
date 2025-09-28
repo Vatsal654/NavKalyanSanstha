@@ -1,5 +1,5 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram, Linkedin } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
 const ContactUs = () => {
@@ -61,7 +61,6 @@ const ContactUs = () => {
           <CardContent className="text-gray-700">
             <p className="mb-2">Stay updated with our latest activities, events, and impact stories by connecting with us on social media:</p>
             <p>Instagram: <a href="https://www.instagram.com/nav.kalyan.sanstha/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">@nav.kalyan.sanstha</a></p>
-            <p>LinkedIn: <a href="https://www.linkedin.com/in/nav-kalyan-sanstha/" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline">linkedin.com/in/nav-kalyan-sanstha</a></p>
             <p className="text-sm text-muted-foreground mt-2">Follow us to see the real-time impact of your support!</p>
           </CardContent>
         </Card>

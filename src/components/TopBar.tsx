@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, Mail, Instagram, Linkedin } from 'lucide-react';
+import { Phone, Mail, Instagram } from 'lucide-react';
 
 const TopBar = () => {
   return (
@@ -24,15 +24,6 @@ const TopBar = () => {
             aria-label="Instagram"
           >
             <Instagram className="h-4 w-4" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nav-kalyan-sanstha/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-4 w-4" />
           </a>
         </div>
       </div>

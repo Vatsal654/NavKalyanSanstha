@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Linkedin } from 'lucide-react';
+import { Instagram } from 'lucide-react';
 
 const Footer = () => {
   return (
@@ -26,15 +26,6 @@ const Footer = () => {
             aria-label="Instagram"
           >
             <Instagram className="h-5 w-5" />
-          </a>
-          <a
-            href="https://www.linkedin.com/in/nav-kalyan-sanstha/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent transition-colors"
-            aria-label="LinkedIn"
-          >
-            <Linkedin className="h-5 w-5" />
           </a>
         </div>
       </div>
