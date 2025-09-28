@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
-import { Users, HeartHandshake, UserCircle } from 'lucide-react'; // Import UserCircle icon for placeholders
+import { Users, HeartHandshake } from 'lucide-react'; // Removed UserCircle icon as images are now used
 
 const AboutUs = () => {
   return (
@@ -63,19 +63,19 @@ const AboutUs = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
           <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent">
-              <UserCircle className="h-20 w-20 text-gray-500" />
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+              <img src="/images/seema-arya.jpg" alt="Ms. Seema Arya" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
-            <p className="text-lg text-gray-700">President</p> {/* Updated title */}
+            <p className="text-lg text-gray-700">President</p>
             <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent">
-              <UserCircle className="h-20 w-20 text-gray-500" />
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent overflow-hidden">
+              <img src="/images/shreyshi-arya.jpg" alt="Ms. Shreyshi Arya" className="w-full h-full object-cover" />
             </div>
             <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
-            <p className="text-lg text-gray-700">Secretary</p> {/* Updated title */}
+            <p className="text-lg text-gray-700">Secretary</p>
             <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>
           </div>
           <div className="md:col-span-2 text-center mt-8">

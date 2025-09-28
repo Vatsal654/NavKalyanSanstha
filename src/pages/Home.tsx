@@ -25,13 +25,13 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
-        <div
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-gray-200"
-          style={{ backgroundImage: 'url(/images/cake-cutting-children.jpg)' }}
-        >
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
-        </div>
+      <section className="relative min-h-[80vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
+        <img
+          src="/images/cake-cutting-children.jpg"
+          alt="Children celebrating"
+          className="absolute inset-0 w-full h-full object-cover bg-gray-200"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
         <BackgroundPattern Icon={HandHeart} size={300} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
         <BackgroundPattern Icon={UtensilsCrossed} size={250} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
         <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
@@ -219,7 +219,7 @@ const Home = () => {
                   <li><strong>Holistic Welfare:</strong> Our commitment extends to the well-being of all creatures.</li>
                 </ul>
                 <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
-                  <Link to="/what-we-do">Explore Options</Link>
+                  <Link to="/general-donations">Explore Options</Link>
                 </Button>
               </CardContent>
             </Card>
