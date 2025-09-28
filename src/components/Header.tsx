@@ -42,7 +42,7 @@ const Header = () => {
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
         <div className="flex items-center gap-2 flex-shrink-0">
           <Link to="/" className="flex items-center gap-2">
-            <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8" />
+            <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full" />
             <div className="flex flex-col items-start">
               <span className="text-lg font-semibold text-primary-foreground">Nav Kalyan Sanstha</span>
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
@@ -92,7 +92,7 @@ const Header = () => {
           <SheetContent side="right" className="bg-card"> {/* Changed bg-background to bg-card for visibility */}
             <div className="flex flex-col gap-4 py-6">
               <Link to="/" className="flex items-center gap-2 mb-4">
-                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8" />
+                <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full" />
                 <div className="flex flex-col items-start">
                   <span className="text-lg font-semibold text-primary">Nav Kalyan Sanstha</span>
                   <span className="text-sm text-primary/80 -mt-1">Charity Organization</span>

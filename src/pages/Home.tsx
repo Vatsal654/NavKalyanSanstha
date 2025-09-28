@@ -25,8 +25,12 @@ const Home = () => {
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)]">
       {/* Hero Section */}
-      <section className="bg-primary text-primary-foreground min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-24">
-        <div className="p-4 md:p-8 max-w-5xl mx-auto">
+      <section className="relative text-primary-foreground min-h-[80vh] flex flex-col items-center justify-center text-center overflow-hidden py-16 md:py-24">
+        <div className="absolute inset-0">
+          <img src="/images/hero-background-child.jpg" alt="Child receiving food" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary opacity-70"></div>
+        </div>
+        <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">A Meal of Hope. A Gesture of Love.</h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
             Welcome to Nav Kalyan Sanstha Delhi. We are a non-profit, women-led initiative dedicated to serving fresh, home-cooked meals to those in need. For just ₹21, you can provide a nutritious meal and be a part of our mission to ensure no one in our community goes hungry. Our commitment extends beyond just food; it's about fostering dignity, community, and hope.
@@ -115,7 +119,8 @@ const Home = () => {
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/gallery">View Photos</Link>
                 </Button>
-              </CardContent>
+              </I've updated the logo to be circular and added the new background image to the hero section with a transparent overlay.
+CardContent>
             </Card>
           </div>
         </div>
