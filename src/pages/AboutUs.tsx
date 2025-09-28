@@ -58,13 +58,13 @@ const AboutUs = () => {
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
           <div className="flex flex-col items-center text-center">
-            <img src="/images/IMG_4220.jpg" alt="Ms. Seema Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
+            <img src="/images/cake-cutting-children.jpg" alt="Ms. Seema Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
             <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
             <p className="text-lg text-gray-700">General Secretary</p>
             <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <img src="/images/IMG_4111.JPG" alt="Ms. Shreyshi Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
+            <img src="/images/birthday-girl-srishti.jpg" alt="Ms. Shreyshi Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
             <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
             <p className="text-lg text-gray-700">Deputy General Secretary</p>
             <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>

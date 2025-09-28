@@ -3,18 +3,18 @@ import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { Search } from 'lucide-react'; // Import Search icon
 
 const images = [
-  { src: '/images/gallery-1.jpg', alt: 'Child receiving food' },
-  { src: '/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg', alt: 'Children eating together' },
-  { src: '/images/gallery-2.jpg', alt: 'Child reaching for food' },
-  { src: '/images/target-image1.jpg', alt: 'Children celebrating birthday' },
-  { src: '/images/20190122164349_838A3181_D5P3M1bwCyu0x7.jpg', alt: 'Volunteer distributing food' },
-  { src: '/images/istockphoto-941786374-612x612.jpg', alt: 'Children waiting for food' },
-  { src: '/images/malmas-1-1024x683.jpg', alt: 'Donation in temple' },
-  { src: '/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg', alt: 'Woman feeding cow' },
-  { src: '/images/cow-feeding-her-calf-varanasi-india-ali-kabas.jpg', alt: 'Cow feeding calf' },
-  { src: '/images/gallery-3.jpg', alt: 'Food package being handed over' },
-  { src: '/images/gallery-4.jpg', alt: 'Another food package being handed over' },
-  { src: '/images/hero_2.jpg', alt: 'Kid with food plate' },
+  { src: '/images/donation-receive-1.jpg', alt: 'Person receiving food packet' },
+  { src: '/images/birthday-girl-srishti.jpg', alt: 'Girl celebrating birthday' },
+  { src: '/images/cake-feeding-children.jpg', alt: 'Woman feeding cake to children' },
+  { src: '/images/donation-receive-2.jpg', alt: 'Child receiving food packet' },
+  { src: '/images/man-praying-money.jpg', alt: 'Man praying with money' },
+  { src: '/images/birthday-girl-cake.jpg', alt: 'Girl with birthday hat and cake' },
+  { src: '/images/donation-receive-3.jpg', alt: 'Child reaching for food packet' },
+  { src: '/images/cake-cutting-children.jpg', alt: 'Woman cutting cake with children' },
+  { src: '/images/donation-receive-1.jpg', alt: 'Person receiving food packet' }, // Repeat to fill
+  { src: '/images/birthday-girl-srishti.jpg', alt: 'Girl celebrating birthday' }, // Repeat to fill
+  { src: '/images/cake-feeding-children.jpg', alt: 'Woman feeding cake to children' }, // Repeat to fill
+  { src: '/images/donation-receive-2.jpg', alt: 'Child receiving food packet' }, // Repeat to fill
 ];
 
 const Gallery = () => {

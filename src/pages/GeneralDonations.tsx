@@ -45,7 +45,7 @@ const GeneralDonations = () => {
             </CardHeader>
             <CardContent className="text-gray-700">
               <p className="mb-2">We've had the immense joy of celebrating numerous birthdays with underprivileged children. Seeing their faces light up as they cut cakes and share meals with us is a truly unforgettable experience. These moments of pure happiness are a testament to the power of collective kindness.</p>
-              <img src="/images/target-image1.jpg" alt="Children celebrating birthday" className="w-full h-48 object-cover rounded-md mt-4" />
+              <img src="/images/birthday-girl-cake.jpg" alt="Children celebrating birthday" className="w-full h-48 object-cover rounded-md mt-4" />
             </CardContent>
           </Card>
 
@@ -57,7 +57,7 @@ const GeneralDonations = () => {
             </CardHeader>
             <CardContent className="text-gray-700">
               <p className="mb-2">Every Tuesday and Saturday, the children eagerly await our arrival. Their warm hugs and bright smiles are our greatest reward. It's more than just food; it's a bond of trust and affection that we cherish deeply, making our efforts incredibly meaningful.</p>
-              <img src="/images/istockphoto-941786374-612x612.jpg" alt="Children waiting for food" className="w-full h-48 object-cover rounded-md mt-4" />
+              <img src="/images/donation-receive-3.jpg" alt="Children waiting for food" className="w-full h-48 object-cover rounded-md mt-4" />
             </CardContent>
           </Card>
 
@@ -69,7 +69,7 @@ const GeneralDonations = () => {
             </CardHeader>
             <CardContent className="text-gray-700">
               <p className="mb-2">Our commitment to service extends to sacred spaces. We've organized food donations in various temples, ensuring that devotees and those in need receive blessed meals, especially during auspicious occasions. This allows us to spread kindness in diverse community settings.</p>
-              <img src="/images/malmas-1-1024x683.jpg" alt="Donation in temple" className="w-full h-48 object-cover rounded-md mt-4" />
+              <img src="/images/man-praying-money.jpg" alt="Donation in temple" className="w-full h-48 object-cover rounded-md mt-4" />
             </CardContent>
           </Card>
 
@@ -81,7 +81,7 @@ const GeneralDonations = () => {
             </CardHeader>
             <CardContent className="text-gray-700">
               <p className="mb-2">Crossing the milestone of 1000 food packages was a moment of immense pride. To celebrate, our team personally donated 100 packages, reinforcing our dedication. These self-donations and milestones reflect our deep personal commitment to the cause.</p>
-              <img src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg" alt="Volunteers celebrating milestone" className="w-full h-48 object-cover rounded-md mt-4" />
+              <img src="/images/cake-feeding-children.jpg" alt="Volunteers celebrating milestone" className="w-full h-48 object-cover rounded-md mt-4" />
             </CardContent>
           </Card>
         </div>

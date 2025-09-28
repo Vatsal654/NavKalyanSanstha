@@ -15,10 +15,10 @@ const Home = () => {
   };
 
   const galleryImages = [
-    { src: '/images/gallery-1.jpg', alt: 'Child receiving food' },
-    { src: '/images/gallery-2.jpg', alt: 'Child reaching for food' },
-    { src: '/images/woman-feeding-fresh-green-grass-cow-rural-setting_965060-885.jpg', alt: 'Woman feeding cow' },
-    { src: '/images/target-image1.jpg', alt: 'Children celebrating birthday' },
+    { src: '/images/donation-receive-1.jpg', alt: 'Person receiving food packet' },
+    { src: '/images/donation-receive-2.jpg', alt: 'Child receiving food packet' },
+    { src: '/images/man-praying-money.jpg', alt: 'Man praying with money' },
+    { src: '/images/birthday-girl-cake.jpg', alt: 'Girl with birthday hat and cake' },
   ];
 
   return (
@@ -27,7 +27,7 @@ const Home = () => {
       <section className="relative min-h-[70vh] flex flex-col items-center justify-center text-center text-white overflow-hidden py-16 md:py-24">
         <div
           className="absolute inset-0 bg-cover bg-center bg-no-repeat bg-gray-200"
-          style={{ backgroundImage: 'url(/images/hero_2.jpg)' }}
+          style={{ backgroundImage: 'url(/images/cake-cutting-children.jpg)' }}
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
         </div>
@@ -143,7 +143,7 @@ const Home = () => {
             </div>
             <div className="relative overflow-hidden rounded-lg shadow-xl min-h-[200px] bg-gray-200">
               <img
-                src="/images/IMG-20200918-WA0011_onjlmn_1601462799.jpg"
+                src="/images/cake-feeding-children.jpg"
                 alt="Volunteers serving food"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />
@@ -308,7 +308,7 @@ const Home = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 items-center">
             <div className="relative overflow-hidden rounded-lg shadow-xl col-span-full lg:col-span-2 min-h-[200px] bg-gray-200">
               <img
-                src="/images/Black-and-Yellow-Photo-Modern-Business-Instagram-Post-3.jpg"
+                src="/images/cake-cutting-children.jpg"
                 alt="People collaborating"
                 className="w-full h-72 object-cover transition-transform duration-500 hover:scale-110"
               />

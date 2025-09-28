@@ -37,7 +37,7 @@ const WhatWeDo = () => {
           </Card>
           <div className="relative overflow-hidden rounded-lg shadow-lg min-h-[300px] bg-gray-200">
             <img
-              src="/images/20190122164349_838A3181_D5P3M1bwCyu0x7.jpg" // Updated image
+              src="/images/donation-receive-1.jpg" // Updated image
               alt="Food distribution"
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
             />
