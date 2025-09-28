@@ -1,20 +1,17 @@
-import { TooltipProvider } from "@/components/ui/tooltip";
 import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import Layout from "./components/Layout";
 import Home from "./pages/Home";
 import AboutUs from "./pages/AboutUs";
 import WhatWeDo from "./pages/WhatWeDo";
 import DonateFood from "./pages/DonateFood";
-import GeneralDonations from "./pages/GeneralDonations"; // Renamed from PastDonations
+import GeneralDonations from "./pages/GeneralDonations";
 import FAQs from "./pages/FAQs";
 import Gallery from "./pages/Gallery";
 import ContactUs from "./pages/ContactUs";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import TermsAndConditions from "./pages/TermsAndConditions";
 import NotFound from "./pages/NotFound";
-import { AnimatePresence, motion } from "framer-motion"; // Import motion and AnimatePresence
-
-// Removed QueryClient and QueryClientProvider as Supabase and react-query are no longer used.
+import { AnimatePresence, motion } from "framer-motion";
 
 const AnimatedRoutes = () => {
   const location = useLocation();
@@ -74,7 +71,7 @@ const AnimatedRoutes = () => {
           }
         />
         <Route
-          path="/general-donations" // Updated path for renamed page
+          path="/general-donations"
           element={
             <motion.div
               initial={{ opacity: 0, y: 20 }}
@@ -82,7 +79,7 @@ const AnimatedRoutes = () => {
               exit={{ opacity: 0, y: -20 }}
               transition={{ duration: 0.3 }}
             >
-              <GeneralDonations /> {/* Updated component name */}
+              <GeneralDonations />
             </motion.div>
           }
         />
@@ -170,15 +167,11 @@ const AnimatedRoutes = () => {
 };
 
 const App = () => (
-  // Removed QueryClientProvider
-  <TooltipProvider>
-    {/* Toaster and Sonner removed */}
-    <BrowserRouter>
-      <Layout>
-        <AnimatedRoutes />
-      </Layout>
-    </BrowserRouter>
-  </TooltipProvider>
+  <BrowserRouter>
+    <Layout>
+      <AnimatedRoutes />
+    </Layout>
+  </BrowserRouter>
 );
 
 export default App;
