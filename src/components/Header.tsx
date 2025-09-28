@@ -2,11 +2,9 @@ import React, { useState, useEffect } from 'react';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, Search, QrCode } from 'lucide-react';
-import { Input } from '@/components/ui/input';
-import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover';
-import { Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem } from '@/components/ui/command';
-import { searchItems } from '@/utils/search-items';
+import { Menu, QrCode } from 'lucide-react'; // Removed Search import
+// Removed Input, Popover, PopoverContent, PopoverTrigger, Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem imports
+// Removed searchItems import
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -20,8 +18,7 @@ const navItems = [
 ];
 
 const Header = () => {
-  const [openSearch, setOpenSearch] = useState(false);
-  const [searchTerm, setSearchTerm] = useState('');
+  // Removed openSearch and searchTerm states
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -29,21 +26,7 @@ const Header = () => {
     console.log("Header component rendered or re-rendered.");
   }, []);
 
-  const handleSearchSelect = (itemPath: string, itemAnchor?: string) => {
-    setOpenSearch(false);
-    setSearchTerm('');
-    if (itemAnchor) {
-      navigate(`${itemPath}#${itemAnchor}`);
-      setTimeout(() => {
-        const element = document.getElementById(itemAnchor);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      navigate(itemPath);
-    }
-  };
+  // Removed handleSearchSelect function
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
@@ -79,58 +62,14 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
-          <Popover open={openSearch} onOpenChange={setOpenSearch}>
-            <PopoverTrigger asChild={false}>
-              <Button
-                variant="outline"
-                role="combobox"
-                aria-expanded={openSearch}
-                className="w-[200px] justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
-              >
-                {/* Wrapped icon and text in a single span */}
-                <span>
-                  <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                  {searchTerm ? searchTerm : "Search..."}
-                </span>
-              </Button>
-            </PopoverTrigger>
-            <PopoverContent className="w-[300px] p-0">
-              <Command>
-                <CommandInput
-                  placeholder="Search pages or sections..."
-                  value={searchTerm}
-                  onValueChange={setSearchTerm}
-                />
-                <CommandList>
-                  <CommandEmpty>No results found.</CommandEmpty>
-                  <CommandGroup>
-                    {searchItems
-                      .filter((item) =>
-                        item.label.toLowerCase().includes(searchTerm.toLowerCase())
-                      )
-                      .map((item) => (
-                        <CommandItem
-                          key={item.value}
-                          value={item.label}
-                          onSelect={() => handleSearchSelect(item.path, item.anchor)}
-                        >
-                          {item.label}
-                        </CommandItem>
-                      ))}
-                  </CommandGroup>
-                </CommandList>
-              </Command>
-            </PopoverContent>
-          </Popover>
+          {/* Search functionality removed */}
         </nav>
         <Sheet>
-          <SheetTrigger asChild={false}>
+          {/* SheetTrigger now uses asChild with Button as its child */}
+          <SheetTrigger asChild>
             <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
-              {/* Wrapped icon and sr-only span in a single span */}
-              <span>
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Toggle navigation menu</span>
-              </span>
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
@@ -142,54 +81,13 @@ const Header = () => {
                   <span className="text-sm text-primary/80 -mt-1">Charity Organization</span>
                 </div>
               </Link>
-              <Button variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
+              <Button asChild variant="ghost" size="sm" className="text-primary hover:text-accent hover:bg-transparent px-2 justify-start">
                 <Link to="/donate-food" className="flex items-center gap-1">
                   <QrCode className="h-4 w-4" />
                   <span className="text-base">Show QR</span>
                 </Link>
               </Button>
-              <Popover open={openSearch} onOpenChange={setOpenSearch}>
-                <PopoverTrigger asChild={false}>
-                  <Button
-                    variant="outline"
-                    role="combobox"
-                    aria-expanded={openSearch}
-                    className="w-full justify-between bg-background text-foreground hover:bg-background/90 hover:text-foreground"
-                  >
-                    <span>
-                      <Search className="mr-2 h-4 w-4 shrink-0 opacity-50" />
-                      {searchTerm ? searchTerm : "Search..."}
-                    </span>
-                  </Button>
-                </PopoverTrigger>
-                <PopoverContent className="w-[calc(100%-2rem)] p-0">
-                  <Command>
-                    <CommandInput
-                      placeholder="Search pages or sections..."
-                      value={searchTerm}
-                      onValueChange={setSearchTerm}
-                    />
-                    <CommandList>
-                      <CommandEmpty>No results found.</CommandEmpty>
-                      <CommandGroup>
-                        {searchItems
-                          .filter((item) =>
-                            item.label.toLowerCase().includes(searchTerm.toLowerCase())
-                          )
-                          .map((item) => (
-                            <CommandItem
-                              key={item.value}
-                              value={item.label}
-                              onSelect={() => handleSearchSelect(item.path, item.anchor)}
-                            >
-                              {item.label}
-                            </CommandItem>
-                          ))}
-                      </CommandGroup>
-                    </CommandList>
-                  </Command>
-                </PopoverContent>
-              </Popover>
+              {/* Search functionality removed from mobile menu */}
               {navItems.map((item) => (
                 <Link
                   key={item.name}
