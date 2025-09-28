@@ -14,7 +14,7 @@
     --popover-foreground: 222.2 84% 4.9%; /* Dark Blue/Black */
 
     --primary: 210 80% 30%; /* A rich, deep blue */
-    --primary-foreground: 210 40% 98%; /* Off-white */
+    --primary-foreground: 0 0% 100%; /* Pure white for better visibility */
 
     --secondary: 210 40% 96.1%; /* Light Gray/Blue for subtle sections */
     --secondary-foreground: 222.2 47.4% 11.2%; /* Dark Blue/Black */

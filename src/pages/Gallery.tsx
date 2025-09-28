@@ -11,10 +11,6 @@ const images = [
   { src: '/images/birthday-girl-cake.jpg', alt: 'Girl with birthday hat and cake' },
   { src: '/images/donation-receive-3.jpg', alt: 'Child reaching for food packet' },
   { src: '/images/cake-cutting-children.jpg', alt: 'Woman cutting cake with children' },
-  { src: '/images/donation-receive-1.jpg', alt: 'Person receiving food packet' }, // Repeat to fill
-  { src: '/images/birthday-girl-srishti.jpg', alt: 'Girl celebrating birthday' }, // Repeat to fill
-  { src: '/images/cake-feeding-children.jpg', alt: 'Woman feeding cake to children' }, // Repeat to fill
-  { src: '/images/donation-receive-2.jpg', alt: 'Child receiving food packet' }, // Repeat to fill
 ];
 
 const Gallery = () => {

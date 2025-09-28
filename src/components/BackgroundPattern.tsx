@@ -13,7 +13,7 @@ const BackgroundPattern: React.FC<BackgroundPatternProps> = ({
   Icon,
   className = '',
   size = 200, // Default large size
-  opacity = 'opacity-[0.03]', // Very low opacity for subtle effect
+  opacity = 'opacity-[0.05]', // Increased opacity for better visibility
   position = 'absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2', // Centered by default
 }) => {
   return (

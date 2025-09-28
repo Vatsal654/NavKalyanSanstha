@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
-import { Users, HeartHandshake } from 'lucide-react'; // Import icons
+import { Users, HeartHandshake, UserCircle } from 'lucide-react'; // Import UserCircle icon for placeholders
 
 const AboutUs = () => {
   return (
@@ -9,7 +9,7 @@ const AboutUs = () => {
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">About Us</h1>
 
       <section className="relative mb-12 bg-background p-8 rounded-lg shadow-lg border border-border">
-        <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Story: The Spark of Service</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           Nav Kalyan Sanstha began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. In a bustling city like Delhi, we observed the silent struggle of countless children, daily wage earners, and vulnerable families who were deprived of this basic necessity. This stark reality ignited a deep calling within us to bridge the gap between those who wished to help and those who desperately needed it.
@@ -55,21 +55,25 @@ const AboutUs = () => {
       </div>
 
       <section className="relative bg-muted p-8 rounded-lg shadow-lg border border-border">
-        <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
-        <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Leadership: Guiding with Vision and Dedication</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           Nav Kalyan Sanstha Delhi is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
           <div className="flex flex-col items-center text-center">
-            <img src="/images/cake-cutting-children.jpg" alt="Ms. Seema Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent">
+              <UserCircle className="h-20 w-20 text-gray-500" />
+            </div>
             <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
             <p className="text-lg text-gray-700">President</p> {/* Updated title */}
             <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
           </div>
           <div className="flex flex-col items-center text-center">
-            <img src="/images/birthday-girl-srishti.jpg" alt="Ms. Shreyshi Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
+            <div className="w-32 h-32 rounded-full bg-gray-300 flex items-center justify-center mb-4 shadow-md border-2 border-accent">
+              <UserCircle className="h-20 w-20 text-gray-500" />
+            </div>
             <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
             <p className="text-lg text-gray-700">Secretary</p> {/* Updated title */}
             <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>

@@ -11,8 +11,8 @@ const WhatWeDo = () => {
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">What We Do</h1>
 
       <section className="relative mb-12 bg-secondary p-8 rounded-lg shadow-lg border border-border">
-        <BackgroundPattern Icon={Utensils} size={280} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
-        <BackgroundPattern Icon={HandHeart} size={220} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={Utensils} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={HandHeart} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">Core Initiative: Weekly Food Distribution – Nourishing Bodies, Inspiring Hope</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto relative z-10">
           Our flagship program is dedicated to alleviating hunger by providing freshly prepared, nutritious meals to those who need them most. We believe in serving with dignity and consistency, ensuring that every individual receives a wholesome meal and a moment of comfort. This initiative is the cornerstone of our mission, driven by compassion and a commitment to community well-being, aiming to create a hunger-free Delhi.
@@ -40,7 +40,7 @@ const WhatWeDo = () => {
           </Card>
           <div className="relative overflow-hidden rounded-lg shadow-lg min-h-[300px] bg-gray-200">
             <img
-              src="/images/donation-receive-1.jpg" // Updated image
+              src="/images/donation-receive-2.jpg" // Changed image from donation-receive-1.jpg
               alt="Food distribution"
               className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
             />
@@ -51,8 +51,8 @@ const WhatWeDo = () => {
       </section>
 
       <section className="relative bg-background p-8 rounded-lg shadow-lg border border-border">
-        <BackgroundPattern Icon={Heart} size={280} opacity="opacity-[0.03]" position="absolute top-1/4 right-1/4 translate-x-1/2 -translate-y-1/2 -rotate-12" />
-        <BackgroundPattern Icon={PiggyBank} size={220} opacity="opacity-[0.03]" position="absolute bottom-1/4 left-1/4 -translate-x-1/2 translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={Heart} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 right-1/4 translate-x-1/2 -translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={PiggyBank} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 left-1/4 -translate-x-1/2 translate-y-1/2 rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">Special Initiatives: Spreading Joy Beyond Meals</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto relative z-10">
           Beyond our regular food distribution, Nav Kalyan Sanstha Delhi is proud to organize a variety of special programs. These initiatives allow our community to engage in unique acts of kindness, celebrate life's precious moments with those less fortunate, and extend compassion to all living beings. Each program fosters a holistic approach to well-being and strengthens community bonds, creating a ripple effect of positivity.
