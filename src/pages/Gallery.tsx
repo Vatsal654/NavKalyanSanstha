@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
-import { Search } from 'lucide-react'; // Import Search icon
+import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
+import { Search, X } from 'lucide-react'; // Import X icon
 
 const images = [
   { src: '/images/donation-receive-1.jpg', alt: 'Person receiving food packet' },
@@ -49,13 +49,21 @@ const Gallery = () => {
       </div>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
+        <DialogContent className="max-w-4xl w-auto p-0 border-none bg-transparent shadow-none">
           {selectedImage && (
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="w-full h-auto max-h-[90vh] object-contain"
-            />
+            <div className="relative">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+              />
+              <DialogClose asChild>
+                <button className="absolute top-2 right-2 p-1 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+                  <X className="h-6 w-6" />
+                  <span className="sr-only">Close</span>
+                </button>
+              </DialogClose>
+            </div>
           )}
         </DialogContent>
       </Dialog>

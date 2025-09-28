@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search, Utensils } from 'lucide-react';
-import { Dialog, DialogContent } from '@/components/ui/dialog';
+import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search, Utensils, X } from 'lucide-react';
+import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
 import BackgroundPattern from '@/components/BackgroundPattern';
 
 const Home = () => {
@@ -335,7 +335,7 @@ const Home = () => {
                   <Link to="/faqs">View FAQs</Link>
                 </Button>
               </CardContent>
-            </Card>
+            </card>
             <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Phone className="h-12 w-12 text-accent mb-4" />
@@ -353,13 +353,21 @@ const Home = () => {
       </section>
 
       <Dialog open={open} onOpenChange={setOpen}>
-        <DialogContent className="max-w-4xl p-0 border-none bg-transparent">
+        <DialogContent className="max-w-4xl w-auto p-0 border-none bg-transparent shadow-none">
           {selectedImage && (
-            <img
-              src={selectedImage.src}
-              alt={selectedImage.alt}
-              className="w-full h-auto max-h-[90vh] object-contain"
-            />
+            <div className="relative">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.alt}
+                className="w-full h-auto max-h-[90vh] object-contain rounded-lg"
+              />
+              <DialogClose asChild>
+                <button className="absolute top-2 right-2 p-1 bg-black/50 text-white rounded-full hover:bg-black/75 transition-colors focus:outline-none focus:ring-2 focus:ring-white">
+                  <X className="h-6 w-6" />
+                  <span className="sr-only">Close</span>
+                </button>
+              </DialogClose>
+            </div>
           )}
         </DialogContent>
       </Dialog>
