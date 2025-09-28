@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search, Utensils, X } from 'lucide-react';
 import { Dialog, DialogContent, DialogClose } from '@/components/ui/dialog';
 import BackgroundPattern from '@/components/BackgroundPattern';
+import AnimatedNumber from '@/components/AnimatedNumber'; // Import the new component
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -39,15 +40,15 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <h3 className="text-4xl font-bold text-accent mb-2">3000+</h3>
+              <AnimatedNumber to={3000} suffix="+" className="text-4xl font-bold text-accent mb-2" />
               <p className="text-lg">Meals Served and Counting</p>
             </div>
             <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <h3 className="text-4xl font-bold text-accent mb-2">100%</h3>
+              <AnimatedNumber to={100} suffix="%" className="text-4xl font-bold text-accent mb-2" />
               <p className="text-lg">Volunteer Driven</p>
             </div>
             <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <h3 className="text-4xl font-bold text-accent mb-2">₹21</h3>
+              <AnimatedNumber to={21} prefix="₹" className="text-4xl font-bold text-accent mb-2" />
               <p className="text-lg">Provides One Hygienic, Home-Cooked Meal</p>
             </div>
           </div>
