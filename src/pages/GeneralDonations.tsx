@@ -91,11 +91,6 @@ const GeneralDonations = () => {
         </div>
       </section>
 
-      <div className="mt-8 p-6 bg-blue-50/50 border-l-4 border-blue-500 rounded-md text-gray-800">
-        <h3 className="text-lg font-semibold mb-2">Important Information Regarding Tax Exemption:</h3>
-        <p className="mb-2">Nav Kalyan Sanstha Delhi is registered under Section 80G of the Indian Income Tax Act, which means your donations are eligible for tax exemption. Please contact us for details on how to receive your tax exemption certificate.</p>
-      </div>
-
       <div className="mt-8 text-center text-gray-700">
         <h3 className="text-lg font-semibold mb-2">For Donation Queries:</h3>
         <p>Should you have any questions or require assistance with your donation, please do not hesitate to contact us. You can call us directly at <a href="tel:+919958349220" className="text-blue-500 hover:underline">+919958349220</a> or send an email to <a href="mailto:navkalyansansthadelhi@gmail.com" className="text-blue-500 hover:underline">navkalyansansthadelhi@gmail.com</a>. Our team is ready to assist you.</p>
