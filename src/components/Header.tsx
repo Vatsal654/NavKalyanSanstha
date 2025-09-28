@@ -89,7 +89,7 @@ const Header = () => {
               <span className="sr-only">Toggle navigation menu</span>
             </Button>
           </SheetTrigger>
-          <SheetContent side="right" className="bg-background">
+          <SheetContent side="right" className="bg-card"> {/* Changed bg-background to bg-card for visibility */}
             <div className="flex flex-col gap-4 py-6">
               <Link to="/" className="flex items-center gap-2 mb-4">
                 <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
