@@ -2,11 +2,12 @@ import React from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.tsx";
 import "./globals.css";
-// Removed ThemeProvider as dark mode is no longer needed.
+import { ThemeProvider } from "./components/ThemeProvider.tsx"; // Re-import ThemeProvider
 
 createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
-    {/* ThemeProvider removed */}
-    <App />
+    <ThemeProvider defaultTheme="system" storageKey="vite-ui-theme"> {/* Re-adding ThemeProvider */}
+      <App />
+    </ThemeProvider>
   </React.StrictMode>
 );
