@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import React from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Sheet, SheetContent, SheetTrigger } from '@/components/ui/sheet';
-import { Menu, QrCode } from 'lucide-react'; // Removed Search import
-// Removed Popover, Command, CommandInput, CommandList, CommandEmpty, CommandGroup, CommandItem imports
-// Removed searchItems import
+import { Menu, QrCode } from 'lucide-react';
 
 const navItems = [
   { name: 'Home', path: '/' },
@@ -18,15 +16,7 @@ const navItems = [
 ];
 
 const Header = () => {
-  // Removed openSearch and searchTerm state
-  const navigate = useNavigate();
   const location = useLocation();
-
-  useEffect(() => {
-    console.log("Header component rendered or re-rendered.");
-  }, []);
-
-  // Removed handleSearchSelect function
 
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
@@ -39,7 +29,6 @@ const Header = () => {
               <span className="text-xs text-primary-foreground/80 -mt-1">Charity Organization</span>
             </div>
           </Link>
-          {/* Simplified QR code link: Removed Button asChild wrapper */}
           <Link to="/donate-food" className="flex items-center gap-1 text-primary-foreground hover:text-accent transition-colors px-2 py-1 rounded-md">
             <QrCode className="h-4 w-4" />
             <span className="text-sm">Show QR</span>
@@ -61,17 +50,13 @@ const Header = () => {
               <span className="absolute bottom-0 left-0 w-full h-0.5 bg-accent scale-x-0 group-hover:scale-x-100 transition-transform duration-300"></span>
             </Link>
           ))}
-          {/* Removed Popover search component */}
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            {/* Simplified SheetTrigger child: Only Menu icon, sr-only moved to aria-label */}
-            <span
-              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors hover:bg-accent hover:text-accent-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-10 w-10 lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground cursor-pointer"
-              aria-label="Toggle navigation menu" // sr-only text moved here for accessibility
-            >
+            <Button variant="ghost" size="icon" className="lg:hidden text-primary-foreground hover:bg-accent hover:text-accent-foreground">
               <Menu className="h-6 w-6" />
-            </span>
+              <span className="sr-only">Toggle navigation menu</span>
+            </Button>
           </SheetTrigger>
           <SheetContent side="right" className="bg-background">
             <div className="flex flex-col gap-4 py-6">
@@ -86,7 +71,6 @@ const Header = () => {
                 <QrCode className="h-4 w-4" />
                 <span className="text-base">Show QR</span>
               </Link>
-              {/* Removed Popover search component from mobile menu */}
               {navItems.map((item) => (
                 <Link
                   key={item.name}
