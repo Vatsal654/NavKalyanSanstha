@@ -40,7 +40,7 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full bg-primary text-primary-foreground shadow-md">
       <div className="container flex h-16 items-center justify-between px-4 md:px-6">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 flex-shrink-0"> {/* Added flex-shrink-0 */}
           <Link to="/" className="flex items-center gap-2">
             <img src="/images/logo.jpg" alt="Nav Kalyan Sanstha Logo" className="h-8 w-8 rounded-full bg-gray-200" />
             <div className="flex flex-col items-start">
@@ -55,7 +55,7 @@ const Header = () => {
             </Link>
           </Button>
         </div>
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="hidden lg:flex items-center gap-6"> {/* Changed md:flex to lg:flex */}
           {navItems.map((item) => (
             <Link
               key={item.name}
@@ -84,7 +84,7 @@ const Header = () => {
         </nav>
         <Sheet>
           <SheetTrigger asChild>
-            <Button variant="outline" size="icon" className="md:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground">
+            <Button variant="outline" size="icon" className="lg:hidden bg-primary-foreground text-primary hover:bg-accent hover:text-accent-foreground"> {/* Changed md:hidden to lg:hidden */}
               <Menu className="h-6 w-6" />
               <span className="sr-only">Toggle navigation menu</span>
             </Button>

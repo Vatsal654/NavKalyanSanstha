@@ -21,9 +21,9 @@ const WhatWeDo = () => {
                 <Utensils className="h-6 w-6 text-accent" /> Our Program Details
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between">
-              <p>Our primary focus is our robust food distribution program, which operates with unwavering dedication every week. Our team of passionate volunteers meticulously prepares and carefully packages hundreds of meals. These wholesome food packages are then distributed across various identified locations in Delhi, specifically targeting underprivileged children, hardworking daily wage earners, and vulnerable families who are struggling with food insecurity.</p>
-              <p>We are committed to not just providing food, but providing nourishment with dignity. Our program ensures a consistent and reliable source of healthy meals for those who often go without, fostering a sense of hope and community support. We believe that a warm meal can be a powerful catalyst for change, offering comfort and strength.</p>
+            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <p className="text-wrap">Our primary focus is our robust food distribution program, which operates with unwavering dedication every week. Our team of passionate volunteers meticulously prepares and carefully packages hundreds of meals. These wholesome food packages are then distributed across various identified locations in Delhi, specifically targeting underprivileged children, hardworking daily wage earners, and vulnerable families who are struggling with food insecurity.</p>
+              <p className="text-wrap">We are committed to not just providing food, but providing nourishment with dignity. Our program ensures a consistent and reliable source of healthy meals for those who often go without, fostering a sense of hope and community support. We believe that a warm meal can be a powerful catalyst for change, offering comfort and strength.</p>
               <ul className="list-disc list-inside space-y-1 pl-4">
                 <li><strong>Meal Cost:</strong> Each nutritious, freshly prepared meal package costs just ₹21, making it an incredibly affordable and impactful way for anyone to contribute to our cause.</li>
                 <li><strong>Meal Quality:</strong> We take immense pride in providing healthy, hygienic, home-cooked, and delicious meals. Every dish is prepared with the utmost care, love, and profound respect for the recipients. We strictly focus on distributing fresh, ready-to-eat food, rather than dry rations, to ensure immediate nourishment and prevent food waste.</li>
@@ -59,9 +59,9 @@ const WhatWeDo = () => {
                 <Heart className="h-6 w-6 text-accent" /> Celebrate Your Special Day
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between">
-              <p>Make your birthday, anniversary, or any significant milestone truly unforgettable by sharing your joy with those who need it most. For a modest contribution of ₹500-₹600, we can arrange for a heartwarming cake cutting ceremony and meal sharing event with the underprivileged children we serve. This unique initiative not only creates smiles and cherished memories that last a lifetime for you and the children, but also allows you to give back in a deeply personal and impactful way on your special day.</p>
-              <p className="text-sm text-muted-foreground">Please contact us well in advance to coordinate your celebration and ensure all arrangements are made perfectly! We look forward to helping you make your special day even more meaningful.</p>
+            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <p className="text-wrap">Make your birthday, anniversary, or any significant milestone truly unforgettable by sharing your joy with those who need it most. For a modest contribution of ₹500-₹600, we can arrange for a heartwarming cake cutting ceremony and meal sharing event with the underprivileged children we serve. This unique initiative not only creates smiles and cherished memories that last a lifetime for you and the children, but also allows you to give back in a deeply personal and impactful way on your special day.</p>
+              <p className="text-sm text-muted-foreground text-wrap">Please contact us well in advance to coordinate your celebration and ensure all arrangements are made perfectly! We look forward to helping you make your special day even more meaningful.</p>
               <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                 <Link to="/contact-us">Plan Your Celebration</Link>
               </Button>
@@ -73,9 +73,9 @@ const WhatWeDo = () => {
                 <PiggyBank className="h-6 w-6 text-accent" /> Gau Seva (Cow Feeding)
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between">
-              <p>Extend your profound kindness and compassion to all living beings through our revered Gau Seva (cow feeding) program. We actively facilitate donations specifically dedicated to providing nutritious fodder, clean water, and essential veterinary care for these gentle and sacred animals. This initiative is a reflection of our broader commitment to compassion and welfare for all creatures, promoting a holistic approach to charity that extends beyond human beneficiaries. Your contribution to Gau Seva helps us ensure the well-being and respectful treatment of these animals, upholding a cherished tradition of service.</p>
-              <p className="text-sm text-muted-foreground">Your generous contribution directly helps us care for these animals and uphold this important tradition of service, contributing to a more compassionate world.</p>
+            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <p className="text-wrap">Extend your profound kindness and compassion to all living beings through our revered Gau Seva (cow feeding) program. We actively facilitate donations specifically dedicated to providing nutritious fodder, clean water, and essential veterinary care for these gentle and sacred animals. This initiative is a reflection of our broader commitment to compassion and welfare for all creatures, promoting a holistic approach to charity that extends beyond human beneficiaries. Your contribution to Gau Seva helps us ensure the well-being and respectful treatment of these animals, upholding a cherished tradition of service.</p>
+              <p className="text-sm text-muted-foreground text-wrap">Your generous contribution directly helps us care for these animals and uphold this important tradition of service, contributing to a more compassionate world.</p>
               <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                 <Link to="/general-donations">Support Gau Seva</Link>
               </Button>
@@ -87,9 +87,9 @@ const WhatWeDo = () => {
                 <Utensils className="h-6 w-6 text-accent" /> Custom Donation Requests
               </CardTitle>
             </CardHeader>
-            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between">
-              <p>We understand that generosity can manifest in many unique forms. If you have a specific way you'd like to contribute, a particular item you wish to donate (beyond monetary contributions), or a special occasion you want to mark through a unique act of service, please do not hesitate to contact us. We are always open to discussing and facilitating your unique acts of kindness and integrating them into our broader mission, ensuring your generosity makes the desired and most impactful difference in the community.</p>
-              <p className="text-sm text-muted-foreground">Reach out to us via phone or email to discuss your innovative ideas and how we can collaborate to make a difference together!</p>
+            <CardContent className="text-gray-700 space-y-3 flex-grow flex flex-col justify-between p-4"> {/* Added p-4 */}
+              <p className="text-wrap">We understand that generosity can manifest in many unique forms. If you have a specific way you'd like to contribute, a particular item you wish to donate (beyond monetary contributions), or a special occasion you want to mark through a unique act of service, please do not hesitate to contact us. We are always open to discussing and facilitating your unique acts of kindness and integrating them into our broader mission, ensuring your generosity makes the desired and most impactful difference in the community.</p>
+              <p className="text-sm text-muted-foreground text-wrap">Reach out to us via phone or email to discuss your innovative ideas and how we can collaborate to make a difference together!</p>
               <Button asChild variant="link" className="mt-auto text-accent hover:text-accent/90">
                 <Link to="/contact-us">Discuss Custom Donations</Link>
               </Button>

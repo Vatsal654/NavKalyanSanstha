@@ -47,6 +47,9 @@
 
   body {
     @apply bg-background text-foreground;
+    overflow-y: scroll; /* Force scrollbar to always be visible */
+    scrollbar-width: thin; /* For Firefox */
+    scrollbar-color: hsl(var(--scrollbar-thumb)) hsl(var(--scrollbar-track)); /* For Firefox */
   }
 }
 
