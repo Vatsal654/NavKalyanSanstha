@@ -78,10 +78,10 @@
 
 /* Make scrollbar thumb more visible on body hover */
 body:hover ::-webkit-scrollbar-thumb {
-  background: hsl(var(--primary)); /* Primary color, full opacity */
+  background: hsl(var(--accent)); /* Accent color, full opacity */
 }
 
 /* Also make it more visible when the scrollbar itself is hovered */
 ::-webkit-scrollbar-thumb:hover {
-  background: hsl(var(--primary)); /* Primary color, full opacity */
+  background: hsl(var(--accent)); /* Accent color, full opacity */
 }

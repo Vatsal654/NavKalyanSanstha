@@ -2,7 +2,8 @@ import React, { useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Link, useLocation } from 'react-router-dom';
-import { IndianRupee, Banknote } from 'lucide-react';
+import { IndianRupee, Banknote, HandHeart } from 'lucide-react'; // Added HandHeart icon
+import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
 
 const DonateFood = () => {
   const location = useLocation();
@@ -21,25 +22,27 @@ const DonateFood = () => {
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">Nav Seva - A Gift of Food, A Gift of Life.</h1>
       <p className="text-xl text-center text-gray-700 mb-8">Feed a Needy Person for Just ₹21.</p>
 
-      <section className="mb-12 max-w-3xl mx-auto bg-secondary p-8 rounded-lg shadow-lg border border-border">
-        <h2 className="text-3xl font-semibold mb-6 text-primary text-center">The Power of Nav Seva</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-6">
+      <section className="relative mb-12 max-w-3xl mx-auto bg-secondary p-8 rounded-lg shadow-lg border border-border">
+        <BackgroundPattern Icon={HandHeart} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">The Power of Nav Seva</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-6 relative z-10">
           In a city of millions, many struggle silently for their next meal. For the families of patients in hospitals, for daily wage workers, and for countless children, a warm, nutritious meal is a distant dream. It's not just food; it's a message of hope, a moment of comfort, and the strength to face another day. At Nav Kalyan Sanstha Delhi, we believe that no one should go hungry.
         </p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-8">
+        <p className="text-lg text-gray-700 leading-relaxed mb-8 relative z-10">
           Nav Kalyan Sanstha Delhi is on a mission to deliver this hope directly to those in need. Your contribution, no matter the size, directly translates into a freshly cooked, wholesome meal served with dignity and love. Join us in this sacred act of 'Nav Seva' and help us nourish bodies and spirits across Delhi. Every single rupee you donate goes directly towards preparing and distributing these vital meals, ensuring maximum impact.
         </p>
-        <p className="text-2xl font-semibold text-primary text-center mb-8">
+        <p className="text-2xl font-semibold text-primary text-center mb-8 relative z-10">
           Every <strong>₹21</strong> provides one hygienic, home-cooked meal.
         </p>
       </section>
 
-      <Card id="donation-qr-section" className="max-w-3xl mx-auto shadow-lg border border-border bg-card">
-        <CardHeader>
+      <Card id="donation-qr-section" className="relative max-w-3xl mx-auto shadow-lg border border-border bg-card">
+        <BackgroundPattern Icon={IndianRupee} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <CardHeader className="relative z-10">
           <CardTitle className="text-3xl font-bold text-primary text-center">Complete Your Donation</CardTitle>
           <CardDescription className="text-gray-600 text-center mt-2">Thank you for your generosity! Please use one of the following secure methods to complete your donation.</CardDescription>
         </CardHeader>
-        <CardContent className="space-y-6">
+        <CardContent className="space-y-6 relative z-10">
           <p className="text-lg text-gray-700 leading-relaxed text-center">
             After making the payment, we kindly request you to share a screenshot of your payment confirmation via WhatsApp to <a href="https://wa.me/919958349220" target="_blank" rel="noopener noreferrer" className="text-blue-500 hover:underline"><strong>+919958349220</strong></a>. This helps us track your valuable contribution and issue a confirmation.
           </p>

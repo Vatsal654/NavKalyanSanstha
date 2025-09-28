@@ -5,6 +5,8 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
+import { MessageSquareText } from 'lucide-react'; // Import icon
 
 const faqs = [
   {
@@ -57,8 +59,9 @@ const FAQs = () => {
         Here you'll find answers to the most common questions about Nav Kalyan Sanstha Delhi, our mission, how we operate, and how you can get involved. If you don't find what you're looking for, please feel free to contact us directly.
       </p>
 
-      <div className="max-w-3xl mx-auto">
-        <Accordion type="single" collapsible className="w-full">
+      <div className="relative max-w-3xl mx-auto">
+        <BackgroundPattern Icon={MessageSquareText} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <Accordion type="single" collapsible className="w-full relative z-10">
           {faqs.map((faq, index) => (
             <AccordionItem key={index} value={`item-${index}`} className="border-b border-border">
               <AccordionTrigger className="text-lg font-semibold text-secondary-foreground hover:no-underline text-left py-4">

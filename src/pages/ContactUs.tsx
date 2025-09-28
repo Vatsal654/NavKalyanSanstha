@@ -1,6 +1,7 @@
 import React from 'react';
-import { MapPin, Phone, Mail, Instagram } from 'lucide-react';
+import { MapPin, Phone, Mail, Instagram, MessageSquareText } from 'lucide-react'; // Added MessageSquareText icon
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
 
 const ContactUs = () => {
   return (
@@ -10,8 +11,10 @@ const ContactUs = () => {
         We would love to hear from you. Whether you have a question about our initiatives, wish to volunteer your time, explore collaboration opportunities, or simply want to share your feedback, please do not hesitate to reach out to us. Your engagement is invaluable to our mission.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <BackgroundPattern Icon={Phone} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={Mail} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
+        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <MapPin className="h-6 w-6 text-accent" /> Our Office Address
@@ -25,7 +28,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Phone className="h-6 w-6 text-accent" /> Phone & WhatsApp
@@ -38,7 +41,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Mail className="h-6 w-6 text-accent" /> Email Us
@@ -52,7 +55,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Instagram className="h-6 w-6 text-accent" /> Connect With Us Online
@@ -66,12 +69,13 @@ const ContactUs = () => {
         </Card>
       </div>
 
-      <section className="mb-12">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center">Our Location on Map</h2>
-        <p className="text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+      <section className="relative mb-12">
+        <BackgroundPattern Icon={MapPin} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Location on Map</h2>
+        <p className="text-lg text-center text-gray-700 mb-8 max-w-3xl mx-auto relative z-10">
           Find us easily on the map. Our central location in Rohini, Delhi, allows us to efficiently coordinate our food distribution drives and reach various communities in need.
         </p>
-        <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg border border-border">
+        <div className="aspect-video w-full max-w-4xl mx-auto rounded-lg overflow-hidden shadow-lg border border-border relative z-10">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3498.6540000000003!2d77.09500000000001!3d28.725000000000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0123456789ab%3A0x123456789abcdef0!2sPrahladpur%20Rd%2C%20Manigram%20Park%20Extension%2C%20Rohini%2C%20Delhi%2C%20110086!5e0!3m2!1sen!2sin!4v1678901234567!5m2!1sen!2sin"
             width="100%"
@@ -85,12 +89,13 @@ const ContactUs = () => {
         </div>
       </section>
 
-      <section className="text-center text-gray-700">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground">Hours of Operation</h2>
-        <p className="text-lg max-w-3xl mx-auto mb-6">
+      <section className="relative text-center text-gray-700">
+        <BackgroundPattern Icon={MessageSquareText} size={200} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 -rotate-45" />
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground relative z-10">Hours of Operation</h2>
+        <p className="text-lg max-w-3xl mx-auto mb-6 relative z-10">
           We are committed to serving the community and are available during the following hours for inquiries and operations. Our food distribution schedule is fixed to ensure consistent support.
         </p>
-        <ul className="list-disc list-inside inline-block text-left space-y-2">
+        <ul className="list-disc list-inside inline-block text-left space-y-2 relative z-10">
           <li><strong>Donations:</strong> Accepted 24/7 online through our various payment methods, ensuring you can contribute at your convenience.</li>
           <li><strong>Phone Inquiries:</strong> Our team is available to answer your calls and WhatsApp messages Monday - Saturday, from 10:00 AM to 6:00 PM.</li>
           <li><strong>Food Distribution:</strong> Our dedicated food drives take place every Tuesday & Saturday, rain or shine, reaching those in need without fail.</li>

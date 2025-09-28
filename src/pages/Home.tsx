@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { HandHeart, UtensilsCrossed, GalleryHorizontal, MessageSquareText, Users, IndianRupee, HeartHandshake, PiggyBank, CalendarDays, Phone, Search } from 'lucide-react';
 import { Dialog, DialogContent } from '@/components/ui/dialog';
+import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
 
 const Home = () => {
   const [open, setOpen] = useState(false);
@@ -31,6 +32,8 @@ const Home = () => {
         >
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-black/40"></div>
         </div>
+        <BackgroundPattern Icon={HandHeart} size={300} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={UtensilsCrossed} size={250} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
         <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight drop-shadow-lg">A Meal of Hope. A Gesture of Love.</h1>
           <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto drop-shadow">
@@ -65,8 +68,10 @@ const Home = () => {
       </section>
 
       {/* Quick Navigation / Call to Action Section */}
-      <section className="py-12 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-12 bg-primary text-primary-foreground">
+        <BackgroundPattern Icon={HeartHandshake} size={200} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-6" />
+        <BackgroundPattern Icon={IndianRupee} size={180} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-6" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore Our Mission</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
             Dive deeper into the heart of Nav Kalyan Sanstha Delhi. Discover our core values, the impact we've made, and the various ways you can join us in creating a hunger-free community. Each section provides a deeper insight into our work and the various ways you can contribute.
@@ -125,8 +130,9 @@ const Home = () => {
       </section>
 
       {/* About Us Snippet */}
-      <section className="py-16 bg-secondary text-foreground">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-16 bg-secondary text-foreground">
+        <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary">Who We Are: Our Story</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
             Nav Kalyan Sanstha Delhi began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. We are a non-profit, women-led organization dedicated to serving fresh, home-cooked meals to those in need, bridging the gap between compassion and action. Our journey started with a small group of dedicated women, and has grown into a community-driven movement that believes in the power of collective kindness.
@@ -154,8 +160,10 @@ const Home = () => {
       </section>
 
       {/* What We Do Snippet */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-16 bg-primary text-primary-foreground">
+        <BackgroundPattern Icon={Utensils} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 right-1/4 translate-x-1/2 -translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={PiggyBank} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 left-1/4 -translate-x-1/2 translate-y-1/2 rotate-12" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">Our Initiatives: Beyond Meals</h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-10">
             Beyond our regular food distribution, we organize special programs that allow our community to engage in unique acts of kindness and celebrate life's moments with those less fortunate. Each initiative is a step towards a more compassionate society, fostering hope and well-being for all.
@@ -220,8 +228,9 @@ const Home = () => {
       </section>
 
       {/* How You Can Help Section */}
-      <section className="py-16 bg-secondary text-foreground">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-16 bg-secondary text-foreground">
+        <BackgroundPattern Icon={IndianRupee} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary">How You Can Help</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
             Your support is the backbone of our mission, enabling us to reach more individuals and make a lasting impact. Here are a few profound ways you can contribute to a brighter future for our community. Every gesture of kindness, big or small, fuels our efforts.
@@ -268,8 +277,10 @@ const Home = () => {
       </section>
 
       {/* Gallery Snippet */}
-      <section className="py-16 bg-muted">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-16 bg-muted">
+        <BackgroundPattern Icon={GalleryHorizontal} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-6" />
+        <BackgroundPattern Icon={Search} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-6" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary">Moments of Impact</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-10">
             Witness the smiles your generosity creates and the profound impact of our collective efforts. Our gallery captures heartwarming moments from our food distribution drives, special events, and community interactions, showcasing the real difference your support makes in countless lives.
@@ -299,8 +310,10 @@ const Home = () => {
       </section>
 
       {/* Contact Us Snippet */}
-      <section className="py-16 bg-primary text-primary-foreground">
-        <div className="container mx-auto px-4 md:px-6 text-center">
+      <section className="relative py-16 bg-primary text-primary-foreground">
+        <BackgroundPattern Icon={Phone} size={280} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
+        <BackgroundPattern Icon={MessageSquareText} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
+        <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary-foreground">Get In Touch</h2>
           <p className="text-lg md:text-xl text-primary-foreground/90 max-w-3xl mx-auto mb-8">
             Have questions, want to volunteer, or collaborate? We'd love to hear from you. Your engagement helps us grow and serve more effectively, strengthening our community bonds and extending our reach to those in need.

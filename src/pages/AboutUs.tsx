@@ -1,20 +1,23 @@
 import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import BackgroundPattern from '@/components/BackgroundPattern'; // Import BackgroundPattern
+import { Users, HeartHandshake } from 'lucide-react'; // Import icons
 
 const AboutUs = () => {
   return (
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">About Us</h1>
 
-      <section className="mb-12 bg-background p-8 rounded-lg shadow-lg border border-border">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center">Our Story: The Spark of Service</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+      <section className="relative mb-12 bg-background p-8 rounded-lg shadow-lg border border-border">
+        <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Story: The Spark of Service</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           Nav Kalyan Sanstha began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. In a bustling city like Delhi, we observed the silent struggle of countless children, daily wage earners, and vulnerable families who were deprived of this basic necessity. This stark reality ignited a deep calling within us to bridge the gap between those who wished to help and those who desperately needed it.
         </p>
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+        <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           We started as a small chapter of our parent organization in Haryana, driven by a team of dedicated women who wanted to transform their compassion into tangible action. Our initial efforts were humble, but our resolve was strong. We are not just an NGO; we are a platform, a conduit for kindness, built on the belief that every individual deserves to eat with dignity.
         </p>
-        <p className="text-lg text-gray-700 leading-relaxed">
+        <p className="text-lg text-gray-700 leading-relaxed relative z-10">
           Today, we continue to grow, fueled by the unwavering support of our volunteers and donors. We cook with love, serve with respect, and firmly believe that every meal we provide is a significant step towards building a more equitable, compassionate, and caring society for all. Our journey is a testament to the power of collective action and heartfelt dedication. We invite you to be a part of this transformative movement.
         </p>
       </section>
@@ -51,22 +54,24 @@ const AboutUs = () => {
         </Card>
       </div>
 
-      <section className="bg-muted p-8 rounded-lg shadow-lg border border-border">
-        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center">Our Leadership: Guiding with Vision and Dedication</h2>
-        <p className="text-lg text-gray-700 leading-relaxed mb-4">
+      <section className="relative bg-muted p-8 rounded-lg shadow-lg border border-border">
+        <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
+        <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
+        <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Leadership: Guiding with Vision and Dedication</h2>
+        <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           Nav Kalyan Sanstha Delhi is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
         </p>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
           <div className="flex flex-col items-center text-center">
             <img src="/images/cake-cutting-children.jpg" alt="Ms. Seema Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
             <h3 className="text-xl font-bold text-primary">Ms. Seema Arya</h3>
-            <p className="text-lg text-gray-700">General Secretary</p>
+            <p className="text-lg text-gray-700">President</p> {/* Updated title */}
             <p className="text-sm text-muted-foreground mt-2">A visionary leader whose profound compassion, strategic insight, and tireless dedication are the driving force behind our organization's success and continuous growth.</p>
           </div>
           <div className="flex flex-col items-center text-center">
             <img src="/images/birthday-girl-srishti.jpg" alt="Ms. Shreyshi Arya" className="w-32 h-32 rounded-full object-cover mb-4 shadow-md border-2 border-accent" />
             <h3 className="text-xl font-bold text-primary">Ms. Shreyshi Arya</h3>
-            <p className="text-lg text-gray-700">Deputy General Secretary</p>
+            <p className="text-lg text-gray-700">Secretary</p> {/* Updated title */}
             <p className="text-sm text-muted-foreground mt-2">Instrumental in operationalizing our mission, she brings fresh perspectives, innovative ideas, and tireless energy to our initiatives, ensuring efficient and effective outreach.</p>
           </div>
           <div className="md:col-span-2 text-center mt-8">
@@ -75,7 +80,7 @@ const AboutUs = () => {
             </p>
           </div>
         </div>
-        <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center">
+        <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center relative z-10">
           Together, this team works tirelessly to ensure that Nav Kalyan Sanstha Delhi continues to be a beacon of hope and service in the community, transforming lives one meal and one act of kindness at a time. We are deeply grateful for their leadership and the collective spirit that propels our mission forward.
         </p>
       </section>
