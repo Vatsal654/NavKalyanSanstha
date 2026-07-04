@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "https://sevapravah.in/(.*)",
+      "destination": "https://www.sevapravah.in/$1",
+      "permanent": true
+    }
+  ]
+}
