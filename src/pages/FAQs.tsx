@@ -10,8 +10,8 @@ import { MessageSquareText } from 'lucide-react'; // Import icon
 
 const faqs = [
   {
-    question: 'What is Nav Kalyan Sanstha Delhi and what is its primary mission?',
-    answer: 'Nav Kalyan Sanstha Delhi is a dedicated non-profit, women-led organization committed to humanitarian service. Our primary mission is to alleviate hunger by consistently preparing and distributing healthy, hygienic, and home-cooked food packages to underprivileged children, daily wage earners, and vulnerable individuals across various locations in Delhi. We believe that access to nutritious food is a fundamental human right, and we strive to uphold this principle with every meal we serve.',
+    question: 'What is Seva Pravah and what is its primary mission?',
+    answer: 'Seva Pravah is a dedicated non-profit, women-led organization committed to humanitarian service. Our primary mission is to alleviate hunger by consistently preparing and distributing healthy, hygienic, and home-cooked food packages to underprivileged children, daily wage earners, and vulnerable individuals across various locations in Delhi. We believe that access to nutritious food is a fundamental human right, and we strive to uphold this principle with every meal we serve.',
   },
   {
     question: 'How can I contribute to your food distribution program?',
@@ -26,8 +26,8 @@ const faqs = [
     answer: 'We are deeply committed to providing only the highest quality meals. We distribute healthy, hygienic, home-cooked, and delicious meal packages. Each meal is prepared with the utmost care, love, and profound respect for the recipients. We strictly adhere to food safety standards and focus on distributing fresh, ready-to-eat food. We do not distribute dry rations; our emphasis is always on providing wholesome, freshly prepared meals.',
   },
   {
-    question: 'Are donations to Nav Kalyan Sanstha Delhi eligible for tax exemption?',
-    answer: 'Nav Kalyan Sanstha Delhi is officially registered under Section 80G of the Indian Income Tax Act. This means that all monetary donations made to our organization are eligible for tax exemption. Please contact us for more details on how to receive your tax exemption certificate.',
+    question: 'Are donations to Seva Pravah eligible for tax exemption?',
+    answer: 'Seva Pravah is officially registered under Section 80G of the Indian Income Tax Act. This means that all monetary donations made to our organization are eligible for tax exemption. Please contact us for more details on how to receive your tax exemption certificate.',
   },
   {
     question: 'Can I celebrate my birthday or other special occasions with your organization?',
@@ -38,15 +38,15 @@ const faqs = [
     answer: 'To help us accurately track your generous contribution and send you a timely confirmation, we kindly request you to share a screenshot of your payment confirmation via WhatsApp to +919958349220. This ensures proper record-keeping and acknowledgment of your support.',
   },
   {
-    question: 'Who are the key individuals leading Nav Kalyan Sanstha Delhi?',
+    question: 'Who are the key individuals leading Seva Pravah?',
     answer: 'Our organization is proudly run by a dedicated and passionate team of women volunteers. The leadership includes our esteemed General Secretary, Ms. Seema Arya, and our dynamic Deputy General Secretaries, Ms. Shreyshi Arya and Ms. Srishti Arya. Beyond the core leadership, we are powered by a vast network of countless helping hands—our selfless volunteers—who are the true heart and soul of our organization, making our mission a reality every single day.',
   },
   {
-    question: 'How can I volunteer my time and services with Nav Kalyan Sanstha Delhi?',
+    question: 'How can I volunteer my time and services with Seva Pravah?',
     answer: 'We are always eager to welcome new helping hands and passionate individuals to our team! If you are interested in volunteering your time and services, please do not hesitate to contact us directly via phone or email at navkalyansansthadelhi@gmail.com. We will be delighted to guide you through the volunteering process, discuss available opportunities, and help you find a meaningful way to contribute to our mission. Your dedication can make a significant difference.',
   },
   {
-    question: 'What other initiatives does Nav Kalyan Sanstha Delhi undertake?',
+    question: 'What other initiatives does Seva Pravah undertake?',
     answer: 'Beyond our core food distribution program, we engage in several special initiatives to promote holistic welfare. These include our revered Gau Seva (cow feeding) program, where we facilitate donations for providing fodder and care for gentle animals. We also welcome custom donation requests, allowing individuals to contribute in unique ways or support specific needs within the community. Our aim is to spread kindness and support in various forms.',
   },
 ];
@@ -56,7 +56,7 @@ const FAQs = () => {
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">Frequently Asked Questions</h1>
       <p className="text-lg text-center text-gray-700 max-w-3xl mx-auto mb-8">
-        Here you'll find answers to the most common questions about Nav Kalyan Sanstha Delhi, our mission, how we operate, and how you can get involved. If you don't find what you're looking for, please feel free to contact us directly.
+        Here you'll find answers to the most common questions about Seva Pravah, our mission, how we operate, and how you can get involved. If you don't find what you're looking for, please feel free to contact us directly.
       </p>
 
       <div className="relative max-w-3xl mx-auto">
