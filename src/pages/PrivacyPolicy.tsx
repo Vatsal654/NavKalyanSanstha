@@ -2,15 +2,16 @@ import React from 'react';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="container mx-auto py-12 px-4 md:px-6 prose max-w-4xl">
-      <h1 className="text-4xl font-bold text-center mb-10 text-primary">Privacy Policy</h1>
+    <div className="container mx-auto py-12 px-4 md:px-6">
+    <div className="glass prose max-w-4xl mx-auto rounded-2xl p-6 md:p-12">
+      <h1 className="text-4xl font-display font-bold text-center mb-10 text-primary">Privacy Policy</h1>
       <p className="text-lg text-center text-gray-700 mb-8">
-        At Nav Kalyan Sanstha Delhi, we are deeply committed to protecting the privacy and personal information of our valued donors, dedicated volunteers, and all visitors to our website. This Privacy Policy outlines in detail how we collect, utilize, safeguard, and manage your personal data, ensuring transparency and trust in all our interactions.
+        At Seva Pravah, we are deeply committed to protecting the privacy and personal information of our valued donors, dedicated volunteers, and all visitors to our website. This Privacy Policy outlines in detail how we collect, utilize, safeguard, and manage your personal data, ensuring transparency and trust in all our interactions.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4 text-secondary-foreground">Information We Collect:</h2>
       <p className="text-lg text-gray-700 mb-4">
-        We collect various types of information to facilitate our operations and enhance your experience with Nav Kalyan Sanstha Delhi. This includes:
+        We collect various types of information to facilitate our operations and enhance your experience with Seva Pravah. This includes:
       </p>
       <ul className="list-disc list-inside text-lg text-gray-700 space-y-2">
         <li><strong>Personal Identification Information:</strong> This encompasses details such as your full name, email address, contact phone number, and complete postal address. This information is primarily collected when you choose to make a donation, express interest in volunteering, or directly contact us for inquiries or support.</li>
@@ -38,13 +39,14 @@ const PrivacyPolicy = () => {
 
       <h2 className="text-2xl font-semibold mt-8 mb-4 text-secondary-foreground">Sharing Your Information:</h2>
       <p className="text-lg text-gray-700 mb-4">
-        Nav Kalyan Sanstha Delhi maintains a strict policy regarding the sharing of your personal information. We do not, under any circumstances, sell, trade, or rent your personal identification information to third parties for marketing or any other commercial purposes. We may only share information if it is explicitly required by law, such as in response to a court order or legal process, or when it is necessary to protect our rights, property, or safety, or the rights, property, or safety of others. Any such sharing will be done with the utmost care and in compliance with legal standards.
+        Seva Pravah maintains a strict policy regarding the sharing of your personal information. We do not, under any circumstances, sell, trade, or rent your personal identification information to third parties for marketing or any other commercial purposes. We may only share information if it is explicitly required by law, such as in response to a court order or legal process, or when it is necessary to protect our rights, property, or safety, or the rights, property, or safety of others. Any such sharing will be done with the utmost care and in compliance with legal standards.
       </p>
 
       <h2 className="text-2xl font-semibold mt-8 mb-4 text-secondary-foreground">Your Consent:</h2>
       <p className="text-lg text-gray-700 mb-4">
         By utilizing our website or by voluntarily providing us with your personal information, you explicitly consent to our collection, use, and protection of your information as meticulously described in this comprehensive Privacy Policy. We encourage you to read this policy carefully and contact us if you have any questions or concerns regarding your data privacy.
       </p>
+    </div>
     </div>
   );
 };
