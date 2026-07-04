@@ -10,7 +10,7 @@ const WhatWeDo = () => {
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">What We Do</h1>
 
-      <section className="relative mb-12 bg-secondary p-8 rounded-lg shadow-lg border border-border">
+      <section className="relative mb-12 glass p-8 rounded-2xl">
         <BackgroundPattern Icon={Utensils} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
         <BackgroundPattern Icon={HandHeart} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">Core Initiative: Weekly Food Distribution – Nourishing Bodies, Inspiring Hope</h2>
@@ -18,7 +18,7 @@ const WhatWeDo = () => {
           Our flagship program is dedicated to alleviating hunger by providing freshly prepared, nutritious meals to those who need them most. We believe in serving with dignity and consistency, ensuring that every individual receives a wholesome meal and a moment of comfort. This initiative is the cornerstone of our mission, driven by compassion and a commitment to community well-being, aiming to create a hunger-free Delhi.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center relative z-10">
-          <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+          <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
                 <Utensils className="h-6 w-6 text-accent" /> Our Program Details
@@ -50,15 +50,15 @@ const WhatWeDo = () => {
         </div>
       </section>
 
-      <section className="relative bg-background p-8 rounded-lg shadow-lg border border-border">
+      <section className="relative glass p-8 rounded-2xl">
         <BackgroundPattern Icon={Heart} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 right-1/4 translate-x-1/2 -translate-y-1/2 -rotate-12" />
         <BackgroundPattern Icon={PiggyBank} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 left-1/4 -translate-x-1/2 translate-y-1/2 rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">Special Initiatives: Spreading Joy Beyond Meals</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 text-center max-w-3xl mx-auto relative z-10">
-          Beyond our regular food distribution, Nav Kalyan Sanstha Delhi is proud to organize a variety of special programs. These initiatives allow our community to engage in unique acts of kindness, celebrate life's precious moments with those less fortunate, and extend compassion to all living beings. Each program fosters a holistic approach to well-being and strengthens community bonds, creating a ripple effect of positivity.
+          Beyond our regular food distribution, Seva Pravah is proud to organize a variety of special programs. These initiatives allow our community to engage in unique acts of kindness, celebrate life's precious moments with those less fortunate, and extend compassion to all living beings. Each program fosters a holistic approach to well-being and strengthens community bonds, creating a ripple effect of positivity.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
-          <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+          <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
                 <Heart className="h-6 w-6 text-accent" /> Celebrate Your Special Day
@@ -72,7 +72,7 @@ const WhatWeDo = () => {
               </Button>
             </CardContent>
           </Card>
-          <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+          <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
                 <PiggyBank className="h-6 w-6 text-accent" /> Gau Seva (Cow Feeding)
@@ -86,7 +86,7 @@ const WhatWeDo = () => {
               </Button>
             </CardContent>
           </Card>
-          <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+          <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
             <CardHeader>
               <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
                 <Utensils className="h-6 w-6 text-accent" /> Custom Donation Requests
