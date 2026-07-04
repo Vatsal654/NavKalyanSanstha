@@ -22,21 +22,21 @@ const DonateFood = () => {
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">Nav Seva - A Gift of Food, A Gift of Life.</h1>
       <p className="text-xl text-center text-gray-700 mb-8">Feed a Needy Person for Just ₹21.</p>
 
-      <section className="relative mb-12 max-w-3xl mx-auto bg-secondary p-8 rounded-lg shadow-lg border border-border">
+      <section className="relative mb-12 max-w-3xl mx-auto glass p-8 rounded-2xl">
         <BackgroundPattern Icon={HandHeart} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <h2 className="text-3xl font-semibold mb-6 text-primary text-center relative z-10">The Power of Nav Seva</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-6 relative z-10">
-          In a city of millions, many struggle silently for their next meal. For the families of patients in hospitals, for daily wage workers, and for countless children, a warm, nutritious meal is a distant dream. It's not just food; it's a message of hope, a moment of comfort, and the strength to face another day. At Nav Kalyan Sanstha Delhi, we believe that no one should go hungry.
+          In a city of millions, many struggle silently for their next meal. For the families of patients in hospitals, for daily wage workers, and for countless children, a warm, nutritious meal is a distant dream. It's not just food; it's a message of hope, a moment of comfort, and the strength to face another day. At Seva Pravah, we believe that no one should go hungry.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 relative z-10">
-          Nav Kalyan Sanstha Delhi is on a mission to deliver this hope directly to those in need. Your contribution, no matter the size, directly translates into a freshly cooked, wholesome meal served with dignity and love. Join us in this sacred act of 'Nav Seva' and help us nourish bodies and spirits across Delhi. Every single rupee you donate goes directly towards preparing and distributing these vital meals, ensuring maximum impact.
+          Seva Pravah is on a mission to deliver this hope directly to those in need. Your contribution, no matter the size, directly translates into a freshly cooked, wholesome meal served with dignity and love. Join us in this sacred act of 'Nav Seva' and help us nourish bodies and spirits across Delhi. Every single rupee you donate goes directly towards preparing and distributing these vital meals, ensuring maximum impact.
         </p>
         <p className="text-2xl font-semibold text-primary text-center mb-8 relative z-10">
           Every <strong>₹21</strong> provides one hygienic, home-cooked meal.
         </p>
       </section>
 
-      <Card id="donation-qr-section" className="relative max-w-3xl mx-auto shadow-lg border border-border bg-card">
+      <Card id="donation-qr-section" className="relative max-w-3xl mx-auto shadow-lg border border-border">
         <BackgroundPattern Icon={IndianRupee} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <CardHeader className="relative z-10">
           <CardTitle className="text-3xl font-bold text-primary text-center">Complete Your Donation</CardTitle>
@@ -48,7 +48,7 @@ const DonateFood = () => {
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+            <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-1.5">
               <IndianRupee className="h-12 w-12 text-accent mb-4" />
               <CardTitle className="text-xl text-primary mb-4">UPI (Paytm, Google Pay, PhonePe, etc.)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
@@ -60,7 +60,7 @@ const DonateFood = () => {
               </CardContent>
             </Card>
 
-            <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105">
+            <Card className="bg-muted shadow-sm border border-border p-6 flex flex-col items-center text-center transition-transform duration-300 hover:-translate-y-1.5">
               <Banknote className="h-12 w-12 text-accent mb-4" />
               <CardTitle className="text-xl text-primary mb-4">Bank Transfer (NEFT/RTGS/IMPS)</CardTitle>
               <CardContent className="space-y-2 text-gray-700 p-0">
@@ -99,7 +99,7 @@ const DonateFood = () => {
         </CardContent>
       </Card>
 
-      <Card className="relative max-w-3xl mx-auto shadow-lg border border-border bg-card mt-8">
+      <Card className="relative max-w-3xl mx-auto shadow-lg border border-border mt-8">
         <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <CardHeader className="relative z-10">
           <CardTitle className="text-3xl font-bold text-primary text-center">Our Leadership</CardTitle>
