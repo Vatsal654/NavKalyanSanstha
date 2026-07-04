@@ -14,7 +14,7 @@ const ContactUs = () => {
       <div className="relative grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
         <BackgroundPattern Icon={Phone} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
         <BackgroundPattern Icon={Mail} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <MapPin className="h-6 w-6 text-accent" /> Our Office Address
@@ -28,7 +28,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Phone className="h-6 w-6 text-accent" /> Phone & WhatsApp
@@ -41,7 +41,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Mail className="h-6 w-6 text-accent" /> Email Us
@@ -55,7 +55,7 @@ const ContactUs = () => {
           </CardContent>
         </Card>
 
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border relative z-10">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border relative z-10">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary flex items-center gap-2">
               <Instagram className="h-6 w-6 text-accent" /> Connect With Us Online
@@ -84,7 +84,7 @@ const ContactUs = () => {
             allowFullScreen={true}
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Nav Kalyan Sanstha Location"
+            title="Seva Pravah Location"
           ></iframe>
         </div>
       </section>
