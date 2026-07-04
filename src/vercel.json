@@ -1,9 +1,0 @@
-{
-  "redirects": [
-    {
-      "source": "https://navkalyansanstha.in/(.*)",
-      "destination": "https://www.navkalyansanstha.in/$1",
-      "permanent": true
-    }
-  ]
-}
