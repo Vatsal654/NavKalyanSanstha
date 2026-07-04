@@ -8,12 +8,12 @@ const AboutUs = () => {
     <div className="container mx-auto py-12 px-4 md:px-6">
       <h1 className="text-4xl font-bold text-center mb-10 text-primary">About Us</h1>
 
-      <section className="relative mb-12 bg-muted p-8 rounded-lg shadow-lg border border-border">
+      <section className="relative mb-12 glass p-8 rounded-2xl">
         <BackgroundPattern Icon={HeartHandshake} size={250} opacity="opacity-[0.05]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-12" />
         <BackgroundPattern Icon={Users} size={200} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-12" />
         <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Leadership: Guiding with Vision and Dedication</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
-          Nav Kalyan Sanstha Delhi is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
+          Seva Pravah is proudly guided by a dedicated and passionate leadership team, committed to steering our mission with integrity and vision. Our leaders inspire and mobilize our volunteers, ensuring that our efforts are impactful and reach those who need it most. Their unwavering commitment is the cornerstone of our success and the driving force behind our community initiatives.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8 relative z-10">
           <div className="flex flex-col items-center text-center">
@@ -39,15 +39,15 @@ const AboutUs = () => {
           </div>
         </div>
         <p className="text-lg text-gray-700 leading-relaxed mt-8 text-center relative z-10">
-          Together, this team works tirelessly to ensure that Nav Kalyan Sanstha Delhi continues to be a beacon of hope and service in the community, transforming lives one meal and one act of kindness at a time. We are deeply grateful for their leadership and the collective spirit that propels our mission forward.
+          Together, this team works tirelessly to ensure that Seva Pravah continues to be a beacon of hope and service in the community, transforming lives one meal and one act of kindness at a time. We are deeply grateful for their leadership and the collective spirit that propels our mission forward.
         </p>
       </section>
 
-      <section className="relative mb-12 bg-background p-8 rounded-lg shadow-lg border border-border">
+      <section className="relative mb-12 glass p-8 rounded-2xl">
         <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <h2 className="text-3xl font-semibold mb-6 text-secondary-foreground text-center relative z-10">Our Story: The Spark of Service</h2>
         <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
-          Nav Kalyan Sanstha began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. In a bustling city like Delhi, we observed the silent struggle of countless children, daily wage earners, and vulnerable families who were deprived of this basic necessity. This stark reality ignited a deep calling within us to bridge the gap between those who wished to help and those who desperately needed it.
+          Seva Pravah began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. In a bustling city like Delhi, we observed the silent struggle of countless children, daily wage earners, and vulnerable families who were deprived of this basic necessity. This stark reality ignited a deep calling within us to bridge the gap between those who wished to help and those who desperately needed it.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mb-4 relative z-10">
           We started as a small chapter of our parent organization in Haryana, driven by a team of dedicated women who wanted to transform their compassion into tangible action. Our initial efforts were humble, but our resolve was strong. We are not just an NGO; we are a platform, a conduit for kindness, built on the belief that every individual deserves to eat with dignity.
@@ -58,7 +58,7 @@ const AboutUs = () => {
       </section>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary">Our Vision</CardTitle>
           </CardHeader>
@@ -66,7 +66,7 @@ const AboutUs = () => {
             Our ultimate vision is to create a hunger-free Delhi, a city where every single individual, regardless of their socio-economic background, has consistent access to nutritious, wholesome food. We envision a community where everyone is treated with inherent dignity and profound respect, and where collective well-being is a shared responsibility. We strive for a society where compassion triumphs over scarcity, and where the basic human right to food is universally upheld.
           </CardContent>
         </Card>
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary">Our Mission</CardTitle>
           </CardHeader>
@@ -74,7 +74,7 @@ const AboutUs = () => {
             Our mission is to consistently prepare and distribute healthy, hygienic, and tasty home-cooked meals to underprivileged children and individuals residing in Delhi. We are deeply committed to maintaining a transparent, heartfelt, and easily accessible platform for our generous donors. This ensures they can contribute with confidence and directly witness the profound impact of their generosity on the lives of those we serve, fostering trust and accountability.
           </CardContent>
         </Card>
-        <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border">
+        <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border">
           <CardHeader>
             <CardTitle className="text-2xl font-bold text-primary">Our Values</CardTitle>
           </CardHeader>
