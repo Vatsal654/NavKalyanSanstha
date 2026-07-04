@@ -13,7 +13,7 @@ const GeneralDonations = () => {
       <section className="relative mb-12 max-w-3xl mx-auto text-center">
         <BackgroundPattern Icon={PiggyBank} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <p className="text-lg text-gray-700 leading-relaxed mb-6 relative z-10">
-          While our Nav Seva (food distribution) program is our primary and most visible focus, general contributions are absolutely vital for the overall sustainability and operational efficiency of Nav Kalyan Sanstha Delhi. These flexible funds provide us with the necessary resources to cover essential administrative costs, manage logistics, and respond promptly to urgent and unforeseen needs within the community that fall outside our regular meal programs.
+          While our Nav Seva (food distribution) program is our primary and most visible focus, general contributions are absolutely vital for the overall sustainability and operational efficiency of Seva Pravah. These flexible funds provide us with the necessary resources to cover essential administrative costs, manage logistics, and respond promptly to urgent and unforeseen needs within the community that fall outside our regular meal programs.
         </p>
         <p className="text-lg text-gray-700 leading-relaxed mb-8 relative z-10">
           Your general donation is a powerful way to support the backbone of our organization and helps with a wide array of critical operational aspects, ensuring our mission continues to thrive:
@@ -28,7 +28,7 @@ const GeneralDonations = () => {
         <p className="text-xl font-semibold text-primary mb-8 relative z-10">
           Every rupee you contribute through a general donation strengthens our overall capacity and ability to serve more effectively and efficiently. Your trust and unwavering support are deeply cherished and make a profound difference in the lives of countless individuals. Thank you for being a pillar of our mission.
         </p>
-        <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 relative z-10">
+        <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-6 text-lg rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1.5 relative z-10">
           <Link to="/donate-food">Make a General Donation Now</Link>
         </Button>
       </section>
@@ -41,7 +41,7 @@ const GeneralDonations = () => {
           Beyond the numbers, our journey is filled with heartwarming moments and profound connections. Here are some glimpses into the impact we've made, fueled by your generosity and our volunteers' dedication:
         </p>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative z-10">
-          <Card className="bg-card shadow-md border border-border">
+          <Card className="shadow-md border border-border">
             <CardHeader>
               <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Smile className="h-6 w-6 text-accent" /> Birthday Celebrations
@@ -53,7 +53,7 @@ const GeneralDonations = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card shadow-md border border-border">
+          <Card className="shadow-md border border-border">
             <CardHeader>
               <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Handshake className="h-6 w-6 text-accent" /> Awaiting Our Arrival
@@ -65,7 +65,7 @@ const GeneralDonations = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card shadow-md border border-border">
+          <Card className="shadow-md border border-border">
             <CardHeader>
               <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Heart className="h-6 w-6 text-accent" /> Donations in Temples
@@ -77,7 +77,7 @@ const GeneralDonations = () => {
             </CardContent>
           </Card>
 
-          <Card className="bg-card shadow-md border border-border">
+          <Card className="shadow-md border border-border">
             <CardHeader>
               <CardTitle className="text-xl text-primary flex items-center gap-2">
                 <Award className="h-6 w-6 text-accent" /> Milestones & Self-Donations
