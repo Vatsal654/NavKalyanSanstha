@@ -32,32 +32,34 @@ const Home = () => {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         <div className="relative z-10 p-4 md:p-8 max-w-5xl mx-auto">
-          <h1 className="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">A Meal of Hope. A Gesture of Love.</h1>
-          <p className="text-lg md:text-xl mb-8 max-w-3xl mx-auto">
-            Welcome to Nav Kalyan Sanstha Delhi. We are a non-profit, women-led initiative dedicated to serving fresh, home-cooked meals to those in need. For just ₹21, you can provide a nutritious meal and be a part of our mission to ensure no one in our community goes hungry. Our commitment extends beyond just food; it's about fostering dignity, community, and hope.
+          <span className="inline-block mb-4 px-4 py-1.5 rounded-full glass-soft text-xs uppercase tracking-[0.2em] text-brand-gold border border-white/25">
+            Together For A Better Tomorrow
+          </span>
+          <h1 className="text-4xl md:text-6xl font-display font-extrabold mb-4 leading-tight text-gradient-light">A Meal of Hope. A Gesture of Love.</h1>
+          <p className="text-lg md:text-xl mb-10 max-w-3xl mx-auto text-white/90">
+            Welcome to Seva Pravah. We are a non-profit, women-led initiative dedicated to serving fresh, home-cooked meals to those in need. For just ₹21, you can provide a nutritious meal and be a part of our mission to ensure no one in our community goes hungry. Our commitment extends beyond just food; it's about fostering dignity, community, and hope.
           </p>
-          <p className="text-2xl md:text-3xl font-semibold mb-10 text-accent">Our Slogan: Donate. Impact. Change.</p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <AnimatedNumber to={3000} suffix="+" className="text-4xl font-bold text-accent mb-2" />
-              <p className="text-lg">Meals Served and Counting</p>
+            <div className="glass p-6 rounded-2xl hover:-translate-y-1.5 transition-all duration-300">
+              <AnimatedNumber to={3000} suffix="+" className="text-4xl font-display font-bold text-brand-gold mb-2" />
+              <p className="text-lg text-white/90">Meals Served and Counting</p>
             </div>
-            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <AnimatedNumber to={100} suffix="%" className="text-4xl font-bold text-accent mb-2" />
-              <p className="text-lg">Volunteer Driven</p>
+            <div className="glass p-6 rounded-2xl hover:-translate-y-1.5 transition-all duration-300">
+              <AnimatedNumber to={100} suffix="%" className="text-4xl font-display font-bold text-brand-gold mb-2" />
+              <p className="text-lg text-white/90">Volunteer Driven</p>
             </div>
-            <div className="bg-black/40 backdrop-blur-sm p-6 rounded-xl shadow-xl border border-white/20 hover:bg-black/50 transition-all duration-300">
-              <AnimatedNumber to={21} prefix="₹" className="text-4xl font-bold text-accent mb-2" />
-              <p className="text-lg">Provides One Hygienic, Home-Cooked Meal</p>
+            <div className="glass p-6 rounded-2xl hover:-translate-y-1.5 transition-all duration-300">
+              <AnimatedNumber to={21} prefix="₹" className="text-4xl font-display font-bold text-brand-gold mb-2" />
+              <p className="text-lg text-white/90">Provides One Hygienic, Home-Cooked Meal</p>
             </div>
           </div>
 
           <div className="flex flex-col md:flex-row justify-center gap-4">
-            <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-10 py-7 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Button asChild size="lg" className="shimmer-border px-10 py-7 text-xl">
               <Link to="/donate-food#donation-qr-section">Donate a Meal Now (₹21)</Link>
             </Button>
-            <Button asChild variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white hover:text-primary px-10 py-7 text-xl rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+            <Button asChild variant="outline" size="lg" className="px-10 py-7 text-xl text-white border-white/40 hover:text-primary">
               <Link to="/about-us">Learn Our Story</Link>
             </Button>
           </div>
@@ -65,28 +67,28 @@ const Home = () => {
       </section>
 
       {/* Quick Navigation / Call to Action Section */}
-      <section className="relative py-12 bg-primary text-primary-foreground">
+      <section className="relative py-12 bg-gradient-to-br from-primary via-primary to-brand-purple text-primary-foreground overflow-hidden">
         <BackgroundPattern Icon={HeartHandshake} size={200} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 -rotate-6" />
         <BackgroundPattern Icon={IndianRupee} size={180} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 rotate-6" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-3xl md:text-4xl font-bold mb-8">Explore Our Mission</h2>
           <p className="text-lg md:text-xl max-w-3xl mx-auto mb-10">
-            Dive deeper into the heart of Nav Kalyan Sanstha Delhi. Discover our core values, the impact we've made, and the various ways you can join us in creating a hunger-free community. Each section provides a deeper insight into our work and the various ways you can contribute.
+            Dive deeper into the heart of Seva Pravah. Discover our core values, the impact we've made, and the various ways you can join us in creating a hunger-free community. Each section provides a deeper insight into our work and the various ways you can contribute.
           </p>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-xl transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Users className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">About Us</CardTitle>
               </CardHeader>
               <CardContent className="flex-grow flex flex-col justify-between p-4">
-                <p className="text-sm mb-4 text-wrap">Discover our inspiring journey, our unwavering vision for a better society, and meet the dedicated team behind Nav Kalyan Sanstha.</p>
+                <p className="text-sm mb-4 text-wrap">Discover our inspiring journey, our unwavering vision for a better society, and meet the dedicated team behind Seva Pravah.</p>
                 <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground mt-auto">
                   <Link to="/about-us">Our Story</Link>
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-xl transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <UtensilsCrossed className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">What We Do</CardTitle>
@@ -98,7 +100,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-xl transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <IndianRupee className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Donate Food</CardTitle>
@@ -110,7 +112,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-xl transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-xl transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <GalleryHorizontal className="h-10 w-10 text-accent mb-3" />
                 <CardTitle className="text-xl font-semibold">Gallery</CardTitle>
@@ -127,12 +129,12 @@ const Home = () => {
       </section>
 
       {/* About Us Snippet */}
-      <section className="relative py-16 bg-secondary text-foreground">
+      <section className="relative py-16 bg-secondary/60 backdrop-blur-sm text-foreground">
         <BackgroundPattern Icon={Users} size={250} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary">Who We Are: Our Story</h2>
           <p className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto mb-8">
-            Nav Kalyan Sanstha Delhi began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. We are a non-profit, women-led organization dedicated to serving fresh, home-cooked meals to those in need, bridging the gap between compassion and action. Our journey started with a small group of dedicated women, and has grown into a community-driven movement that believes in the power of collective kindness.
+            Seva Pravah began with a simple yet profound realization: food is not a privilege, it is a fundamental human right. We are a non-profit, women-led organization dedicated to serving fresh, home-cooked meals to those in need, bridging the gap between compassion and action. Our journey started with a small group of dedicated women, and has grown into a community-driven movement that believes in the power of collective kindness.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
             <div className="text-left">
@@ -157,7 +159,7 @@ const Home = () => {
       </section>
 
       {/* What We Do Snippet */}
-      <section className="relative py-16 bg-primary text-primary-foreground">
+      <section className="relative py-16 bg-gradient-to-br from-primary via-primary to-brand-purple text-primary-foreground overflow-hidden">
         <BackgroundPattern Icon={Utensils} size={280} opacity="opacity-[0.05]" position="absolute top-1/4 right-1/4 translate-x-1/2 -translate-y-1/2 -rotate-12" />
         <BackgroundPattern Icon={PiggyBank} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 left-1/4 -translate-x-1/2 translate-y-1/2 rotate-12" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
@@ -166,7 +168,7 @@ const Home = () => {
             Beyond our regular food distribution, we organize special programs that allow our community to engage in unique acts of kindness and celebrate life's moments with those less fortunate. Each initiative is a step towards a more compassionate society, fostering hope and well-being for all.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <HandHeart className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Weekly Food Distribution</CardTitle>
@@ -184,7 +186,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <UtensilsCrossed className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Us</CardTitle>
@@ -202,7 +204,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card text-card-foreground shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="text-card-foreground shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <PiggyBank className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Gau Seva & Custom Donations</CardTitle>
@@ -225,7 +227,7 @@ const Home = () => {
       </section>
 
       {/* How You Can Help Section */}
-      <section className="relative py-16 bg-secondary text-foreground">
+      <section className="relative py-16 bg-secondary/60 backdrop-blur-sm text-foreground">
         <BackgroundPattern Icon={IndianRupee} size={300} opacity="opacity-[0.03]" position="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-45" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
           <h2 className="text-4xl font-bold mb-6 text-primary">How You Can Help</h2>
@@ -233,7 +235,7 @@ const Home = () => {
             Your support is the backbone of our mission, enabling us to reach more individuals and make a lasting impact. Here are a few profound ways you can contribute to a brighter future for our community. Every gesture of kindness, big or small, fuels our efforts.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <IndianRupee className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Donate Meals</CardTitle>
@@ -245,7 +247,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <HeartHandshake className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Volunteer Your Time</CardTitle>
@@ -257,7 +259,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <CalendarDays className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Celebrate with Purpose</CardTitle>
@@ -274,7 +276,7 @@ const Home = () => {
       </section>
 
       {/* Gallery Snippet */}
-      <section className="relative py-16 bg-muted">
+      <section className="relative py-16 bg-muted/60 backdrop-blur-sm">
         <BackgroundPattern Icon={GalleryHorizontal} size={250} opacity="opacity-[0.03]" position="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-6" />
         <BackgroundPattern Icon={Search} size={200} opacity="opacity-[0.03]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-6" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
@@ -300,14 +302,14 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg rounded-md shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105">
+          <Button asChild className="bg-accent hover:bg-accent/90 text-accent-foreground px-8 py-4 text-lg rounded-md shadow-lg transition-all duration-300 ease-in-out transform hover:-translate-y-1.5">
             <Link to="/gallery">View Full Gallery</Link>
           </Button>
         </div>
       </section>
 
       {/* Contact Us Snippet */}
-      <section className="relative py-16 bg-primary text-primary-foreground">
+      <section className="relative py-16 bg-gradient-to-br from-primary via-primary to-brand-purple text-primary-foreground overflow-hidden">
         <BackgroundPattern Icon={Phone} size={280} opacity="opacity-[0.05]" position="absolute top-1/2 left-1/4 -translate-x-1/2 -translate-y-1/2 rotate-12" />
         <BackgroundPattern Icon={MessageSquareText} size={220} opacity="opacity-[0.05]" position="absolute bottom-1/4 right-1/4 translate-x-1/2 translate-y-1/2 -rotate-12" />
         <div className="container mx-auto px-4 md:px-6 text-center relative z-10">
@@ -325,7 +327,7 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
               <p className="absolute bottom-4 left-4 text-white text-xl font-semibold">Join Our Community</p>
             </div>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <MessageSquareText className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Quick FAQs</CardTitle>
@@ -337,7 +339,7 @@ const Home = () => {
                 </Button>
               </CardContent>
             </Card>
-            <Card className="bg-card shadow-lg transition-transform duration-300 hover:scale-105 border border-border h-full flex flex-col">
+            <Card className="shadow-lg transition-transform duration-300 hover:-translate-y-1.5 border border-border h-full flex flex-col">
               <CardHeader className="flex flex-col items-center text-center">
                 <Phone className="h-12 w-12 text-accent mb-4" />
                 <CardTitle className="text-2xl font-bold text-primary">Direct Contact</CardTitle>
